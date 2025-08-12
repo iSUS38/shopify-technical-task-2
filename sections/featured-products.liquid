@@ -90,8 +90,8 @@
       >
         {% assign skip_card_product_styles = false %}
 
-        {%- if section.settings.featured_products.size > 0 -%}
-          {%- for product in section.settings.featured_products -%}
+        {%- if section.settings.featured_products.list.size > 0 -%}
+          {%- for product in section.settings.featured_products.list -%}
             <li
               id="Slide-{{ section.id }}-{{ forloop.index }}"
               class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
