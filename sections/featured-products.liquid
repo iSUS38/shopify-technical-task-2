@@ -169,18 +169,17 @@
     {
         "type": "product_list",
         "id": "featured_products",
-        "label": " t:sections.featured-products.settings.featured_products.label"
+        "label": "t:sections.featured-products.settings.featured_products.label"
     },
     {
         "type": "checkbox",
         "id": "is_add_to_cart_popup_enabled",
-        "default": true,
-        "label": " t:sections.featured-products.settings.add_to_cart_popup_enabled.label"
+        "default": false,
+        "label": "t:sections.featured-products.settings.add_to_cart_popup_enabled.label"
     },
     {
         "type": "checkbox",
         "id": "is_add_to_cart_popup_visible_once",
-        "default": false,
         "label": "t:sections.featured-products.settings.add_to_cart_popup_visible_once.label",
         "visible_if": "{{ section.settings.is_add_to_cart_popup_enabled }}"
     },
