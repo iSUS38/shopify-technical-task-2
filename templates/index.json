@@ -55,7 +55,12 @@
       "settings": {
         "title": "<p>Featured products</p>",
         "featured_products": [
-          "exclsive-event-offer"
+          "akaasiakuitu",
+          "aloe-vera-suihke-200ml",
+          "annostelijapumppu-lemmikkien-lohioljyyn",
+          "anti-gray-hair-60kaps",
+          "beauty-oil-arganoljy-50-ml",
+          "puhdas-aromaterapia-autodiffuuseri-cd-01-15"
         ],
         "is_add_to_cart_popup_enabled": false,
         "is_add_to_cart_popup_visible_once": false,
