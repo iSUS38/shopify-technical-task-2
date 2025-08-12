@@ -53,7 +53,7 @@
       "type": "featured-products",
       "name": "t:sections.featured-products.name",
       "settings": {
-        "title": "",
+        "title": "<p>Featured products</p>",
         "featured_products": [
           "5-htp-100-mg-60-kaps",
           "akaasiakuitu",
