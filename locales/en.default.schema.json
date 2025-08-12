@@ -439,6 +439,26 @@
         "label": "Image shape"
       }
     },
+    "featured-products": {
+      "name": "Featured products",
+      "settings": {
+        "title": {
+          "label": "Heading"
+        },
+        "featured_products": {
+          "label": "Featured products list"
+        },
+        "add_to_cart_popup_enabled": {
+          "label": "Is the add to cart popup enabled"
+        },
+        "add_to_cart_popup_visible_once": {
+          "label": "Is the add to cart popup visible once"
+        },
+        "add_to_cart_popup_products": {
+          "label": "Displayed products in the add to cart popup"
+        }
+      }
+    },
     "announcement-bar": {
       "name": "Announcement bar",
       "settings": {
