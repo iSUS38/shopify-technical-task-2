@@ -63,7 +63,7 @@
     assign show_desktop_slider = true
   endif
 -%}
-f
+
 <div
   class="color-{{ section.settings.color_scheme }} isolate gradient"
 >
@@ -88,6 +88,7 @@ f
         role="list"
         aria-label="{{ 'general.slider.name' | t }}"
       >
+        {{ section.settings.featured_products.size }}
         {% assign skip_card_product_styles = false %}
 
         {%- if section.settings.featured_products.size > 0 -%}
