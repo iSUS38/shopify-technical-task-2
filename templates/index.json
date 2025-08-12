@@ -55,10 +55,7 @@
       "settings": {
         "title": "<p>Featured products</p>",
         "featured_products": [
-          "5-htp-100-mg-60-kaps",
-          "akaasiakuitu",
-          "acerola",
-          "aloe-vera-suihke-200ml"
+          "acerola"
         ],
         "is_add_to_cart_popup_enabled": false,
         "is_add_to_cart_popup_visible_once": false,
