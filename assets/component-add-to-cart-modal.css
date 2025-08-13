@@ -33,3 +33,8 @@
 .add_to_cart_modal-subtitles > span {
     display: inline-block;
 }
+
+.add_to_cart_modal-subtitles .add-to-cart-modal-product-name {
+    font-weight: 700;
+    font-size: 20px;
+}
