@@ -34,6 +34,7 @@
 .add_to_cart_modal-subtitles > span {
     display: inline-block;
     font-size: 14px;
+    line-height: 23px;
 }
 
 .add_to_cart_modal-subtitles .add-to-cart-modal-product-name,
