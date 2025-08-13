@@ -64,7 +64,7 @@
   endif
 
 
-  assign collection_product = collections["test"].products | slice: 10
+  assign collection_product = collections["test"].products | slice: 0, 10
 -%}
 
 {{ collection_product.size }}
