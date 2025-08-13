@@ -66,7 +66,7 @@
 
   assign collection_products = collections["test"].products | slice: 0, 10
 -%}
-{{ collection_products.size }}
+
 <div
   data-kkk="{{ all_products.first }}"
   class="color-{{ section.settings.color_scheme }} isolate gradient"
@@ -94,8 +94,8 @@
       >
         {% assign skip_card_product_styles = false %}
 
-        {%- if featured_products.size > 0 -%}
-          {%- for product in featured_products -%}
+        {%- if collection_products.size > 0 -%}
+          {%- for product in collection_products -%}
             <li
               id="Slide-{{ section.id }}-{{ forloop.index }}"
               class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
