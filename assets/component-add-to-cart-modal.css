@@ -5,6 +5,7 @@
     background-color: white;
     padding: 40px;
     border: 1px solid #F5F5F5;
+    gap: 10px;
 }
 
 .add-to-cart-modal-product-image,
