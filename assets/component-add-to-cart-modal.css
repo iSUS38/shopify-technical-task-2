@@ -6,3 +6,8 @@
     display: flex;
     justify-content: center;
 }
+
+.add-to-cart-modal-product-image img {
+    width: 400px;
+    height: 400px;
+}
