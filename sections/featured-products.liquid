@@ -41,6 +41,7 @@
 
 {%- liquid
   assign featured_products = section.settings.featured_products | map: 'handle'
+  assign first_featured_product = nil
   assign show_add_to_cart_popup = false
 
   if section.settings.is_add_to_cart_popup_enabled
@@ -97,6 +98,10 @@
 
         {%- for product_handle in featured_products -%}
           {%- assign product = all_products[product_handle] %}
+
+          {% if forloop.index == 1 %}
+            {% assign first_featured_product = product %}
+          {% endif %}
 
           <li
             id="Slide-{{ section.id }}-{{ forloop.index }}"
@@ -159,64 +164,8 @@
       {{ 'mask-arch.svg' | inline_asset_content }}
     {%- endif -%}
 
-    {% if section.settings.is_add_to_cart_popup_enabled %}
-      {% assign first_featured_product = featured_products.first %}
-
-      <div class="add-to-cart-confirmation-modal">
-        <div class="add-to-cart-modal-product-image">
-          <img 
-            src="{{ first_featured_product.featured_image | image_url: width: 600 }}" 
-            alt="{{ first_featured_product.featured_image.alt }}"
-            width="{{ first_featured_product.featured_image.width }}"
-            height="{{ first_featured_product.featured_image.height }}"
-           />
-        </div>
-        <div>
-          <div>
-            <h5>{{ section.settings.title }}</h5>
-          </div>
-          <div>
-            <span>{{ 'add_to_cart_modal.product_message' | t: product_name: first_featured_product.title }}</span>
-            <span>{{ 'add_to_cart_modal.save_money_message' | t: saved_amount: 0 }}</span>
-          </div>
-          <div class="add-to-cart-modal-recommended-products">
-            {% assign recommended_products = section.settings.add_to_cart_popup_products | map: 'handle' %}
-
-            {% for recommended_product_handle in recommended_products %}
-              {% assign recommended_product = all_products[recommended_product_handle] %}
-
-              <div class="add-to-cart-modal-recommendation-product">
-                <div class="recommended-product-image-wrapper">
-                  <img 
-                    src="{{ recommended_product.featured_image | image_url: width: 400 }}"
-                    alt="{{ recommended_product.featured_image.alt }}"
-                    width="88px"
-                    height="100px"
-                  />
-                </div>
-                <div>
-                  <div>
-                    <h5>{{ recommended_product.title }}</h5>
-                    <span>{{ recommended_product.type }}</span>
-                  </div>
-
-                  {% if recommended_product.first_available_variant.sku %}
-                    <div>
-                      <span>{{ 'add_to_cart_modal.sku_caption' | t: sku: recommended_product.first_available_variant.sku }}</span>
-                    </div>
-                  {% endif %}
-
-                  {% render 'price', product: recommended_product %}
-                </div>
-              </div>
-            {% endfor %}
-          </div>
-          <div class="add-to-cart-modal-buttons-wrapper">
-              <button>{{ 'add_to_cart_modal.add_to_cart_all' | t }}</button>
-              <button>{{ 'add_to_cart_modal.add_to_cart' | t }}</button>
-          </div>
-        </div>
-      </div>
+    {% if first_featured_product and section.settings.is_add_to_cart_popup_enabled %}
+      {% render 'confirmation-add-to-cart-modal', first_featured_product: first_featured_product %}
     {% endif %}
   </div>
 </div>
