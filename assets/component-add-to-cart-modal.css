@@ -63,3 +63,9 @@
     display: flex;
     gap: 10px;
 }
+
+.add-to-cart-modal-recommended-products {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
