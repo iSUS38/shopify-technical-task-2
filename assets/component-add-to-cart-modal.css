@@ -79,3 +79,8 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
+.recommended-product-image-wrapper {
+    width: 80px;
+    height: 110px;
+}
