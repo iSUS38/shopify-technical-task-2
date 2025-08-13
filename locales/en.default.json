@@ -71,6 +71,13 @@
     "success": "Thanks for subscribing",
     "button_label": "Subscribe"
   },
+  "add_to_cart_modal": {
+    "product_message": "You are trying to add <span class=\"add-to-cart-modal-product-name\">{{ product_name }}</span> to the cart.",
+    "save_money_message": "Complete your look and save <span class=\"add-to-cart-modal-amount-saved\">{{ saved_amount}}</span>",
+    "sku_caption": "SKU: {{ sku }}",
+    "add_to_cart_all": "Add To Cart",
+    "add_to_cart": "Continue To The Cart"
+  },
   "accessibility": {
     "skip_to_text": "Skip to content",
     "skip_to_product_info": "Skip to product information",
@@ -383,9 +390,6 @@
       "min_error": "This item has a minimum of {{ min }}",
       "max_error": "This item has a maximum of {{ max }}",
       "step_error": "You can only add this item in increments of {{ step }}"
-    },
-    "featured_products": {
-      "add_to_cart_product_message": "You are trying to add <span class=\"add-to-cart-modal-product-name\">{{ product_name }}</span> to the cart."
     }
   },
   "localization": {
