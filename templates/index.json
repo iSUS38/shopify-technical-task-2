@@ -54,6 +54,11 @@
       "name": "t:sections.featured-products.name",
       "settings": {
         "title": "<p>Featured products</p>",
+        "product_list": [
+          "acerola",
+          "5-htp-100-mg-60-kaps",
+          "akaasiakuitu"
+        ],
         "is_add_to_cart_popup_enabled": false,
         "is_add_to_cart_popup_visible_once": false,
         "add_to_cart_popup_products": []
