@@ -39,7 +39,7 @@
 {%- endstyle -%}
 
 {% assign featured_products = collections[0].products %}
-{{ collections[0].handle }}
+{{ featured_products.count }}
 {%- liquid
   assign products_to_display = section.settings.collection.all_products_count
 
