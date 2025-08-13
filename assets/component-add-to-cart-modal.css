@@ -64,6 +64,10 @@
     gap: 10px;
 }
 
+.add-to-cart-modal-recommendation-product h4 {
+    margin: 0;
+}
+
 .add-to-cart-modal-recommended-products {
     display: flex;
     flex-direction: column;
