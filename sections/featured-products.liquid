@@ -40,6 +40,9 @@
 
 
 {%- liquid
+  assign featured_products = section.settings.featured_products | map: 'handle'
+
+
   assign products_to_display = section.settings.collection.all_products_count
 
   if section.settings.collection.all_products_count > section.settings.products_to_show
@@ -87,6 +90,13 @@
         aria-label="{{ 'general.slider.name' | t }}"
       >
         {% assign skip_card_product_styles = false %}
+
+        {%- for product_handle in featured_products -%}
+          {%- assign product = all_products[product_handle] %}
+
+          {{ product.handle }}
+        {% endfor %}
+
 
         {%- if collection_products.size > 0 -%}
           {%- for product in collection_products -%}
