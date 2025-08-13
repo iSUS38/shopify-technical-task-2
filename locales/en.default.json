@@ -73,7 +73,7 @@
   },
   "add_to_cart_modal": {
     "product_message_html": "You are trying to add <span class='add-to-cart-modal-product-name'>{{ product_name }}</span> to the cart.",
-    "save_money_message": "Complete your look and save <span class=\"/add-to-cart-modal-amount-saved\">{{ saved_amount}}</span>",
+    "save_money_message_html": "Complete your look and save <span class=\"/add-to-cart-modal-amount-saved\">{{ saved_amount}}</span>",
     "sku_caption": "SKU: {{ sku }}",
     "add_to_cart_all": "Add To Cart",
     "add_to_cart": "Continue To The Cart"
