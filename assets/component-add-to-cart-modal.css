@@ -19,7 +19,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 22px;
 }
 
 .add-to-cart-modal-product-image img {
@@ -92,7 +92,7 @@
 
 .recommended-product-image-wrapper {
     width: 80px;
-    height: 110px;
+    height: 100px;
 }
 
 .recommended-product-image-wrapper img {
