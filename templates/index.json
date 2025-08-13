@@ -55,7 +55,11 @@
       "settings": {
         "title": "<p>Featured products</p>",
         "featured_products": [
-          "acerola"
+          "annostelijapumppu-lemmikkien-lohioljyyn",
+          "puhdas-lahdevesi-05l",
+          "aroma-diffuuseri-140ml",
+          "puhdas-aromaterapia-autodiffuuseri-elamanpuu",
+          "puhdas-aromaterapia-autodiffuuseri-cd-01-14"
         ],
         "is_add_to_cart_popup_enabled": false,
         "is_add_to_cart_popup_visible_once": false,
