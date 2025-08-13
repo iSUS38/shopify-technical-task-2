@@ -81,6 +81,11 @@
     padding: 5px 0;
 }
 
+.recommended-product-inner h5 {
+    font-size: 14px;
+    font-weight: bold;
+}
+
 .recommended-product-image-wrapper {
     width: 80px;
     height: 110px;
