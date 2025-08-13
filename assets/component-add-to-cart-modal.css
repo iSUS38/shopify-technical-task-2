@@ -29,3 +29,7 @@
     justify-content: center;
     width: 100%;
 }
+
+.add_to_cart_modal-subtitles > span {
+    display: inline-block;
+}
