@@ -58,3 +58,8 @@
 .add-to-cart-modal-title * {
     margin: 0;
 }
+
+.add-to-cart-modal-recommendation-product {
+    display: flex;
+    gap: 10px;
+}
