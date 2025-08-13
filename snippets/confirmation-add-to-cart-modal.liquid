@@ -16,7 +16,7 @@
           </div>
           <div>
             <span>{{ 'add_to_cart_modal.product_message_html' | t: product_name: first_featured_product.title }}</span>
-            <span>{{ 'add_to_cart_modal.save_money_message' | t: saved_amount: 0 }}</span>
+            <span>{{ 'add_to_cart_modal.save_money_message_html' | t: saved_amount: 0 }}</span>
           </div>
           <div class="add-to-cart-modal-recommended-products">
             {% assign recommended_products = section.settings.add_to_cart_popup_products | map: 'handle' %}
