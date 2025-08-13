@@ -54,10 +54,14 @@
       "name": "t:sections.featured-products.name",
       "settings": {
         "title": "<p>Featured products</p>",
-        "product_list": [
-          "acerola",
-          "5-htp-100-mg-60-kaps",
-          "akaasiakuitu"
+        "featured_products": [
+          "beautydna-elastic-serum-for-saggy-and-tired-skin",
+          "bee-venom-serum-30-ml",
+          "berberiini-60-kaps",
+          "puhdas-beta-alaniini-200-g",
+          "beauty-oil-bronzing-carrot-oil-porkkanaoljy-100-ml",
+          "chlorella-spirulina",
+          "cla-800-mg"
         ],
         "is_add_to_cart_popup_enabled": false,
         "is_add_to_cart_popup_visible_once": false,
