@@ -1,4 +1,5 @@
 .add-to-cart-confirmation-modal {
+    position: relative;
     width: 80%;
     display: flex;
     justify-content: center;
@@ -123,6 +124,9 @@
 }
 
 .add-to-cart-close {
+    position: absolute;
+    top: 0;
+    right: 0;
     width: 14px;
     height: 14px;
 }
