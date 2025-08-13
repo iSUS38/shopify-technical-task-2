@@ -67,7 +67,10 @@
 <div
   class="color-{{ section.settings.color_scheme }} isolate gradient"
 >
-  {{ cart.currency.name }}
+  {% for collection in collections %}
+
+    {{ collection.name }}
+  {% endfor %}
   <div
     class="collection{% if section.settings.quick_add == 'bulk' %} collection-quick-add-bulk{% endif %} section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}"
     id="collection-{{ section.id }}"
