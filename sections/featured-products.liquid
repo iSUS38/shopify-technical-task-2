@@ -194,8 +194,26 @@
                     height="100px"
                   />
                 </div>
+                <div>
+                  <div>
+                    <h5>{{ recommended_product.title }}</h5>
+                    <span>{{ recommended_product.type }}</span>
+                  </div>
+
+                  {% if recommended_product.first_available_variant.sku %}
+                    <div>
+                      <span>{{ 'add_to_cart_modal.sku_caption' | t: sku: recommended_product.first_available_variant.sku }}</span>
+                    </div>
+                  {% endif %}
+
+                  {% render 'price', product: recommended_product %}
+                </div>
               </div>
             {% endfor %}
+          </div>
+          <div class="add-to-cart-modal-buttons-wrapper">
+              <button>{{ 'add_to_cart_modal.add_to_cart_all' | t }}</button>
+              <button>{{ 'add_to_cart_modal.add_to_cart' | t }}</button>
           </div>
         </div>
       </div>
