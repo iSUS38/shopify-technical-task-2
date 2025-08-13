@@ -100,3 +100,19 @@
     display: flex;
     gap: 10px;
 }
+
+.add-to-cart-modal-all {
+    background-color: #05117F;
+    color: #E8E8E8;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+}
+
+.add-to-cart-modal-item {
+    background-color: transparent;
+    border: 1px solid #05117F;
+    color: #05117F;
+    font-weight: 500;
+    font-size: 16px;
+}
