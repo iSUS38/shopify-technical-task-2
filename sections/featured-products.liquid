@@ -41,7 +41,11 @@
 
 {%- liquid
   assign featured_products = section.settings.featured_products | map: 'handle'
+  assign show_add_to_cart_popup = false
 
+  if section.settings.is_add_to_cart_popup_enabled
+    assign show_add_to_cart_popup = true
+  endif
 
   assign products_to_display = section.settings.collection.all_products_count
 
@@ -113,7 +117,7 @@
               skip_styles: skip_card_product_styles,
               section_id: section.id,
               quick_add: false,
-              show_add_to
+              show_add_to_cart_button: 
             %}
           </li>
         {% endfor %}
@@ -154,6 +158,48 @@
     {% if section.settings.image_shape == 'arch' %}
       {{ 'mask-arch.svg' | inline_asset_content }}
     {%- endif -%}
+
+    {% if section.settings.is_add_to_cart_popup_enabled %}
+      {% assign first_featured_product = featured_products.first %}
+
+      <div class="add-to-cart-confirmation-modal">
+        <div class="add-to-cart-modal-product-image">
+          <img 
+            src="{{ first_featured_product.featured_image | image_url: width: 600 }}" 
+            alt="{{ first_featured_product.featured_image.alt }}"
+            width="{{ first_featured_product.featured_image.width }}"
+            height="{{ first_featured_product.featured_image.height }}"
+           />
+        </div>
+        <div>
+          <div>
+            <h5>{{ section.settings.title }}</h5>
+          </div>
+          <div>
+            <span>{{ 'add_to_cart_modal.product_message' | t: product_name: first_featured_product.title }}</span>
+            <span>{{ 'add_to_cart_modal.save_money_message' | t: saved_amount: 0 }}</span>
+          </div>
+          <div class="add-to-cart-modal-recommended-products">
+            {% assign recommended_products = section.settings.add_to_cart_popup_products | map: 'handle' %}
+
+            {% for recommended_product_handle in recommended_products %}
+              {% assign recommended_product = all_products[recommended_product_handle] %}
+
+              <div class="add-to-cart-modal-recommendation-product">
+                <div class="recommended-product-image-wrapper">
+                  <img 
+                    src="{{ recommended_product.featured_image | image_url: width: 400 }}"
+                    alt="{{ recommended_product.featured_image.alt }}"
+                    width="88px"
+                    height="100px"
+                  />
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    {% endif %}
   </div>
 </div>
 
