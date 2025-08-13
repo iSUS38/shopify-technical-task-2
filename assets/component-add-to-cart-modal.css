@@ -22,7 +22,8 @@
     gap: 22px;
 }
 
-.add-to-cart-modal-product-image img {
+.add-to-cart-modal-product-image img,
+.recommended-product-image-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -93,11 +94,6 @@
 .recommended-product-image-wrapper {
     width: 80px;
     height: 100px;
-}
-
-.recommended-product-image-wrapper img {
-    width: 100%;
-    height: 100%;
 }
 
 .add-to-cart-modal-buttons-wrapper {
