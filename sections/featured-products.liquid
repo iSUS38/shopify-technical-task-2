@@ -63,14 +63,9 @@
   if section.settings.enable_desktop_slider and products_to_display > section.settings.columns_desktop
     assign show_desktop_slider = true
   endif
-
-  assign collection_products = collections["test"].products
 -%}
 
-<div
-  data-kkk="{{ all_products.first }}"
-  class="color-{{ section.settings.color_scheme }} isolate gradient"
->
+<div class="color-{{ section.settings.color_scheme }} isolate gradient">
   <div
     class="collection{% if section.settings.quick_add == 'bulk' %} collection-quick-add-bulk{% endif %} section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}"
     id="collection-{{ section.id }}"
@@ -170,7 +165,7 @@
     },
     {
         "type": "product_list",
-        "id": "product_list",
+        "id": "featured_products",
         "label": "t:sections.featured-products.settings.featured_products.label"
     },
     {
