@@ -94,8 +94,6 @@
         {%- for product_handle in featured_products -%}
           {%- assign product = all_products[product_handle] %}
 
-          {{ product.handle }}
-
           <li
             id="Slide-{{ section.id }}-{{ forloop.index }}"
             class="grid__item slider__slide {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
