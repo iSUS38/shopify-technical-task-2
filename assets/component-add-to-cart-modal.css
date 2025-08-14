@@ -119,7 +119,7 @@
 }
 
 .add-to-cart-confirmation-modal  .price__sale {
-    display: flex;
+    display: flex !important;
     flex-direction: row-reverse;
     gap: 10px;
 }
