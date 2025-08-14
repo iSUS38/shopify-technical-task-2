@@ -41,7 +41,7 @@ class CartNotification extends HTMLElement {
       console.log(document.getElementById(section.selector))
       document.getElementById(section.id).innerHTML = this.getSectionInnerHTML(
         parsedState.sections[section.id],
-        section.selector || section.id
+        section.selector
       );
     });
 
