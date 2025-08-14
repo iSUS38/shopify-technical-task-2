@@ -52,7 +52,7 @@ class CartNotification extends HTMLElement {
     console.log(332)
     if (parsedState && parsedState.sections && parsedState.items && parsedState.items.length) {
       if (parsedState.sections["cart-notification-product"]) {
-        console.log(this.notification.getElementById("cart-notification-product"))
+        console.log(this.notification.querySelector("#cart-notification-product"))
         //this.notification.getElementById("cart-notification-product")?.outerHTML = parsedState.sections["cart-notification-product"];
       }
 /*
