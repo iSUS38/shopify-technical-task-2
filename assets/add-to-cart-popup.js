@@ -38,7 +38,7 @@ console.log(addToCartSingleProductButton)
         console.log(productId)
 
         if (window.routes.cart_add_url && +productId) {
-            fetch(window.routes.cart_add_url, {
+            fetch(window.routes.cart_add_url + ".js", {
                 body: JSON.stringify({
                     id: +productId,
                     quantity: 1
