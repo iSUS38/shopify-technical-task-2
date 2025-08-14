@@ -71,8 +71,17 @@
             {% endfor %}
           </div>
           <div class="add-to-cart-modal-buttons-wrapper">
-            <button class="add-to-cart-modal-all">{{ 'add_to_cart_modal.add_to_cart_all' | t }}</button>
-            <button class="add-to-cart-modal-item">{{ 'add_to_cart_modal.add_to_cart' | t }}</button>
+            <button
+                class="add-to-cart-modal-all"
+            >
+                {{ 'add_to_cart_modal.add_to_cart_all' | t }}
+            </button>
+            <button 
+                class="add-to-cart-modal-item"
+                data-product-id={{ first_featured_product.id }}
+            >
+                {{ 'add_to_cart_modal.add_to_cart' | t }}
+            </button>
           </div>
           <span class="svg-wrapper add-to-cart-close">
             {{- 'icon-close-new.svg' | inline_asset_content -}}
