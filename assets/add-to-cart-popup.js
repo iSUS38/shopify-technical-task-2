@@ -38,9 +38,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (window.routes.cart_add_url && +productId) {
             let formData = {
+                sections: "cart-notification-product,cart-notification-button,cart-icon-bubble",
                 items: [{
                     id: +productId,
-                    sections: "cart-notification-product,cart-notification-button,cart-icon-bubble",
                     quantity: 1
                 }]
             };
