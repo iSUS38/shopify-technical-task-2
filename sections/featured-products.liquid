@@ -73,6 +73,8 @@
   if section.settings.enable_desktop_slider and products_to_display > section.settings.columns_desktop
     assign show_desktop_slider = true
   endif
+
+  assign is_add_to_cart_popup_enabled = section.settings.is_add_to_cart_popup_enabled
 -%}
 
 <div class="featured-products-section">
@@ -124,7 +126,8 @@
               skip_styles: skip_card_product_styles,
               section_id: section.id,
               quick_add: false,
-              show_add_to_cart_button: true
+              show_add_to_cart_button: true,
+              is_add_to_cart_popup_enabled: is_add_to_cart_popup_enabled
             %}
           </li>
         {% endfor %}
