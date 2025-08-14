@@ -32,9 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         addToCartContainer?.classList.remove("modal-show");
     });
-
+console.log(addToCartSingleProductButton)
     addToCartSingleProductButton?.addEventListener("click", function () {
-        var productId = this.getAttribute("product-id");
+        var productId = this.getAttribute("data-product-id");
+        console.log(productId)
 
         if (window.routes.cart_add_url && +productId) {
             fetch(window.routes.cart_add_url, {
