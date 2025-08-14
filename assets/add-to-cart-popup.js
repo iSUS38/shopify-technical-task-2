@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const addToCartPopupMainImage = addToCartPopUpWrapper.querySelector(".add-to-cart-modal-product-image img");
                 const addToCartPopupProductTitleEl = addToCartPopUpWrapper.querySelector(".add-to-cart-modal-product-name");
 
-                console.log(productName)
+                console.log(productCardWrapper.querySelector(".card__heading"))
                 addToCartPopupProductTitleEl.innerHTML = productName;
                 addToCartPopupMainImage.src = productImageUrl;
 
