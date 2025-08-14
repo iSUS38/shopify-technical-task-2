@@ -10,7 +10,7 @@
         if  recommended_product.compare_at_price > recommended_product.price
             assign product_saved_amount = recommended_product.compare_at_price | minus: recommended_product.price
 
-            assign total_saved_amount = total_saving | plus: product_saved_amount
+            assign total_saved_amount = total_saved_amount | plus: product_saved_amount
         endif
     endfor
 
