@@ -1,21 +1,20 @@
 {{ 'component-add-to-cart-modal.css' | asset_url | stylesheet_tag }}
 
+{% liquid
+    assign recommended_products = section.settings.add_to_cart_popup_products | map: 'handle'
+    assign total_saved_amount = 0
 
-    {%assign total_saved_amount = 0%}
+    for recommended_product_handle in recommended_products
+        assign recommended_product = all_products[recommended_product_handle]
 
-        {%for recommended_product_handle in recommended_products%}
-            {%assign recommended_product = all_products[recommended_product_handle]%}
+        if  recommended_product.compare_at_price > recommended_product.price
+            assign product_saved_amount = recommended_product.compare_at_price | minus: recommended_product.price
+
+            assign total_saved_amount = total_saving | plus: product_saved_amount
+        endif
+    endfor
+%}
 {{ total_saved_amount }}
-        {% if  recommended_product.compare_at_price > recommended_product.price%}
-            {% assign product_saved_amount = recommended_product.compare_at_price | minus: recommended_product.price%}
-
-            {% assign total_saved_amount = total_saving | plus: product_saved_amount%}
-            {% endif%}
-                {% endfor %}
-
-
-
-{{ recommended_product_handle }}
 <div class="add-to-cart-confirmation-modal-container">
     <div class="add-to-cart-confirmation-modal">
         <div class="add-to-cart-modal-product-image">
@@ -38,8 +37,6 @@
             {% endif %}
           </div>
           <div class="add-to-cart-modal-recommended-products">
-            {% assign recommended_products = section.settings.add_to_cart_popup_products | map: 'handle' %}
-
             {% for recommended_product_handle in recommended_products %}
               {% assign recommended_product = all_products[recommended_product_handle] %}
 
