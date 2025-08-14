@@ -36,10 +36,8 @@ class CartNotification extends HTMLElement {
 
   renderContents(parsedState) {
     this.cartItemKey = parsedState.key;
-console.log(parsedState)
+
     this.getSectionsToRender().forEach((section) => {
-      console.log(section.selector)
-      console.log(parsedState.sections)
       document.getElementById(section.id).innerHTML = this.getSectionInnerHTML(
         parsedState.sections[section.id],
         section.selector
@@ -48,6 +46,26 @@ console.log(parsedState)
 
     if (this.header) this.header.reveal();
     this.open();
+  }
+
+  renderContentsAfterAddToCartPopup(parsedState) {
+    if (parsedState && parsedState.sections && parsedState.items && parsedState.items.length) {
+      if (parsedState.sections["cart-notification-product"]) {
+        this.notification.getElementById("cart-notification-product")?.outerHTML = parsedState.sections["cart-notification-product"];
+      }
+
+      if (parsedState.sections["cart-icon-bubble"]) {
+        this.notification.getElementById("cart-icon-bubble")?.outerHTML = parsedState.sections["cart-icon-bubble"];
+      }
+
+      if (parsedState.sections["cart-notification-button"]) {
+        this.notification.getElementById("cart-notification-button")?.outerHTML = parsedState.sections["cart-notification-button"];
+      }
+
+      if (this.header) this.header.reveal();
+
+      this.open();
+    }
   }
 
   getSectionsToRender() {
