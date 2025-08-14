@@ -153,3 +153,7 @@
     backdrop-filter: blur(2px);
     cursor: pointer;
 }
+
+.add-to-cart-confirmation-modal-container.modal-show ~ .add-to-cart-modal-backdrop {
+    display: block !important;
+}
