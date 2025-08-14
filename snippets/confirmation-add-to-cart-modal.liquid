@@ -7,14 +7,12 @@
         assign recommended_product = all_products[recommended_product_handle]
 
         if  recommended_product.compare_at_price > recommended_product.price
-            assign product_saved_amount = product.compare_at_price | minus: product.price
+            assign product_saved_amount = recommended_product.compare_at_price | minus: recommended_product.price
 
             assign total_saved_amount = total_saving | plus: product_saved_amount
         endif
     endfor
 %}
-
-{{ product_saved_amount }}
 
 <div class="add-to-cart-confirmation-modal-container">
     <div class="add-to-cart-confirmation-modal">
