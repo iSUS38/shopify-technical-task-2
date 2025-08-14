@@ -54,6 +54,10 @@
     transform: scale(1);
 }
 
+.add-to-cart-confirmation-modal-container.modal-show ~ .add-to-cart-modal-backdrop {
+    display: block !important;
+}
+
 .add_to_cart_modal-subtitles > span {
     display: inline-block;
     font-size: 14px;
@@ -154,8 +158,4 @@
     -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
     cursor: pointer;
-}
-
-.add-to-cart-confirmation-modal-container.modal-show ~ .add-to-cart-modal-backdrop {
-    display: block !important;
 }
