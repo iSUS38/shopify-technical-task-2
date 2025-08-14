@@ -93,7 +93,7 @@ if (!customElements.get('product-form')) {
               quickAddModal.hide(true);
             } else {
               CartPerformance.measure("add:paint-updated-sections", () => {
-                console.log(this)
+                console.log(this.cart)
                 this.cart.renderContents(response);
               });
             }
