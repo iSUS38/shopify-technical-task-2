@@ -1,14 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     const allAddToCartButtons = document.querySelectorAll(".card-wrapper .card__add-to-cart-button button"); 
+    const addToCartPopUpCloseButton = document.querySelector(".add-to-cart-confirmation-modal-container . add-to-cart-close");
 
     allAddToCartButtons.forEach(function (button) {
         button.addEventListener("click", function () {
             const productCardWrapper = this.closest(".card-wrapper");
             const isAddToCartPopupEnabled = this.getAttribute("data-pop-up-enabled");
             const addToCartPopUpWrapper = document.querySelector(".add-to-cart-confirmation-modal-container");
-
-            console.log(addToCartPopUpWrapper)
-            console.log(isAddToCartPopupEnabled)
 
             if (isAddToCartPopupEnabled && addToCartPopUpWrapper) {
                 const productImageUrl = productCardWrapper.querySelector(".media img").src;
@@ -20,5 +18,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 addToCartPopUpWrapper.classList.add("modal-show");
             }
         });
+    });
+
+    addToCartPopUpCloseButton?.addEventListener("click", function () {
+        const addToCartContainer = this.closest(".add-to-cart-confirmation-modal-container");
+
+        addToCartContainer?.classList.remove("modal-show");
     });
 });
