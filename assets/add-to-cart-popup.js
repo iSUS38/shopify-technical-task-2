@@ -56,8 +56,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 addToCartPopUpCloseButton.click();
 
                 setTimeout(() => {
+                    var cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
                     CartPerformance.measure("add:paint-updated-sections", () => {
-                      this.cart.renderContents(response);
+                      cart.renderContents(response);
                     });
                 });
             });
