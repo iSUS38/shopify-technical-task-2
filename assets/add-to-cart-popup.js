@@ -53,7 +53,13 @@ document.addEventListener("DOMContentLoaded", function () {
             })
             .then(res => res.json())
             .then(() => {
-                addToCartPopUpCloseButton.click()
+                addToCartPopUpCloseButton.click();
+
+                setTimeout(() => {
+                    CartPerformance.measure("add:paint-updated-sections", () => {
+                      this.cart.renderContents(response);
+                    });
+                });
             });
         }
     });
