@@ -13,11 +13,7 @@
             assign total_saved_amount = total_saved_amount | plus: product_saved_amount
         endif
     endfor
-
-    assign total_saved_amount = total_saved_amount | money
 %}
-
-{{ total_saved_amount }}
 
 <div class="add-to-cart-confirmation-modal-container">
     <div class="add-to-cart-confirmation-modal">
