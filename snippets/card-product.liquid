@@ -290,7 +290,11 @@
 
           {% if show_add_to_cart_button %}
             <div class="card__add-to-cart-button">
-              <button>{{ 'products.product.add_to_cart' | t }}</button>
+              <button 
+                {% if is_add_to_cart_popup_enabled %}data-pop-up-enabled="true"{% endif %}
+              >
+                {{ 'products.product.add_to_cart' | t }}
+              </button>
             </div>
           {% endif %}
         </div>
