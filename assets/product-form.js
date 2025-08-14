@@ -83,7 +83,6 @@ if (!customElements.get('product-form')) {
                 () => {
                   setTimeout(() => {
                     CartPerformance.measure("add:paint-updated-sections", () => {
-                      console.log(this)
                       this.cart.renderContents(response);
                     });
                   });
@@ -93,7 +92,6 @@ if (!customElements.get('product-form')) {
               quickAddModal.hide(true);
             } else {
               CartPerformance.measure("add:paint-updated-sections", () => {
-                console.log(this.cart)
                 this.cart.renderContents(response);
               });
             }
