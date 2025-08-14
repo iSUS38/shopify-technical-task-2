@@ -14,13 +14,15 @@ document.addEventListener("DOMContentLoaded", function () {
             if (isAddToCartPopupEnabled && addToCartPopUpWrapper) {
                 const productImageUrl = productCardWrapper.querySelector(".media img").src;
                 const productName = productCardWrapper.querySelector(".card__heading[data-product-name]")?.getAttribute("data-product-name");
+                const productID = productCardWrapper.querySelector(".card__heading[data-product-id]")?.getAttribute("data-product-id");
 
                 const addToCartPopupMainImage = addToCartPopUpWrapper.querySelector(".add-to-cart-modal-product-image img");
                 const addToCartPopupProductTitleEl = addToCartPopUpWrapper.querySelector(".add-to-cart-modal-product-name");
+                const addToCartSingleItemButtonUpdated = addToCartPopUpWrapper.querySelector(".add-to-cart-modal-item");
 
-                console.log(productCardWrapper.querySelector(".card__heading"))
                 addToCartPopupProductTitleEl.innerHTML = productName;
                 addToCartPopupMainImage.src = productImageUrl;
+                addToCartSingleItemButtonUpdated.setAttribute("data-product-id", productID);
 
                 addToCartPopUpWrapper.classList.add("modal-show");
             }
