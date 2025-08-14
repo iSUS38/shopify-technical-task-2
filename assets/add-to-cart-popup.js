@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 const addToCartPopupMainImage = addToCartPopUpWrapper.querySelector(".add-to-cart-modal-product-image img");
 
                 addToCartPopupMainImage.src = productImageUrl;
+
+                addToCartPopUpWrapper.classList.add("modal-show");
             }
         });
     });
