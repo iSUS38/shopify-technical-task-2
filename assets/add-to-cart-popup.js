@@ -51,9 +51,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 },
                 body: JSON.stringify(formData)
             })
-            .then(response => {
-            return response.json();
-            })
+            .then(res => res.json())
+            .then(() => {
+                addToCartPopUpCloseButton.click()
+            });
         }
     });
 });
