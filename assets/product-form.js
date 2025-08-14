@@ -83,6 +83,7 @@ if (!customElements.get('product-form')) {
                 () => {
                   setTimeout(() => {
                     CartPerformance.measure("add:paint-updated-sections", () => {
+                      console.log(this)
                       this.cart.renderContents(response);
                     });
                   });
