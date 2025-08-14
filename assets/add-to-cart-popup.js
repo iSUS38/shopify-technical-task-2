@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const allAddToCartButtons = document.querySelectorAll(".card-wrapper .card__add-to-cart-button button"); 
 console.log(allAddToCartButtons)
     allAddToCartButtons.forEach(function (button) {
-        console.log(button)
         button.addEventListener("click", function () {
+            console.log(this)
             const productCardWrapper = this.closest(".card-wrapper");
             const isAddToCartPopupEnabled = this.getAttribute("data-pop-up-enabled");
             const addToCartPopUpWrapper = productCardWrapper.querySelector(".add-to-cart-confirmation-modal-container");
