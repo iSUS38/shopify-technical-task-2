@@ -107,6 +107,12 @@
           </div>
         {%- endif -%}
         <div class="card__content">
+          {% if show_add_to_cart_button %}
+            <div class="card__add-to-cart-button">
+              <button>{{ 'products.product.add_to_cart' | t }}</button>
+            </div>
+          {% endif %}
+
           <div class="card__information">
             <h3
               class="card__heading"
