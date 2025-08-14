@@ -57,9 +57,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 addToCartPopUpCloseButton.click();
 
                 setTimeout(() => {
-                    var cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
+                    var cart = document.querySelector('cart-notification');
 
-                    cart.renderContents(res);
+                    cart.renderContentsAfterAddToCartPopup(res);
                 }, 400);
             });
         }
