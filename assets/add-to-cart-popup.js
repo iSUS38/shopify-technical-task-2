@@ -41,7 +41,6 @@ console.log(addToCartSingleProductButton)
             fetch(window.routes.cart_add_url + ".js", {
                 body: JSON.stringify({
                     items: [{
-                        "product-id": productId,
                         id: productId,
                         quantity: 1
                     }]
