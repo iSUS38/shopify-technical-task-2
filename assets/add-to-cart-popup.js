@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const allAddToCartButtons = document.querySelectorAll(".card-wrapper .card__add-to-cart-button button"); 
-    const addToCartPopUpCloseButton = document.querySelector(".add-to-cart-confirmation-modal-container . add-to-cart-close");
+    const addToCartPopUpCloseButton = document.querySelector(".add-to-cart-confirmation-modal-container .add-to-cart-close");
 
     allAddToCartButtons.forEach(function (button) {
         button.addEventListener("click", function () {
