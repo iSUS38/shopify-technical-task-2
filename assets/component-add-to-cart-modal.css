@@ -8,6 +8,8 @@
     gap: 10px;
     max-height: 520px;
     max-width: 920px;
+    transform: scale(0);
+    transition: 0.2s ease-out all;
 }
 
 .add-to-cart-modal-product-image,
@@ -38,14 +40,16 @@
     z-index: 9999999999999999999999999;
     width: 100%;
     display: none;
-    transform: scale(0);
-    transition: 0.2s ease-out transform;
     justify-content: center;
     width: 100%;
 }
 
 .add-to-cart-confirmation-modal-container.modal-show {
     display: flex;
+}
+
+.add-to-cart-confirmation-modal-container.modal-show  .add-to-cart-confirmation-modal {
+    transform: scale(1);
 }
 
 .add_to_cart_modal-subtitles > span {
