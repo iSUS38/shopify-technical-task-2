@@ -55,11 +55,11 @@ class CartNotification extends HTMLElement {
       }
 
       if (parsedState.sections["cart-icon-bubble-new"] && this.header) {
-        //this.header.querySelector("#cart-icon-bubble").outerHTML = parsedState.sections["cart-icon-bubble-new"];
+        this.header.querySelector("#cart-icon-bubble").innerHTML = this.getSectionInnerHTML(parsedState.sections["cart-icon-bubble-new"]);
       }
 
       if (parsedState.sections["cart-notification-button"]) {
-        //this.notification.querySelector("#cart-notification-button").outerHTML = parsedState.sections["cart-notification-button"];
+        this.notification.querySelector("#cart-notification-button").innerHTML = this.getSectionInnerHTML(parsedState.sections["cart-notification-button"]);
       }
 
       if (this.header) this.header.reveal();
