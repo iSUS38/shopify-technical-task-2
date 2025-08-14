@@ -118,6 +118,12 @@
     gap: 10px;
 }
 
+.add-to-cart-confirmation-modal  .price__sale {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+}
+
 .add-to-cart-modal-all {
     background-color: #05117F;
     color: #E8E8E8;
