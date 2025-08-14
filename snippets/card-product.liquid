@@ -286,13 +286,13 @@
                 </quantity-popover>
               {% endif %}
             {%- endif -%}
-
-            {% if show_add_to_cart_button %}
-              <div class="card__add-to-cart-button">
-                <button>{{ 'products.product.add_to_cart' | t }}</button>
-              </div>
-            {% endif %}
           </div>
+
+          {% if show_add_to_cart_button %}
+            <div class="card__add-to-cart-button">
+              <button>{{ 'products.product.add_to_cart' | t }}</button>
+            </div>
+          {% endif %}
         </div>
         {% assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id %}
         {% if quick_add == 'standard' %}
