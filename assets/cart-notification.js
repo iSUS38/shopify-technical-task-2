@@ -55,7 +55,7 @@ class CartNotification extends HTMLElement {
       }
 
       if (parsedState.sections["cart-icon-bubble"] && this.header) {
-        this.header.querySelector("#cart-icon-bubble").outerHTML = parsedState.sections["cart-icon-bubble"];
+        this.header.querySelector("#cart-icon-bubble").outerHTML = parsedState.sections["cart-icon-bubble-new"];
       }
 
       if (parsedState.sections["cart-notification-button"]) {
