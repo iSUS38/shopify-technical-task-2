@@ -37,8 +37,8 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    z-index: -1;
-    width: 100%;
+    z-index: 5;
+    width: 0;
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -46,7 +46,8 @@
 }
 
 .add-to-cart-confirmation-modal-container.modal-show {
-    z-index: 5;
+    width: 100%;
+    height: 100%;
 }
 
 .add-to-cart-confirmation-modal-container.modal-show  .add-to-cart-confirmation-modal {
