@@ -50,7 +50,13 @@ class CartNotification extends HTMLElement {
 
   renderContentsAfterAddToCartPopup(parsedState) {
     console.log(332)
-    
+    if (parsedState && parsedState.sections && parsedState.items && parsedState.items.length) {
+      if (parsedState.sections["cart-notification-product"]) {
+        this.notification.getElementById("cart-notification-product")?.outerHTML = parsedState.sections["cart-notification-product"];
+      }
+
+     
+    }
   }
 
   getSectionsToRender() {
