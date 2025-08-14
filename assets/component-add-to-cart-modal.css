@@ -37,9 +37,15 @@
     transform: translate(-50%, -50%);
     z-index: 9999999999999999999999999;
     width: 100%;
-    display: flex;
+    display: none;
+    transform: scale(0);
+    transition: 0.2s ease-out transform;
     justify-content: center;
     width: 100%;
+}
+
+.add-to-cart-confirmation-modal-container.modal-show {
+    display: flex;
 }
 
 .add_to_cart_modal-subtitles > span {
