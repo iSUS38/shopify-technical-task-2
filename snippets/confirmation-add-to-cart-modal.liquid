@@ -15,9 +15,11 @@
     endfor
 
     if total_saved_amount > 0
-        assign total_saved_amount = total_saved_amount | divided_by: 100
+        assign total_saved_amount = total_saved_amount
     endif
 %}
+
+{{ total_saved_amount }}
 
 <div class="add-to-cart-confirmation-modal-container">
     <div class="add-to-cart-confirmation-modal">
