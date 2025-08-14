@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
             const productCardWrapper = this.closest(".card-wrapper");
             const isAddToCartPopupEnabled = this.getAttribute("data-pop-up-enabled");
+            const parentSectionEl = this.closest(".section-template--*");
+            console.log(parentSectionEl)
             const addToCartPopUpWrapper = document.querySelector(".add-to-cart-confirmation-modal-container");
 
             if (isAddToCartPopupEnabled && addToCartPopUpWrapper) {
