@@ -1,8 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const allAddToCartButtons = document.querySelectorAll(".card-wrapper .card__add-to-cart-button button"); 
-    const addToCartPopUpCloseButton = document.querySelector(".add-to-cart-confirmation-modal-container .add-to-cart-close");
+    const addToCartPopupWrapper = document.querySelector(".add-to-cart-confirmation-modal-container");
+    const allAddToCartTileButtons = document.querySelectorAll(".card-wrapper .card__add-to-cart-button button"); 
+    const addToCartPopUpCloseButton = addToCartPopupWrapper.querySelector(".add-to-cart-close");
+    const addToCartSingleProductButton = addToCartPopupWrapper.querySelector(".add-to-cart-modal-item");
 
-    allAddToCartButtons.forEach(function (button) {
+    allAddToCartTileButtons.forEach(function (button) {
         button.addEventListener("click", function () {
             const productCardWrapper = this.closest(".card-wrapper");
             const isAddToCartPopupEnabled = this.getAttribute("data-pop-up-enabled");
@@ -29,5 +31,24 @@ document.addEventListener("DOMContentLoaded", function () {
         const addToCartContainer = this.closest(".add-to-cart-confirmation-modal-container");
 
         addToCartContainer?.classList.remove("modal-show");
+    });
+
+    addToCartSingleProductButton?.addEventListener("click", function () {
+        var productId = this.getAttribute("product-id");
+
+        if (window.routes.cart_add_url && +productId) {
+            fetch(window.routes.cart_add_url, {
+                body: JSON.stringify({
+                    id: +productId,
+                    quantity: 1
+                }),
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            })
+            .then((res) => res.json())
+            .then(res => res)
+        }
     });
 });
