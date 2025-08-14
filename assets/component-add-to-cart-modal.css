@@ -39,13 +39,9 @@
     transform: translate(-50%, -50%);
     z-index: 9999999999999999999999999;
     width: 100%;
-    display: none;
+    display: flex;
     justify-content: center;
     width: 100%;
-}
-
-.add-to-cart-confirmation-modal-container.modal-show {
-    display: flex;
 }
 
 .add-to-cart-confirmation-modal-container.modal-show  .add-to-cart-confirmation-modal {
