@@ -51,6 +51,7 @@ class CartNotification extends HTMLElement {
   renderContentsAfterAddToCartPopup(parsedState) {
     if (parsedState && parsedState.sections && parsedState.items && parsedState.items.length) {
       if (parsedState.sections["cart-notification-product"]) {
+        console.log( document.querySelector("#cart-notification-product"))
         document.querySelector("#cart-notification-product").outerHTML = parsedState.sections["cart-notification-product"];
       }
 
