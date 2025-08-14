@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const allAddToCartButtons = document.querySelector(".card-wrapper .card__add-to-cart-button button"); 
+    const allAddToCartButtons = document.querySelectorAll(".card-wrapper .card__add-to-cart-button button"); 
 
     allAddToCartButtons.forEach(function (button) {
         button.addEventListener("click", function () {
