@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 setTimeout(() => {
                     var cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
 
-                    cart.renderContents(res.items);
+                    cart.renderContents(res);
                 }, 400);
             });
         }
