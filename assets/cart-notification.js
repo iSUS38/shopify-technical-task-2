@@ -53,7 +53,7 @@ class CartNotification extends HTMLElement {
     if (parsedState && parsedState.sections && parsedState.items && parsedState.items.length) {
       if (parsedState.sections["cart-notification-product"]) {
         console.log(this.notification.querySelector("#cart-notification-product"))
-        this.notification.querySelector("#cart-notification-product")?.outerHTML = parsedState.sections["cart-notification-product"];
+        this.notification.querySelector("#cart-notification-product").outerHTML = parsedState.sections["cart-notification-product"];
       }
 /*
       if (parsedState.sections["cart-icon-bubble"]) {
