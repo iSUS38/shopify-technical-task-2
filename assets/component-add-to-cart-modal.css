@@ -120,7 +120,7 @@
 
 .add-to-cart-confirmation-modal  .price__sale {
     display: flex !important;
-    flex-direction: row-reverse;
+    flex-direction: row-reverse !important;
     gap: 10px;
 }
 
