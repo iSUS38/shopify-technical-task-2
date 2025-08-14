@@ -33,6 +33,8 @@
             <span>{{ 'add_to_cart_modal.product_message_html' | t: product_name: first_featured_product.title }}</span>
 
             {% if total_saved_amount > 0 %}
+                {% assign total_saved_amount = total_saved_amount | money %}
+
                 <span>{{ 'add_to_cart_modal.save_money_message_html' | t: saved_amount: total_saved_amount }}</span>
             {% endif %}
           </div>
