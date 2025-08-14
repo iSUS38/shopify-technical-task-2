@@ -618,4 +618,5 @@
   min-width: calc(12rem + var(--buttons-border-width) * 2);
   min-height: calc(4.5rem + var(--buttons-border-width) * 2);
   border: none;
+  border-radius: 26px;
 }
