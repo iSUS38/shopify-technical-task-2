@@ -49,24 +49,22 @@ class CartNotification extends HTMLElement {
   }
 
   renderContentsAfterAddToCartPopup(parsedState) {
-    console.log(332)
     if (parsedState && parsedState.sections && parsedState.items && parsedState.items.length) {
       if (parsedState.sections["cart-notification-product"]) {
-        console.log(this.notification.querySelector("#cart-notification-product"))
         this.notification.querySelector("#cart-notification-product").outerHTML = parsedState.sections["cart-notification-product"];
       }
-/*
+
       if (parsedState.sections["cart-icon-bubble"]) {
-        this.notification.getElementById("cart-icon-bubble")?.outerHTML = parsedState.sections["cart-icon-bubble"];
+        this.notification.querySelector("#cart-icon-bubble")?.outerHTML = parsedState.sections["cart-icon-bubble"];
       }
 
       if (parsedState.sections["cart-notification-button"]) {
-        this.notification.getElementById("cart-notification-button")?.outerHTML = parsedState.sections["cart-notification-button"];
+        this.notification.querySelector("#cart-notification-button")?.outerHTML = parsedState.sections["cart-notification-button"];
       }
 
       if (this.header) this.header.reveal();
 
-      this.open(); */
+      this.open();
     }
   }
 
