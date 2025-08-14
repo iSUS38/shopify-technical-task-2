@@ -32,28 +32,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
         addToCartContainer?.classList.remove("modal-show");
     });
-console.log(addToCartSingleProductButton)
+
     addToCartSingleProductButton?.addEventListener("click", function () {
         var productId = this.getAttribute("data-product-id");
-        console.log(productId)
 
         if (window.routes.cart_add_url && +productId) {
-            fetch(window.routes.cart_add_url + ".js", {
-                body: JSON.stringify({
-                    items: [{
-                        "product-id": productId,
-                        id: productId,
-                        quantity: 1
-                    }]
-                }),
-                method: "POST",
+            let formData = {
+                'items': [{
+                    'id': +productId,
+                    'quantity': 1
+                }]
+            };
+
+            fetch(window.Shopify.routes.root + 'cart/add.js', {
+                method: 'POST',
                 headers: {
-                    "Content-Type": "application/json",
-                    'Accept': 'application/json'
-                }
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
             })
-            .then((res) => res.json())
-            .then(res => res)
+            .then(response => {
+            return response.json();
+            })
         }
     });
 });
