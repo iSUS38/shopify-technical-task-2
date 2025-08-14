@@ -14,9 +14,7 @@
         endif
     endfor
 
-    if total_saved_amount > 0
-        assign total_saved_amount = total_saved_amount | divided_by: 100
-    endif
+    assign total_saved_amount = total_saved_amount | money
 %}
 
 {{ total_saved_amount }}
