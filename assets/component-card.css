@@ -597,11 +597,11 @@
 .card-wrapper .card__add-to-cart-button {
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: 5;
 }
 
 .card-wrapper .card__information.with-add-to-cart {
-  position: relative;
-  z-index: 5;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
