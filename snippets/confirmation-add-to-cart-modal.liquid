@@ -1,18 +1,20 @@
 {{ 'component-add-to-cart-modal.css' | asset_url | stylesheet_tag }}
 
-{% liquid
-    assign total_saved_amount = 0
 
-    for recommended_product_handle in recommended_products
-        assign recommended_product = all_products[recommended_product_handle]
+    {%assign total_saved_amount = 0%}
 
-        if  recommended_product.compare_at_price > recommended_product.price
-            assign product_saved_amount = recommended_product.compare_at_price | minus: recommended_product.price
+        {%for recommended_product_handle in recommended_products%}
+            {%assign recommended_product = all_products[recommended_product_handle]%}
+{{ recommended_product_handle }}
+        {% if  recommended_product.compare_at_price > recommended_product.price%}
+            {% assign product_saved_amount = recommended_product.compare_at_price | minus: recommended_product.price%}
 
-            assign total_saved_amount = total_saving | plus: product_saved_amount
-        endif
-    endfor
-%}
+            {% assign total_saved_amount = total_saving | plus: product_saved_amount%}
+            {% endif%}
+                {% endfor %}
+
+
+
 {{ recommended_product_handle }}
 <div class="add-to-cart-confirmation-modal-container">
     <div class="add-to-cart-confirmation-modal">
