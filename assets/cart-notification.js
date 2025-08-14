@@ -51,7 +51,7 @@ class CartNotification extends HTMLElement {
   renderContentsAfterAddToCartPopup(parsedState) {
     if (parsedState && parsedState.sections && parsedState.items && parsedState.items.length) {
       if (parsedState.sections["cart-notification-product"]) {
-        this.notification.querySelector("[id*='cart-notification-product']").outerHTML = this.getSectionInnerHTML(parsedState.sections["cart-notification-product"], "[id='shopify-section-cart-notification-product'");
+        this.notification.querySelector("#cart-notification-product").innerHTML = this.getSectionInnerHTML(parsedState.sections["cart-notification-product"], "[id*='cart-notification-product-'");
       }
 
       if (parsedState.sections["cart-icon-bubble-new"] && this.header) {
@@ -84,7 +84,6 @@ class CartNotification extends HTMLElement {
   }
 
   getSectionInnerHTML(html, selector = '.shopify-section') {
-    console.log(html)
     return new DOMParser().parseFromString(html, 'text/html').querySelector(selector).innerHTML;
   }
 
