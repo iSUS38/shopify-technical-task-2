@@ -52,13 +52,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 body: JSON.stringify(formData)
             })
             .then(res => res.json())
-            .then(() => {
+            .then((res) => {
                 addToCartPopUpCloseButton.click();
 
                 setTimeout(() => {
                     var cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
                     CartPerformance.measure("add:paint-updated-sections", () => {
-                      cart.renderContents(response);
+                      cart.renderContents(res);
                     });
                 });
             });
