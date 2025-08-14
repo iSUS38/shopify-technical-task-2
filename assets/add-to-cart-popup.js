@@ -57,10 +57,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 setTimeout(() => {
                     var cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
-                    CartPerformance.measure("add:paint-updated-sections", () => {
-                      cart.open()
-                    });
-                });
+
+                    cart.renderContents(res);
+                }, 400);
             });
         }
     });
