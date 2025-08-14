@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 addToCartPopupMainImage.src = productImageUrl;
 
                 addToCartPopUpWrapper.classList.add("modal-show");
+
+                addToCartPopUpWrapper.classList.add("modal-show");
             }
         });
     });
