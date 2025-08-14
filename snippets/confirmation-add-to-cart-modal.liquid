@@ -13,6 +13,10 @@
             assign total_saved_amount = total_saving | plus: product_saved_amount
         endif
     endfor
+
+    if total_saved_amount > 0
+        assign total_saved_amount = total_saved_amount | divided_by: 100
+    endif
 %}
 
 <div class="add-to-cart-confirmation-modal-container">
