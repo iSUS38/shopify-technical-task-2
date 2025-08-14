@@ -37,7 +37,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    z-index: 5;
+    z-index: -1;
     width: 0;
     height: 0;
     display: flex;
@@ -48,6 +48,7 @@
 .add-to-cart-confirmation-modal-container.modal-show {
     width: 100%;
     height: 100%;
+    z-index: 5;
 }
 
 .add-to-cart-confirmation-modal-container.modal-show  .add-to-cart-confirmation-modal {
