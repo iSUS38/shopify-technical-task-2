@@ -1,5 +1,19 @@
 {{ 'component-add-to-cart-modal.css' | asset_url | stylesheet_tag }}
 
+{% liquid
+    assign total_saved_amount = 0
+
+    for recommended_product_handle in recommended_products
+        assign recommended_product = all_products[recommended_product_handle]
+
+        if  recommended_product.compare_at_price > recommended_product.price
+            assign product_saved_amount = product.compare_at_price | minus: product.price
+
+            assign total_saved_amount = total_saving | plus: product_saved_amount
+        endif
+    endfor
+%}
+
 <div class="add-to-cart-confirmation-modal-container">
     <div class="add-to-cart-confirmation-modal">
         <div class="add-to-cart-modal-product-image">
@@ -16,14 +30,17 @@
           </div>
           <div class="add_to_cart_modal-subtitles">
             <span>{{ 'add_to_cart_modal.product_message_html' | t: product_name: first_featured_product.title }}</span>
-            <span>{{ 'add_to_cart_modal.save_money_message_html' | t: saved_amount: 0 }}</span>
+
+            {% if total_saved_amount > 0 %}
+                <span>{{ 'add_to_cart_modal.save_money_message_html' | t: saved_amount: total_saved_amount }}</span>
+            {% endif %}
           </div>
           <div class="add-to-cart-modal-recommended-products">
             {% assign recommended_products = section.settings.add_to_cart_popup_products | map: 'handle' %}
-      
+
             {% for recommended_product_handle in recommended_products %}
               {% assign recommended_product = all_products[recommended_product_handle] %}
-      
+
               <div class="add-to-cart-modal-recommendation-product">
                 <div class="recommended-product-image-wrapper">
                   <img
