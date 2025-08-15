@@ -1,4 +1,4 @@
-{% assign last_added_product = cart.items.last %}
+{% assign last_added_product = cart.items | last %}
 
 {%- if cart != empty -%}
     {%- for item in cart.items -%}
