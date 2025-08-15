@@ -1,10 +1,8 @@
 
 {%- if cart != empty -%}
-    {% assign last_added_product = cart.items | last %}
+    {% assign last_added_product = cart.items | sort: 'properties.added_at' %}
 
     <div id="cart-notification-product-{{ last_added_product.key }}" class="cart-item">
-        {{ last_added_product.title }}
-
         {%- if last_added_product.image -%}
           <div class="cart-notification-product__image global-media-settings">
             <img
