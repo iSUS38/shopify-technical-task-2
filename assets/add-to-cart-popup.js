@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const addToCartContainer = this.closest(".add-to-cart-confirmation-modal-container");
     
             addToCartContainer?.classList.remove("modal-show");
+            document.body.style.overflow = "unset";
         });
     
         addToCartSingleProductButton?.addEventListener("click", function () {
@@ -88,6 +89,7 @@ console.log(111)
                 addToCartSingleItemButtonUpdated.setAttribute("data-product-id", productID);
 
                 addToCartPopUpWrapper.classList.add("modal-show");
+                document.body.style.overflow = "hidden";
             } else {
                 const productID = productCardWrapper.querySelector(".card__heading[data-product-id]")?.getAttribute("data-product-id");
                 console.log(productID)
