@@ -79,8 +79,12 @@
     margin: 0;
 }
 .desktop-add-to-cart-modal-title *, 
-.mobile-add-to-cart-modal-title *{
+.mobile-add-to-cart-modal-title * {
     margin: 0;
+}
+
+.mobile-add-to-cart-modal-title {
+    display: none;
 }
 
 .add-to-cart-modal-recommendation-product {
@@ -199,5 +203,13 @@
 
     .add-to-cart-confirmation-modal .add-to-cart-modal-title:first-child {
         display: block;
+    }
+
+    .mobile-add-to-cart-modal-title {
+        display: block;
+    }
+
+    .desktop-add-to-cart-modal-title {
+        display: none;
     }
 }
