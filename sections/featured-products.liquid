@@ -169,7 +169,7 @@
       {{ 'mask-arch.svg' | inline_asset_content }}
     {%- endif -%}
 
-    {% if first_featured_product and section.settings.is_add_to_cart_popup_enabled %}
+    {% if request.page_type == 'product' and first_featured_product and section.settings.is_add_to_cart_popup_enabled %}
       {% render 'confirmation-add-to-cart-modal', first_featured_product: first_featured_product %}
     {% endif %}
   </div>
