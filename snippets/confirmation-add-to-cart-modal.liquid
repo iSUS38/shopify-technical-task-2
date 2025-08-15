@@ -17,6 +17,9 @@
 
 <div class="add-to-cart-confirmation-modal-container">
     <div class="add-to-cart-confirmation-modal">
+        <div>
+          <h5 class="add-to-cart-modal-title">{{ section.settings.title }}</h5>
+        </div>
         <div class="add-to-cart-modal-product-image">
           <img
             src="{{ first_featured_product.featured_image | image_url: width: 600 }}"
