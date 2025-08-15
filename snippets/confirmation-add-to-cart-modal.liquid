@@ -42,7 +42,7 @@
             {% for recommended_product_handle in recommended_products %}
               {% assign recommended_product = all_products[recommended_product_handle] %}
 
-              <div class="add-to-cart-modal-recommendation-product">
+              <div class="add-to-cart-modal-recommendation-product" data-product-id="{{ recommended_product.selected_or_first_available_variant.id  }}">
                 <div class="recommended-product-image-wrapper">
                   <img
                     src="{{ recommended_product.featured_image | image_url: width: 400 }}"
