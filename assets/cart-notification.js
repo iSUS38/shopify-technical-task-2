@@ -50,8 +50,8 @@ class CartNotification extends HTMLElement {
 
   renderContentsAfterAddToCartPopup(parsedState) {
     if (parsedState && parsedState.sections && parsedState.items && parsedState.items.length) {
-      if (parsedState.sections["cart-notification-product"]) {
-        this.notification.querySelector("#cart-notification-product").innerHTML = this.getSectionInnerHTML(parsedState.sections["cart-notification-product"], "[id*='cart-notification-product-'");
+      if (parsedState.sections["cart-notification-last-added-product"]) {
+        this.notification.querySelector("#cart-notification-product").innerHTML = this.getSectionInnerHTML(parsedState.sections["cart-notification-last-added-product"], "[id*='cart-notification-product-'");
       }
 
       if (parsedState.sections["cart-icon-bubble-new"] && this.header) {
