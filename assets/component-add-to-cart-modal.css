@@ -168,3 +168,17 @@
     backdrop-filter: blur(2px);
     cursor: pointer;
 }
+
+@media screen and (max-width: 992px) {
+    .add-to-cart-confirmation-modal {
+        flex-direction: column;
+        overflow: scroll;
+        width: unset;
+        justify-content: unset;
+        padding: 20px 20px;
+        gap: 10px;
+        max-height: unset;
+        max-width: 450px;
+        align-items: center;
+    }
+}
