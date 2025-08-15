@@ -3,7 +3,7 @@
 
     <div class="">
       {%- for item in cart.items limit: last_added_products_count  -%}
-        <div id="cart-notification-product" class="cart-item">
+        <div id="cart-notification-product" class="cart-notification-product">
           {%- if item.image -%}
             <div class="cart-notification-product__image global-media-settings">
               <img
