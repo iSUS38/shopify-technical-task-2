@@ -65,6 +65,10 @@
     line-height: 22px;
 }
 
+.add-to-cart-modal-title:first-child {
+    display: block;
+}
+
 .add_to_cart_modal-subtitles .add-to-cart-modal-product-name,
 .add_to_cart_modal-subtitles .add-to-cart-modal-amount-saved {
     font-weight: 700;
@@ -191,7 +195,7 @@
         position: static;
     }
 
-    .add-to-cart-modal-title {
+    .add-to-cart-modal-title:last-child {
         display: none;
     }
 
