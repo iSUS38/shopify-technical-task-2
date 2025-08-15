@@ -221,6 +221,10 @@
     .add-to-cart-modal-product-image, .add-to-cart-modal-product-details {
         flex: unset;
     }
+
+    .add-to-cart-modal-product-details {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 576px) {
