@@ -71,11 +71,46 @@ document.addEventListener("DOMContentLoaded", function () {
     addToCartAllProducts.addEventListener("click", function () {
         var mainProductId = this.getAttribute("data-product-id");
         var allRecommendedProductsWrappers = addToCartPopupWrapper.querySelectorAll(".add-to-cart-modal-recommended-products .add-to-cart-modal-recommendation-product");
+        var allProductIds = [];
 
-        console.log(allRecommendedProductsWrappers)
+        allRecommendedProductsWrappers.forEach((recommendedProduct) => {
+            const recommendedProductId = recommendedProduct.getAttribute("data-product-id");
 
-        allRecommendedProductsWrappers.map((item) => {
-            console.log(item)
+            if (+recommendedProductId) {
+                allProductIds.push(recommendedProductId);
+            }
+        });
+
+        allProductIds.unshift(mainProductId);
+
+        const productsArray = allProductIds.map(productId => {
+            return {
+                id: productId,
+                quantity: 1
+            }
+        });
+
+        const formData = {
+            sections: "cart-notification-last-added-product,cart-notification-button,cart-icon-bubble-new",
+            items: productsArray
+        }
+
+        fetch(window.Shopify.routes.root + 'cart/add.js', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
         })
+        .then(res => res.json())
+        .then((res) => {
+            addToCartPopUpCloseButton.click();
+
+            setTimeout(() => {
+                var cart = document.querySelector('cart-notification');
+
+                cart.renderContentsAfterAddToCartPopup(res);
+            }, 400);
+        });
     });
 });
