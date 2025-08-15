@@ -28,6 +28,19 @@ document.addEventListener("DOMContentLoaded", function () {
                 addToCartSingleItemButtonUpdated.setAttribute("data-product-id", productID);
 
                 addToCartPopUpWrapper.classList.add("modal-show");
+            } else {
+                const productID = productCardWrapper.querySelector(".card__heading[data-product-id]")?.getAttribute("data-product-id");\
+
+                if (+productID) {
+                    const addToCartFormData = {
+                        items: [{
+                            id: +productID,
+                            quantity: 1
+                        }]
+                    }
+
+                    addToCartProducts(formData);
+                }
             }
         });
     });
