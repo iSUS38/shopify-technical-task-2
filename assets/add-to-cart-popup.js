@@ -1,9 +1,68 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const addToCartPopupWrapper = document.querySelector(".add-to-cart-confirmation-modal-container");
     const allAddToCartTileButtons = document.querySelectorAll(".card-wrapper .card__add-to-cart-button button"); 
-    const addToCartPopUpCloseButton = addToCartPopupWrapper?.querySelector(".add-to-cart-close");
-    const addToCartSingleProductButton = addToCartPopupWrapper?.querySelector(".add-to-cart-modal-item");
-    const addToCartAllProducts = addToCartPopupWrapper?.querySelector(".add-to-cart-modal-all")
+    const addToCartPopupWrapper = document.querySelector(".add-to-cart-confirmation-modal-container");
+
+    if (addToCartPopupWrapper) {
+        const addToCartPopUpCloseButton = addToCartPopupWrapper.querySelector(".add-to-cart-close");
+        const addToCartSingleProductButton = addToCartPopupWrapper.querySelector(".add-to-cart-modal-item");
+        const addToCartAllProducts = addToCartPopupWrapper.querySelector(".add-to-cart-modal-all");
+
+        addToCartPopUpCloseButton?.addEventListener("click", function () {
+            const addToCartContainer = this.closest(".add-to-cart-confirmation-modal-container");
+    
+            addToCartContainer?.classList.remove("modal-show");
+        });
+    
+        addToCartSingleProductButton?.addEventListener("click", function () {
+            var productId = this.getAttribute("data-product-id");
+    
+            if (window.routes.cart_add_url && +productId) {
+                let formData = {
+                    sections: "cart-notification-last-added-product,cart-notification-button,cart-icon-bubble-new",
+                    attributes: { last_added_items: [+productId] },
+                    items: [{
+                        id: +productId,
+                        quantity: 1
+                    }]
+                };
+    
+                addToCartProducts(formData);
+            }
+        });
+    
+        addToCartAllProducts.addEventListener("click", function () {
+            var mainProductId = this.getAttribute("data-product-id");
+            var allRecommendedProductsWrappers = addToCartPopupWrapper.querySelectorAll(".add-to-cart-modal-recommended-products .add-to-cart-modal-recommendation-product");
+            var allProductIds = [];
+    
+            allRecommendedProductsWrappers.forEach((recommendedProduct) => {
+                const recommendedProductId = recommendedProduct.getAttribute("data-product-id");
+    
+                if (+recommendedProductId) {
+                    allProductIds.push(+recommendedProductId);
+                }
+            });
+    
+            allProductIds.unshift(+mainProductId);
+    
+            const productsArray = allProductIds.map(productId => {
+                return {
+                    id: productId,
+                    quantity: 1
+                }
+            });
+    
+            const formData = {
+                sections: "cart-notification-last-added-product,cart-notification-button,cart-icon-bubble-new",
+                items: productsArray,
+                attributes:  { last_added_items: allProductIds },
+            }
+    
+            if (window.routes.cart_add_url) {
+                addToCartProducts(formData);
+            }
+        });
+    }
 
     allAddToCartTileButtons.forEach(function (button) {
         console.log(button)
@@ -45,62 +104,6 @@ console.log(111)
                 }
             }
         });
-    });
-
-    addToCartPopUpCloseButton?.addEventListener("click", function () {
-        const addToCartContainer = this.closest(".add-to-cart-confirmation-modal-container");
-
-        addToCartContainer?.classList.remove("modal-show");
-    });
-
-    addToCartSingleProductButton?.addEventListener("click", function () {
-        var productId = this.getAttribute("data-product-id");
-
-        if (window.routes.cart_add_url && +productId) {
-            let formData = {
-                sections: "cart-notification-last-added-product,cart-notification-button,cart-icon-bubble-new",
-                attributes: { last_added_items: [+productId] },
-                items: [{
-                    id: +productId,
-                    quantity: 1
-                }]
-            };
-
-            addToCartProducts(formData);
-        }
-    });
-
-    addToCartAllProducts.addEventListener("click", function () {
-        var mainProductId = this.getAttribute("data-product-id");
-        var allRecommendedProductsWrappers = addToCartPopupWrapper.querySelectorAll(".add-to-cart-modal-recommended-products .add-to-cart-modal-recommendation-product");
-        var allProductIds = [];
-
-        allRecommendedProductsWrappers.forEach((recommendedProduct) => {
-            const recommendedProductId = recommendedProduct.getAttribute("data-product-id");
-
-            if (+recommendedProductId) {
-                allProductIds.push(+recommendedProductId);
-            }
-        });
-
-        allProductIds.unshift(+mainProductId);
-
-        const productsArray = allProductIds.map(productId => {
-            return {
-                id: productId,
-                quantity: 1
-            }
-        });
-
-        const formData = {
-            sections: "cart-notification-last-added-product,cart-notification-button,cart-icon-bubble-new",
-            items: productsArray,
-            attributes:  { last_added_items: allProductIds },
-        }
-
-        if (window.routes.cart_add_url) {
-            addToCartProducts(formData);
-        }
     });
 });
 
