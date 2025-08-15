@@ -222,3 +222,9 @@
         flex: unset;
     }
 }
+
+@media screen and (max-width: 576px) {
+    .add-to-cart-confirmation-modal {
+        height: 100vh;
+    }
+}
