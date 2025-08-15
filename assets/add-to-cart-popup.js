@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const isAddToCartPopupEnabled = this.getAttribute("data-pop-up-enabled");
             const parentSectionEl = this.closest("[class*='section-template--']");
             const addToCartPopUpWrapper = parentSectionEl.querySelector(".add-to-cart-confirmation-modal-container");
-
+console.log(111)
             if (isAddToCartPopupEnabled && addToCartPopUpWrapper) {
                 const productImageUrl = productCardWrapper.querySelector(".media img").src;
                 const productName = productCardWrapper.querySelector(".card__heading[data-product-name]")?.getAttribute("data-product-name");
@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 addToCartPopUpWrapper.classList.add("modal-show");
             } else {
                 const productID = productCardWrapper.querySelector(".card__heading[data-product-id]")?.getAttribute("data-product-id");
+                console.log(productID)
 
                 if (+productID) {
                     const addToCartFormData = {
