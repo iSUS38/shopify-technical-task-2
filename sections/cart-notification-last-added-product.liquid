@@ -1,6 +1,8 @@
 {%- if cart != empty -%}
     {%- for item in cart.items limit: 1  -%}
       <div id="cart-notification-product-{{ item.key }}" class="cart-item">
+        {{ cart.attributes }}
+        {{ cart.attributes.hello }}
         {%- if item.image -%}
           <div class="cart-notification-product__image global-media-settings">
             <img
