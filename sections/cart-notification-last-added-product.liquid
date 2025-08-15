@@ -3,7 +3,53 @@
     {% assign last_added_product = cart.items | last %}
 {{ last_added_product.title }}
     <div id="cart-notification-product-{{ last_added_product.key }}" class="cart-item">
-        
+        {%- if last_added_product.image -%}
+          <div class="cart-notification-product__image global-media-settings">
+            <img
+              src="{{ last_added_product.image | image_url: width: 140 }}"
+              alt="{{ last_added_product.image.alt | escape }}"
+              width="70"
+              height="{{ 70 | divided_by: last_added_product.image.aspect_ratio | ceil }}"
+              loading="lazy"
+            >
+          </div>
+        {%- endif -%}
+        <div>
+          {%- if settings.show_vendor -%}
+            <p class="caption-with-letter-spacing light">{{ last_added_product.product.vendor }}</p>
+          {%- endif -%}
+          <h3 class="cart-notification-product__name h4">{{ last_added_product.product.title | escape }}</h3>
+          <dl>
+            {%- unless last_added_product.product.has_only_default_variant -%}
+              {%- for option in last_added_product.options_with_values -%}
+                <div class="product-option">
+                  <dt>{{ option.name }}:</dt>
+                  <dd>{{ option.value }}</dd>
+                </div>
+              {%- endfor -%}
+            {%- endunless -%}
+            {%- for property in last_added_product.properties -%}
+              {%- assign property_first_char = property.first | slice: 0 -%}
+              {%- if property.last != blank and property_first_char != '_' -%}
+                <div class="product-option">
+                  <dt>{{ property.first }}:</dt>
+                  <dd>
+                    {%- if property.last contains '/uploads/' -%}
+                      <a href="{{ property.last }}" class="link" target="_blank">
+                        {{ property.last | split: '/' | last }}
+                      </a>
+                    {%- else -%}
+                      {{ property.last }}
+                    {%- endif -%}
+                  </dd>
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+          </dl>
+          {%- if last_added_product.selling_plan_allocation != null -%}
+            <p class="product-option">{{ last_added_product.selling_plan_allocation.selling_plan.name }}</p>
+          {%- endif -%}
+        </div>
     </div>
   {%- endif -%}
   
