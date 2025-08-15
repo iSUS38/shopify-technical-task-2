@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        allProductIds.unshift(mainProductId);
+        allProductIds.unshift(+mainProductId);
 
         const productsArray = allProductIds.map(productId => {
             return {
