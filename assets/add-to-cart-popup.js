@@ -20,9 +20,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 const addToCartPopupMainImage = addToCartPopUpWrapper.querySelector(".add-to-cart-modal-product-image img");
                 const addToCartPopupProductTitleEl = addToCartPopUpWrapper.querySelector(".add-to-cart-modal-product-name");
                 const addToCartSingleItemButtonUpdated = addToCartPopUpWrapper.querySelector(".add-to-cart-modal-item");
+                const addToCartAllItemsButton = addToCartPopUpWrapper.querySelector(".add-to-cart-modal-all");
 
                 addToCartPopupProductTitleEl.innerHTML = productName;
                 addToCartPopupMainImage.src = productImageUrl;
+                addToCartAllItemsButton.setAttribute("data-product-id", productID)
                 addToCartSingleItemButtonUpdated.setAttribute("data-product-id", productID);
 
                 addToCartPopUpWrapper.classList.add("modal-show");
