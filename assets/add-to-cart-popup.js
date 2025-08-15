@@ -86,6 +86,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function addToCartProducts(formData) {
+    const addToCartPopupWrapper = document.querySelector(".add-to-cart-confirmation-modal-container");
+    const addToCartPopUpCloseButton = addToCartPopupWrapper.querySelector(".add-to-cart-close");
+
     fetch(window.Shopify.routes.root + 'cart/add.js', {
         method: 'POST',
         headers: {
