@@ -76,7 +76,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const formData = {
             sections: "cart-notification-last-added-product,cart-notification-button,cart-icon-bubble-new",
-            items: productsArray
+            items: productsArray,
+            attributes: {'hello': 555 }
         }
 
         if (window.routes.cart_add_url) {
