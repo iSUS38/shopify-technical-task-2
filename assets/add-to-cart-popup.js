@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (window.routes.cart_add_url && +productId) {
             let formData = {
                 sections: "cart-notification-last-added-product,cart-notification-button,cart-icon-bubble-new",
-                attributes: { last_added_items: [productId] },
+                attributes: { last_added_items: [+productId] },
                 items: [{
                     id: +productId,
                     quantity: 1
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const recommendedProductId = recommendedProduct.getAttribute("data-product-id");
 
             if (+recommendedProductId) {
-                allProductIds.push(recommendedProductId);
+                allProductIds.push(+recommendedProductId);
             }
         });
 
