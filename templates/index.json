@@ -53,7 +53,7 @@
       "type": "featured-products",
       "name": "t:sections.featured-products.name",
       "settings": {
-        "title": "<p>Featured products</p>",
+        "title": "Featured products",
         "featured_products": [
           "beautydna-elastic-serum-for-saggy-and-tired-skin",
           "bee-venom-serum-30-ml",
