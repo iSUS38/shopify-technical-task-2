@@ -43,8 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 sections: "cart-notification-last-added-product,cart-notification-button,cart-icon-bubble-new",
                 items: [{
                     id: +productId,
-                    quantity: 1,
-                    properties: { added_at: Date.now() }
+                    quantity: 1
                 }]
             };
 
