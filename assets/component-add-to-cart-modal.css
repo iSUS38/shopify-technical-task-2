@@ -195,7 +195,7 @@
         display: none;
     }
 
-    .add-to-cart-modal-title:first {
+    .add-to-cart-modal-title:first-child {
         display: block;
     }
 }
