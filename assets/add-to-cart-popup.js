@@ -94,6 +94,7 @@ console.log(111)
 
                 if (+productID) {
                     const addToCartFormData = {
+                        sections: "cart-notification-last-added-product,cart-notification-button,cart-icon-bubble-new",
                         items: [{
                             id: +productID,
                             quantity: 1
