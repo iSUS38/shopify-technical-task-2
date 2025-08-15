@@ -118,7 +118,7 @@
     gap: 10px;
 }
 
-.add-to-cart-confirmation-modal  .price__sale {
+.add-to-cart-confirmation-modal .price--on-sale .price__sale {
     display: flex !important;
     flex-direction: row-reverse !important;
     gap: 10px;
