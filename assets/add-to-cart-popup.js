@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 addToCartPopUpWrapper.classList.add("modal-show");
             } else {
-                const productID = productCardWrapper.querySelector(".card__heading[data-product-id]")?.getAttribute("data-product-id");\
+                const productID = productCardWrapper.querySelector(".card__heading[data-product-id]")?.getAttribute("data-product-id");
 
                 if (+productID) {
                     const addToCartFormData = {
