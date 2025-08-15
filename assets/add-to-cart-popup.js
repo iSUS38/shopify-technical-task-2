@@ -72,6 +72,8 @@ document.addEventListener("DOMContentLoaded", function () {
         var mainProductId = this.getAttribute("data-product-id");
         var allRecommendedProductsWrappers = addToCartPopupWrapper.querySelectorAll(".add-to-cart-modal-recommended-products .add-to-cart-modal-recommendation-product");
 
+        console.log(allRecommendedProductsWrappers)
+
         allRecommendedProductsWrappers.map((item) => {
             console.log(item)
         })
