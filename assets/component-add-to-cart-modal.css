@@ -171,6 +171,7 @@
 
 @media screen and (max-width: 992px) {
     .add-to-cart-confirmation-modal {
+        position: relative;
         flex-direction: column;
         overflow: scroll;
         width: unset;
@@ -186,7 +187,7 @@
         border-radius: 13px;
     }
 
-    .add-to-cart-close {
-        display: none;
+    .add-to-cart-modal-product-details {
+        position: static;
     }
 }
