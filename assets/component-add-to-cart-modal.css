@@ -68,11 +68,6 @@
 .add-to-cart-modal-title:first-child {
     display: block;
 }
-
-.add-to-cart-modal-title:last-child {
-    display: none;
-}
-
 .add_to_cart_modal-subtitles .add-to-cart-modal-product-name,
 .add_to_cart_modal-subtitles .add-to-cart-modal-amount-saved {
     font-weight: 700;
