@@ -212,4 +212,9 @@
     .desktop-add-to-cart-modal-title {
         display: none;
     }
+
+    .add-to-cart-close {
+        top: 11px;
+        right: 24px;
+    }
 }
