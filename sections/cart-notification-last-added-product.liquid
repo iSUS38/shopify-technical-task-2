@@ -1,7 +1,7 @@
 {%- if cart != empty -%}
     <div class="cart-notification-products-wrapper">
       {%- for item in cart.items  -%}
-        {% if cart.attributes contains item.product.first_available_variant.id %}
+        {% if cart.attributes.last_added_items contains item.product.first_available_variant.id %}
           <div id="cart-notification-product" class="cart-notification-product">
             {%- if item.image -%}
               <div class="cart-notification-product__image global-media-settings">
