@@ -136,6 +136,7 @@
     cursor: pointer;
     padding: 10px 40px;
     font-size: 16px;
+    text-wrap: nowrap;
 }
 
 .add-to-cart-modal-item {
@@ -143,6 +144,7 @@
     border: 1px solid #05117F;
     color: #05117F;
     font-weight: 500;
+    text-wrap: nowrap;
 }
 
 .add-to-cart-close {
