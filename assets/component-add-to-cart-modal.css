@@ -231,4 +231,9 @@
     .add-to-cart-confirmation-modal-container {
         height: 100vh !important;
     }
+
+    .add-to-cart-modal-item, .add-to-cart-modal-all {
+        flex: 1;
+        padding: 10px 0;
+    }
 }
