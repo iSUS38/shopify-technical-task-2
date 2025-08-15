@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const addToCartContainer = this.closest(".add-to-cart-confirmation-modal-container");
     
             addToCartContainer?.classList.remove("modal-show");
-            document.body.style.overflow = "unset";
+            document.body.style.overflow = "";
         });
     
         addToCartSingleProductButton?.addEventListener("click", function () {
