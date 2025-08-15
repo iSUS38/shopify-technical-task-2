@@ -108,9 +108,6 @@ console.log(111)
 });
 
 function addToCartProducts(formData) {
-    const addToCartPopupWrapper = document.querySelector(".add-to-cart-confirmation-modal-container");
-    const addToCartPopUpCloseButton = addToCartPopupWrapper.querySelector(".add-to-cart-close");
-
     fetch(window.Shopify.routes.root + 'cart/add.js', {
         method: 'POST',
         headers: {
@@ -120,7 +117,13 @@ function addToCartProducts(formData) {
     })
     .then(res => res.json())
     .then((res) => {
-        addToCartPopUpCloseButton.click();
+        const addToCartPopupWrapper = document.querySelector(".add-to-cart-confirmation-modal-container");
+
+        if (addToCartPopupWrapper) {
+            const addToCartPopUpCloseButton = addToCartPopupWrapper.querySelector(".add-to-cart-close");
+
+            addToCartPopUpCloseButton.click();
+        }
 
         setTimeout(() => {
             var cart = document.querySelector('cart-notification');
