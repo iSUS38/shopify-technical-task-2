@@ -194,4 +194,8 @@
     .add-to-cart-modal-title {
         display: none;
     }
+
+    .add-to-cart-modal-title:first {
+        display: block;
+    }
 }
