@@ -617,8 +617,8 @@
   font-size: 1.5rem;
   letter-spacing: 0.1rem;
   padding: 1em 2em;
-  min-width: calc(12rem + var(--buttons-border-width) * 2);
-  min-height: calc(4.5rem + var(--buttons-border-width) * 2);
+  width: 143px;
+  height: 48px;
   border: none;
   border-radius: 26px;
 }
