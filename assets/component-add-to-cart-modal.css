@@ -190,4 +190,8 @@
     .add-to-cart-modal-product-details {
         position: static;
     }
+
+    .add-to-cart-modal-title {
+        display: none;
+    }
 }
