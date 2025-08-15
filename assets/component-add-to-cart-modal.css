@@ -224,7 +224,7 @@
 }
 
 @media screen and (max-width: 576px) {
-    .add-to-cart-confirmation-modal {
+    .add-to-cart-confirmation-modal-container {
         height: 100vh;
     }
 }
