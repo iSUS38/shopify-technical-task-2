@@ -185,4 +185,8 @@
     .add-to-cart-modal-product-image img {
         border-radius: 13px;
     }
+
+    .add-to-cart-close {
+        display: none;
+    }
 }
