@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     const addToCartPopupWrapper = document.querySelector(".add-to-cart-confirmation-modal-container");
     const allAddToCartTileButtons = document.querySelectorAll(".card-wrapper .card__add-to-cart-button button"); 
-    const addToCartPopUpCloseButton = addToCartPopupWrapper.querySelector(".add-to-cart-close");
-    const addToCartSingleProductButton = addToCartPopupWrapper.querySelector(".add-to-cart-modal-item");
-    const addToCartAllProducts = addToCartPopupWrapper.querySelector(".add-to-cart-modal-all")
+    const addToCartPopUpCloseButton = addToCartPopupWrapper?.querySelector(".add-to-cart-close");
+    const addToCartSingleProductButton = addToCartPopupWrapper?.querySelector(".add-to-cart-modal-item");
+    const addToCartAllProducts = addToCartPopupWrapper?.querySelector(".add-to-cart-modal-all")
 
     allAddToCartTileButtons.forEach(function (button) {
         console.log(button)
