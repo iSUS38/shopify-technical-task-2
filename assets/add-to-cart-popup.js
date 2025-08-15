@@ -48,23 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }]
             };
 
-            fetch(window.Shopify.routes.root + 'cart/add.js', {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            })
-            .then(res => res.json())
-            .then((res) => {
-                addToCartPopUpCloseButton.click();
-
-                setTimeout(() => {
-                    var cart = document.querySelector('cart-notification');
-
-                    cart.renderContentsAfterAddToCartPopup(res);
-                }, 400);
-            });
+            addToCartProducts(formData);
         }
     });
 
@@ -95,22 +79,28 @@ document.addEventListener("DOMContentLoaded", function () {
             items: productsArray
         }
 
-        fetch(window.Shopify.routes.root + 'cart/add.js', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(formData)
-        })
-        .then(res => res.json())
-        .then((res) => {
-            addToCartPopUpCloseButton.click();
-
-            setTimeout(() => {
-                var cart = document.querySelector('cart-notification');
-
-                cart.renderContentsAfterAddToCartPopup(res);
-            }, 400);
-        });
+        if (window.routes.cart_add_url) {
+            addToCartProducts(formData);
+        }
     });
 });
+
+function addToCartProducts(formData) {
+    fetch(window.Shopify.routes.root + 'cart/add.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(res => res.json())
+    .then((res) => {
+        addToCartPopUpCloseButton.click();
+
+        setTimeout(() => {
+            var cart = document.querySelector('cart-notification');
+
+            cart.renderContentsAfterAddToCartPopup(res);
+        }, 400);
+    });
+}
