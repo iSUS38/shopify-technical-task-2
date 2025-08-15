@@ -217,4 +217,8 @@
         top: 11px;
         right: 24px;
     }
+
+    .add-to-cart-modal-product-image, .add-to-cart-modal-product-details {
+        flex: unset;
+    }
 }
