@@ -247,4 +247,9 @@ body.add-to-cart-modal-shown  .section-header {
         transform: translate(-50%, -50%);
         height: fit-content !important;
     }
+
+    .add-to-cart-modal-product-image img {
+        width: 250px;
+        height: 300px;
+    }
 }
