@@ -45,32 +45,34 @@
             {% for recommended_product_handle in recommended_products %}
               {% assign recommended_product = all_products[recommended_product_handle] %}
 
-              <div class="add-to-cart-modal-recommendation-product" data-product-id="{{ recommended_product.selected_or_first_available_variant.id  }}">
-                <div class="recommended-product-image-wrapper">
-                  <img
-                    src="{{ recommended_product.featured_image | image_url: width: 400 }}"
-                    alt="{{ recommended_product.featured_image.alt }}"
-                    width="88px"
-                    height="100px"
-                  >
-                </div>
-                <div class="recommended-product-inner">
-                  <div>
-                    <h5>{{ recommended_product.title }}</h5>
-                    <span>{{ recommended_product.type }}</span>
+              {% if recommended_product.available %}
+                <div class="add-to-cart-modal-recommendation-product" data-product-id="{{ recommended_product.selected_or_first_available_variant.id  }}">
+                  <div class="recommended-product-image-wrapper">
+                    <img
+                      src="{{ recommended_product.featured_image | image_url: width: 400 }}"
+                      alt="{{ recommended_product.featured_image.alt }}"
+                      width="88px"
+                      height="100px"
+                    >
                   </div>
-      
-                  {% if recommended_product.first_available_variant.sku %}
+                  <div class="recommended-product-inner">
                     <div>
-                      <span>
-                        {{- 'add_to_cart_modal.sku_caption' | t: sku: recommended_product.first_available_variant.sku -}}
-                      </span>
+                      <h5>{{ recommended_product.title }}</h5>
+                      <span>{{ recommended_product.type }}</span>
                     </div>
-                  {% endif %}
-      
-                  {% render 'price', product: recommended_product %}
+        
+                    {% if recommended_product.first_available_variant.sku %}
+                      <div>
+                        <span>
+                          {{- 'add_to_cart_modal.sku_caption' | t: sku: recommended_product.first_available_variant.sku -}}
+                        </span>
+                      </div>
+                    {% endif %}
+
+                    {% render 'price', product: recommended_product %}
+                  </div>
                 </div>
-              </div>
+              {% endif %}
             {% endfor %}
           </div>
           <div class="add-to-cart-modal-buttons-wrapper">
