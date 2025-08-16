@@ -235,19 +235,16 @@ body.add-to-cart-modal-shown  .section-header {
 }
 
 @media screen and (max-width: 576px) {
-    .add-to-cart-confirmation-modal-container {
-        height: 100vh !important;
-    }
-
     .add-to-cart-modal-item, .add-to-cart-modal-all {
         flex: 1;
         padding: 10px 0;
     }
 
     .add-to-cart-confirmation-modal-container {
-        position: fixed;
+        position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        height: fit-content !important;
     }
 }
