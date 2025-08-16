@@ -250,7 +250,6 @@ body.add-to-cart-modal-shown  .section-header {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        height: fit-content !important;
     }
 
     .add-to-cart-modal-product-image img {
