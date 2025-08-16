@@ -257,4 +257,8 @@ body.add-to-cart-modal-shown  .section-header {
         width: 250px;
         height: 300px;
     }
+
+    .add-to-cart-confirmation-modal {
+        height: 100%;
+    }
 }
