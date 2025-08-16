@@ -232,6 +232,11 @@ body.add-to-cart-modal-shown  .section-header {
     .add-to-cart-modal-product-details {
         width: 100%;
     }
+
+    .add-to-cart-modal-product-image img {
+        width: 375px;
+        height: 340px;
+    }
 }
 
 @media screen and (max-width: 576px) {
