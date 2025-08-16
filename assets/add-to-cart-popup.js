@@ -13,10 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
             addToCartContainer?.classList.remove("modal-show");
             document.body.classList.remove("add-to-cart-modal-shown");
         });
-    
+
         addToCartSingleProductButton?.addEventListener("click", function () {
-            var productId = this.getAttribute("data-product-id");
-    
+            const productId = this.getAttribute("data-product-id");
+
             if (window.routes.cart_add_url && +productId) {
                 let formData = {
                     sections: "cart-notification-last-added-product,cart-notification-button,cart-icon-bubble-new",
@@ -26,39 +26,39 @@ document.addEventListener("DOMContentLoaded", function () {
                         quantity: 1
                     }]
                 };
-    
+
                 addToCartProducts(formData);
             }
         });
-    
+
         addToCartAllProducts.addEventListener("click", function () {
-            var mainProductId = this.getAttribute("data-product-id");
-            var allRecommendedProductsWrappers = addToCartPopupWrapper.querySelectorAll(".add-to-cart-modal-recommended-products .add-to-cart-modal-recommendation-product");
-            var allProductIds = [];
-    
+            const mainProductId = this.getAttribute("data-product-id");
+            const allRecommendedProductsWrappers = addToCartPopupWrapper.querySelectorAll(".add-to-cart-modal-recommended-products .add-to-cart-modal-recommendation-product");
+            const allProductIds = [];
+
             allRecommendedProductsWrappers.forEach((recommendedProduct) => {
                 const recommendedProductId = recommendedProduct.getAttribute("data-product-id");
-    
+
                 if (+recommendedProductId) {
                     allProductIds.push(+recommendedProductId);
                 }
             });
-    
+
             allProductIds.unshift(+mainProductId);
-    
+
             const productsArray = allProductIds.map(productId => {
                 return {
                     id: productId,
                     quantity: 1
                 }
             });
-    
+
             const formData = {
                 sections: "cart-notification-last-added-product,cart-notification-button,cart-icon-bubble-new",
                 items: productsArray,
                 attributes:  { last_added_items: allProductIds },
             }
-    
+
             if (window.routes.cart_add_url) {
                 addToCartProducts(formData);
             }
@@ -66,13 +66,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     allAddToCartTileButtons.forEach(function (button) {
-        console.log(button)
         button.addEventListener("click", function () {
             const productCardWrapper = this.closest(".card-wrapper");
             const isAddToCartPopupEnabled = this.getAttribute("data-pop-up-enabled");
             const parentSectionEl = this.closest("[class*='section-template--']");
             const addToCartPopUpWrapper = parentSectionEl.querySelector(".add-to-cart-confirmation-modal-container");
-console.log(111)
+
             if (isAddToCartPopupEnabled && addToCartPopUpWrapper) {
                 const productImageUrl = productCardWrapper.querySelector(".media img").src;
                 const productName = productCardWrapper.querySelector(".card__heading[data-product-name]")?.getAttribute("data-product-name");
@@ -92,7 +91,6 @@ console.log(111)
                 document.body.classList.add("add-to-cart-modal-shown");
             } else {
                 const productID = productCardWrapper.querySelector(".card__heading[data-product-id]")?.getAttribute("data-product-id");
-                console.log(productID)
 
                 if (+productID) {
                     const addToCartFormData = {
@@ -130,7 +128,7 @@ function addToCartProducts(formData) {
         }
 
         setTimeout(() => {
-            var cart = document.querySelector('cart-notification');
+            const cart = document.querySelector('cart-notification');
 
             cart.renderContentsAfterAddToCartPopup(res);
         }, 400);
