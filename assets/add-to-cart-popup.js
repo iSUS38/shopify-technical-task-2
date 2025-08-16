@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         addToCartPopUpCloseButton?.addEventListener("click", function () {
             const addToCartContainer = this.closest(".add-to-cart-confirmation-modal-container");
-    
+
             addToCartContainer?.classList.remove("modal-show");
-            document.body.style.overflow = "";
+            document.body.classList.remove("add-to-cart-modal-shown");
         });
     
         addToCartSingleProductButton?.addEventListener("click", function () {
@@ -89,7 +89,7 @@ console.log(111)
                 addToCartSingleItemButtonUpdated.setAttribute("data-product-id", productID);
 
                 addToCartPopUpWrapper.classList.add("modal-show");
-                document.body.style.overflow = "hidden";
+                document.body.classList.add("add-to-cart-modal-shown");
             } else {
                 const productID = productCardWrapper.querySelector(".card__heading[data-product-id]")?.getAttribute("data-product-id");
                 console.log(productID)
