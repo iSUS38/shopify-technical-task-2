@@ -244,4 +244,11 @@ body.add-to-cart-modal-shown  .section-header {
         flex: 1;
         padding: 10px 0;
     }
+
+    .add-to-cart-confirmation-modal-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: none;
+    }
 }
