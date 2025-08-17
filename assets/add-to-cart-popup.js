@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (!(+addToCartPopupDisplaysCount)) {
                 localStorage.removeItem("addToCartPopupDisplaysCount");
             } else {
-                if (popupCurrentDisplaysCount >= addToCartPopupDisplaysCount) {
+                if (+popupCurrentDisplaysCount >= +addToCartPopupDisplaysCount) {
                     isAddToCartPopupEnabled = false;
                 }
             }
