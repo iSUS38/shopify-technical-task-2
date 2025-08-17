@@ -11,31 +11,9 @@
   assign is_add_to_cart_popup_enabled = section.settings.is_add_to_cart_popup_enabled
   assign featured_products = section.settings.featured_products | map: 'handle'
   assign first_featured_product = nil
-  assign show_add_to_cart_popup = false
-
-  assign products_to_display = section.settings.collection.all_products_count
-
-  if section.settings.collection.all_products_count > section.settings.products_to_show
-    assign products_to_display = section.settings.products_to_show
-    assign more_in_collection = true
-  endif
-
-  assign columns_mobile_int = section.settings.columns_mobile | plus: 0
-  assign columns_desktop_int = section.settings.columns_desktop | plus: 0
-  assign show_mobile_slider = false
-  if section.settings.swipe_on_mobile and products_to_display > columns_mobile_int
-    assign show_mobile_slider = true
-  endif
-
-  assign max_columns_to_show = columns_mobile_int
-  if columns_desktop_int > columns_mobile_int
-    assign max_columns_to_show = columns_desktop_int
-  endif
 
   assign show_desktop_slider = true
-  if section.settings.enable_desktop_slider and products_to_display > section.settings.columns_desktop
-    assign show_desktop_slider = true
-  endif
+  assign show_mobile_slider = true
 -%}
 
 <div class="featured-products-section">
