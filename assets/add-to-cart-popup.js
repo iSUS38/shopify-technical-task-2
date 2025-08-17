@@ -130,8 +130,19 @@ function setNewProductData(productCardWrapper, addToCartPopUpWrapper) {
     const addToCartSingleItemButtonUpdated = addToCartPopUpWrapper.querySelector(".add-to-cart-modal-item");
     const addToCartAllItemsButton = addToCartPopUpWrapper.querySelector(".add-to-cart-modal-all");
 
-    addToCartPopupProductTitleEl.innerHTML = productName;
-    addToCartPopupMainImage.src = productImageUrl;
-    addToCartAllItemsButton.setAttribute("data-product-id", productID)
-    addToCartSingleItemButtonUpdated.setAttribute("data-product-id", productID);
+    if (addToCartPopupProductTitleEl) {
+        addToCartPopupProductTitleEl.innerHTML = productName;
+    }
+
+    if (addToCartPopupMainImage) {
+        addToCartPopupMainImage.src = productImageUrl;
+    }
+
+    if (addToCartAllItemsButton) {
+        addToCartAllItemsButton.setAttribute("data-product-id", productID)
+    }
+
+    if (addToCartSingleItemButtonUpdated) {
+        addToCartSingleItemButtonUpdated.setAttribute("data-product-id", productID);
+    }
 }
