@@ -14,8 +14,9 @@
   assign show_desktop_slider = true
   assign show_mobile_slider = true
 -%}
-{{ template.suffix }}
+
 <div class="featured-products-section">
+  {{ template.name }}
   <div
     class="collection section-{{ section.id }}-padding"
     id="collection-{{ section.id }}"
