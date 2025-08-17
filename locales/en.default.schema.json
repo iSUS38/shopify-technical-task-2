@@ -461,8 +461,8 @@
           "label": "Is the add to cart popup enabled"
         },
         "add_to_cart_popup_title": "Add to cart popup heading",
-        "add_to_cart_popup_visible_once": {
-          "label": "Is the add to cart popup visible once"
+        "add_to_cart_popup_displays_count": {
+          "label": "Add to cart popup displays count"
         },
         "add_to_cart_popup_products": {
           "label": "Displayed products in the add to cart popup"
