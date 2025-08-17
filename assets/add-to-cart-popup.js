@@ -122,12 +122,12 @@ function addToCartProducts(formData) {
         const addToCartPopupWrapper = document.querySelector(".add-to-cart-confirmation-modal-container");
         const cart = document.querySelector('cart-notification');
 
-        cart.renderContentsAfterAddToCartPopup(res);
-
         if (addToCartPopupWrapper) {
             const addToCartPopUpCloseButton = addToCartPopupWrapper.querySelector(".add-to-cart-close");
 
             addToCartPopUpCloseButton.click();
         }
+
+        cart.renderContentsAfterAddToCartPopup(res);
     });
 }
