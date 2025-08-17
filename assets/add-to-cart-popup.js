@@ -70,10 +70,11 @@ document.addEventListener("DOMContentLoaded", function () {
             const productCardWrapper = this.closest(".card-wrapper");
             const parentSectionEl = this.closest("[class*='section-template--']");
             const addToCartPopUpWrapper = parentSectionEl.querySelector(".add-to-cart-confirmation-modal-container");
+            const pageTemplateName = addToCartPopUpWrapper?.getAttribute("data-template-name");
 
             let isAddToCartPopupEnabled = this.getAttribute("data-pop-up-enabled");
             let addToCartPopupDisplaysCount = addToCartPopUpWrapper?.getAttribute("data-popup-displays-count");
-            let popupCurrentDisplaysCount = +(localStorage.getItem("addToCartPopupDisplaysCount"));
+            let popupCurrentDisplaysCount = +(localStorage.getItem(`template-${pageTemplateName}-addToCartPopupDisplaysCount`));
 
             if (isAddToCartPopupEnabled && addToCartPopUpWrapper) {
                 if (!(+addToCartPopupDisplaysCount)) {
