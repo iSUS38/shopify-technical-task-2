@@ -74,11 +74,13 @@ document.addEventListener("DOMContentLoaded", function () {
             const addToCartPopupDisplaysCount = addToCartPopUpWrapper.getAttribute("data-popup-displays-count");
             const popupCurrentDisplaysCount = localStorage.getItem("addToCartPopupDisplaysCount");
 
-            if (!(+addToCartPopupDisplaysCount)) {
-                localStorage.removeItem("addToCartPopupDisplaysCount");
-            } else {
-                if (+popupCurrentDisplaysCount >= +addToCartPopupDisplaysCount) {
-                    isAddToCartPopupEnabled = false;
+            if (isAddToCartPopupEnabled) {
+                if (!(+addToCartPopupDisplaysCount)) {
+                    localStorage.removeItem("addToCartPopupDisplaysCount");
+                } else {
+                    if (+popupCurrentDisplaysCount >= +addToCartPopupDisplaysCount) {
+                        isAddToCartPopupEnabled = false;
+                    }
                 }
             }
 
