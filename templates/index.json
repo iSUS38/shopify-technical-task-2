@@ -53,7 +53,7 @@
       "type": "featured-products",
       "name": "t:sections.featured-products.name",
       "settings": {
-        "title": "Featured products",
+        "title": "New featured products",
         "featured_products": [
           "beautydna-elastic-serum-for-saggy-and-tired-skin",
           "bee-venom-serum-30-ml",
@@ -65,7 +65,7 @@
         ],
         "is_add_to_cart_popup_enabled": true,
         "is_add_to_cart_popup_visible_once": false,
-        "add_to_cart_popup_title": "COMPLETE YOUR PURCHASE",
+        "add_to_cart_popup_title": "Complete your purchase",
         "add_to_cart_popup_products": [
           "kombucha-ihana-inkivaari",
           "kombucha-villi-mustikka"
