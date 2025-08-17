@@ -65,6 +65,7 @@
         ],
         "is_add_to_cart_popup_enabled": true,
         "is_add_to_cart_popup_visible_once": false,
+        "add_to_cart_popup_title": "COMPLETE YOUR PURCHASE",
         "add_to_cart_popup_products": [
           "kombucha-ihana-inkivaari",
           "kombucha-villi-mustikka"
