@@ -68,17 +68,18 @@ document.addEventListener("DOMContentLoaded", function () {
     allAddToCartTileButtons.forEach(function (button) {
         button.addEventListener("click", function () {
             const productCardWrapper = this.closest(".card-wrapper");
-            const isAddToCartPopupEnabled = this.getAttribute("data-pop-up-enabled");
             const parentSectionEl = this.closest("[class*='section-template--']");
             const addToCartPopUpWrapper = parentSectionEl.querySelector(".add-to-cart-confirmation-modal-container");
-            const addToCartPopupDisplaysCount = addToCartPopUpWrapper.getAttribute("data-popup-displays-count");
-            const popupCurrentDisplaysCount = localStorage.getItem("addToCartPopupDisplaysCount");
 
-            if (isAddToCartPopupEnabled) {
+            let isAddToCartPopupEnabled = this.getAttribute("data-pop-up-enabled");
+            let addToCartPopupDisplaysCount = addToCartPopUpWrapper?.getAttribute("data-popup-displays-count");
+            let popupCurrentDisplaysCount = +(localStorage.getItem("addToCartPopupDisplaysCount"));
+
+            if (isAddToCartPopupEnabled && addToCartPopUpWrapper) {
                 if (!(+addToCartPopupDisplaysCount)) {
                     localStorage.removeItem("addToCartPopupDisplaysCount");
                 } else {
-                    if (+popupCurrentDisplaysCount >= +addToCartPopupDisplaysCount) {
+                    if (popupCurrentDisplaysCount >= +addToCartPopupDisplaysCount) {
                         isAddToCartPopupEnabled = false;
                     }
                 }
@@ -89,6 +90,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 addToCartPopUpWrapper.classList.add("modal-show");
                 document.body.classList.add("add-to-cart-modal-shown");
+
+                localStorage.setItem("addToCartPopupDisplaysCount", (popupCurrentDisplaysCount ? ++popupCurrentDisplaysCount : 1));
             } else {
                 const productID = productCardWrapper.querySelector(".card__heading[data-product-id]")?.getAttribute("data-product-id");
 
