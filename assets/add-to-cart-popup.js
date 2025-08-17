@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 addToCartPopUpWrapper.classList.add("modal-show");
                 document.body.classList.add("add-to-cart-modal-shown");
 
-                localStorage.setItem("addToCartPopupDisplaysCount", (popupCurrentDisplaysCount ? ++popupCurrentDisplaysCount : 1));
+                localStorage.setItem(`template-${pageTemplateName}-addToCartPopupDisplaysCount`, (popupCurrentDisplaysCount ? ++popupCurrentDisplaysCount : 1));
             } else {
                 const productID = productCardWrapper.querySelector(".card__heading[data-product-id]")?.getAttribute("data-product-id");
 
