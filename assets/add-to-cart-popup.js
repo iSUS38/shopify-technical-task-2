@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
             let addToCartPopupDisplaysCount = addToCartPopUpWrapper?.getAttribute("data-popup-displays-count");
             let popupCurrentDisplaysCount = +(localStorage.getItem("addToCartPopupDisplaysCount"));
 
-            if (isAddToCartPopupEnabled) {
+            if (isAddToCartPopupEnabled && addToCartPopUpWrapper) {
                 if (!(+addToCartPopupDisplaysCount)) {
                     localStorage.removeItem("addToCartPopupDisplaysCount");
                 } else {
