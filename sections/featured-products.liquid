@@ -8,7 +8,6 @@
 
 
 {%- liquid
-  assign is_add_to_cart_popup_enabled = section.settings.is_add_to_cart_popup_enabled
   assign featured_products = section.settings.featured_products | map: 'handle'
   assign first_featured_product = nil
 
@@ -66,7 +65,7 @@
               section_id: section.id,
               quick_add: false,
               show_add_to_cart_button: true,
-              is_add_to_cart_popup_enabled: is_add_to_cart_popup_enabled
+              is_add_to_cart_popup_enabled: section.settings.is_add_to_cart_popup_enabled
             %}
           </li>
         {% endfor %}
