@@ -118,8 +118,9 @@ function addToCartProducts(formData) {
         body: JSON.stringify(formData)
     })
     .then(res => res.json())
-    .then((res) => {
+    .then(res => {
         const addToCartPopupWrapper = document.querySelector(".add-to-cart-confirmation-modal-container");
+        const cart = document.querySelector('cart-notification');
 
         if (addToCartPopupWrapper) {
             const addToCartPopUpCloseButton = addToCartPopupWrapper.querySelector(".add-to-cart-close");
@@ -127,10 +128,6 @@ function addToCartProducts(formData) {
             addToCartPopUpCloseButton.click();
         }
 
-        setTimeout(() => {
-            const cart = document.querySelector('cart-notification');
-
-            cart.renderContentsAfterAddToCartPopup(res);
-        }, 400);
+        cart.renderContentsAfterAddToCartPopup(res);
     });
 }
