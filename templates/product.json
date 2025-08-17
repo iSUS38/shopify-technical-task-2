@@ -98,7 +98,7 @@
           "puhdas-merry-christmas-room-diffuser-kaneli",
           "natural-all-purpose-spray-500ml"
         ],
-        "is_add_to_cart_popup_enabled": true,
+        "is_add_to_cart_popup_enabled": false,
         "is_add_to_cart_popup_visible_once": false,
         "add_to_cart_popup_title": "Complete your purchase",
         "add_to_cart_popup_products": [
