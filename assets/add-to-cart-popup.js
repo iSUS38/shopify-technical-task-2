@@ -71,8 +71,9 @@ document.addEventListener("DOMContentLoaded", function () {
             const isAddToCartPopupEnabled = this.getAttribute("data-pop-up-enabled");
             const parentSectionEl = this.closest("[class*='section-template--']");
             const addToCartPopUpWrapper = parentSectionEl.querySelector(".add-to-cart-confirmation-modal-container");
-            const addToCartPopupDisplaysCount = addToCartPopUpWrapper.getAttribute("data-popup-displays-count");
-            const popupCurrentDisplaysCount = +(localStorage.getItem("addToCartPopupDisplaysCount"));
+
+            let addToCartPopupDisplaysCount = addToCartPopUpWrapper.getAttribute("data-popup-displays-count");
+            let popupCurrentDisplaysCount = +(localStorage.getItem("addToCartPopupDisplaysCount"));
 
             console.log(isAddToCartPopupEnabled)
             console.log(addToCartPopupDisplaysCount)
