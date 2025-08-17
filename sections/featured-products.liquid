@@ -108,7 +108,10 @@
     {%- endif -%}
 
     {% if request.page_type == 'product' and first_featured_product and section.settings.is_add_to_cart_popup_enabled %}
-      {% render 'confirmation-add-to-cart-modal', first_featured_product: first_featured_product, is_add_to_cart_popup_visible_once: section.settings.is_add_to_cart_popup_visible_once %}
+      {% render 'confirmation-add-to-cart-modal', 
+        first_featured_product: first_featured_product, 
+        is_add_to_cart_popup_visible_once: section.settings.is_add_to_cart_popup_visible_once 
+      %}
     {% endif %}
   </div>
 </div>
