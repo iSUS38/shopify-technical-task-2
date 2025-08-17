@@ -57,7 +57,7 @@
   assign is_add_to_cart_popup_enabled = section.settings.is_add_to_cart_popup_enabled
 -%}
 
-<div class="featured-products-section section-{{ section.id }}-padding">
+<div class="featured-products-section">
   <div
     class="collection{% if section.settings.quick_add == 'bulk' %} collection-quick-add-bulk{% endif %} section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}"
     id="collection-{{ section.id }}"
