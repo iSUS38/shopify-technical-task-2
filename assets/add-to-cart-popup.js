@@ -130,8 +130,8 @@ function setNewProductData(productCardWrapper, addToCartPopUpWrapper) {
     const addToCartSingleItemButtonUpdated = addToCartPopUpWrapper.querySelector(".add-to-cart-modal-item");
     const addToCartAllItemsButton = addToCartPopUpWrapper.querySelector(".add-to-cart-modal-all");
 
-    addToCartPopupProductTitleEl?.innerHTML = productName;
-    addToCartPopupMainImage?.src = productImageUrl;
-    addToCartAllItemsButton?.setAttribute("data-product-id", productID)
-    addToCartSingleItemButtonUpdated?.setAttribute("data-product-id", productID);
+    addToCartPopupProductTitleEl.innerHTML = productName;
+    addToCartPopupMainImage.src = productImageUrl;
+    addToCartAllItemsButton.setAttribute("data-product-id", productID)
+    addToCartSingleItemButtonUpdated.setAttribute("data-product-id", productID);
 }
