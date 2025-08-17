@@ -71,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const isAddToCartPopupEnabled = this.getAttribute("data-pop-up-enabled");
             const parentSectionEl = this.closest("[class*='section-template--']");
             const addToCartPopUpWrapper = parentSectionEl.querySelector(".add-to-cart-confirmation-modal-container");
+            const isAddToCartPopupVisibleOnce = addToCartPopUpWrapper.getAttribute("data-popup-visible-once") === "true";
 
             if (isAddToCartPopupEnabled && addToCartPopUpWrapper) {
                 setNewProductData(productCardWrapper, addToCartPopUpWrapper);                
