@@ -412,6 +412,10 @@ blockquote {
   color: rgb(var(--color-foreground));
 }
 
+.product__info-wrapper {
+  overflow: hidden;
+}
+
 table:not([class]) {
   table-layout: fixed;
   border-collapse: collapse;

@@ -460,6 +460,7 @@
         "add_to_cart_popup_enabled": {
           "label": "Is the add to cart popup enabled"
         },
+        "add_to_cart_popup_title": "Add to cart popup heading",
         "add_to_cart_popup_visible_once": {
           "label": "Is the add to cart popup visible once"
         },

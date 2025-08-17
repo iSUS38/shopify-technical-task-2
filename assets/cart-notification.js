@@ -36,6 +36,7 @@ class CartNotification extends HTMLElement {
 
   renderContents(parsedState) {
     this.cartItemKey = parsedState.key;
+
     this.getSectionsToRender().forEach((section) => {
       document.getElementById(section.id).innerHTML = this.getSectionInnerHTML(
         parsedState.sections[section.id],
@@ -45,6 +46,32 @@ class CartNotification extends HTMLElement {
 
     if (this.header) this.header.reveal();
     this.open();
+  }
+
+  renderContentsAfterAddToCartPopup(parsedState) {
+    if (parsedState && parsedState.sections && parsedState.items && parsedState.items.length) {
+      if (parsedState.sections["cart-notification-last-added-product"]) {
+        let placeForProductsInsert = this.notification.querySelector(".cart-notification-products-wrapper");
+
+        if (!placeForProductsInsert) {
+          placeForProductsInsert = this.notification.querySelector("#cart-notification-product");
+        }
+
+        placeForProductsInsert.outerHTML = this.getSectionInnerHTML(parsedState.sections["cart-notification-last-added-product"]);
+      }
+
+      if (parsedState.sections["cart-icon-bubble-new"] && this.header) {
+        this.header.querySelector("#cart-icon-bubble").innerHTML = this.getSectionInnerHTML(parsedState.sections["cart-icon-bubble-new"]);
+      }
+
+      if (parsedState.sections["cart-notification-button"]) {
+        this.notification.querySelector("#cart-notification-button").innerHTML = this.getSectionInnerHTML(parsedState.sections["cart-notification-button"]);
+      }
+
+      if (this.header) this.header.reveal();
+
+      this.open();
+    }
   }
 
   getSectionsToRender() {

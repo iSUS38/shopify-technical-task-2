@@ -593,3 +593,45 @@
     clip-path: polygon(var(--shape--blob-5));
   }
 }
+
+.card-wrapper .card__add-to-cart-button {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+}
+
+.card-wrapper .card__information.with-add-to-cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-wrapper .card__add-to-cart-button button {
+  background-color: rgba(var(--color-button), var(--alpha-button-background));
+  color: rgb(var(--color-button-text));
+  font-size: 1.4rem;
+  line-height: calc(1 + 0.2 / var(--font-body-scale));
+  letter-spacing: 0.07rem;
+  border-radius: var(--buttons-radius-outset);
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  width: 150px;
+  height: 48px;
+  border: none;
+  border-radius: 26px;
+  cursor: pointer;
+}
+
+.card-wrapper .card__add-to-cart-button button:disabled {
+  background-color: light-dark(rgba(239, 239, 239, 0.5), rgba(19, 1, 1, 0.5));
+  color: light-dark(rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3));
+  border-color: light-dark(rgba(118, 118, 118, 0.5), rgba(195, 195, 195, 0.5));
+}
+
+@media screen and (max-width: 576px) {
+  .card-wrapper .card__add-to-cart-button button {
+    width: 120px;
+    height: 37px;
+  }
+}

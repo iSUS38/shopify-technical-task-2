@@ -1,58 +1,99 @@
+{{ 'component-add-to-cart-modal.css' | asset_url | stylesheet_tag }}
 
-<div class="add-to-cart-confirmation-modal">
-  <div class="add-to-cart-modal-product-image">
-    <img
-      src="{{ first_featured_product.featured_image | image_url: width: 600 }}"
-      alt="{{ first_featured_product.featured_image.alt }}"
-      width="{{ first_featured_product.featured_image.width }}"
-      height="{{ first_featured_product.featured_image.height }}"
-    >
-  </div>
-  <div>
-    <div>
-      <h5>{{ section.settings.title }}</h5>
-    </div>
-    <div>
-      <span>{{ 'add_to_cart_modal.product_message' | t: product_name: first_featured_product.title }}</span>
-      <span>{{ 'add_to_cart_modal.save_money_message' | t: saved_amount: 0 }}</span>
-    </div>
-    <div class="add-to-cart-modal-recommended-products">
-      {% assign recommended_products = section.settings.add_to_cart_popup_products | map: 'handle' %}
+{% liquid
+    assign recommended_products = section.settings.add_to_cart_popup_products | map: 'handle'
+    assign total_saved_amount = 0
 
-      {% for recommended_product_handle in recommended_products %}
-        {% assign recommended_product = all_products[recommended_product_handle] %}
+    for recommended_product_handle in recommended_products
+        assign recommended_product = all_products[recommended_product_handle]
 
-        <div class="add-to-cart-modal-recommendation-product">
-          <div class="recommended-product-image-wrapper">
-            <img
-              src="{{ recommended_product.featured_image | image_url: width: 400 }}"
-              alt="{{ recommended_product.featured_image.alt }}"
-              width="88px"
-              height="100px"
-            >
-          </div>
-          <div>
-            <div>
-              <h5>{{ recommended_product.title }}</h5>
-              <span>{{ recommended_product.type }}</span>
-            </div>
+        if  recommended_product.compare_at_price > recommended_product.price
+            assign product_saved_amount = recommended_product.compare_at_price | minus: recommended_product.price
 
-            {% if recommended_product.first_available_variant.sku %}
-              <div>
-                <span>
-                  {{- 'add_to_cart_modal.sku_caption' | t: sku: recommended_product.first_available_variant.sku -}}
-                </span>
-              </div>
-            {% endif %}
+            assign total_saved_amount = total_saved_amount | plus: product_saved_amount
+        endif
+    endfor
+%}
 
-            {% render 'price', product: recommended_product %}
-          </div>
+<div class="add-to-cart-confirmation-modal-container">
+    <div class="add-to-cart-confirmation-modal">
+        <div>
+          <h5 class="mobile-add-to-cart-modal-title">{{ section.settings.add_to_cart_popup_title }}</h5>
         </div>
-      {% endfor %}
+        <div class="add-to-cart-modal-product-image">
+          <img
+            src="{{ first_featured_product.featured_image | image_url: width: 600 }}"
+            alt="{{ first_featured_product.featured_image.alt }}"
+            width="{{ first_featured_product.featured_image.width }}"
+            height="{{ first_featured_product.featured_image.height }}"
+          >
+        </div>
+        <div class="add-to-cart-modal-product-details">
+          <div>
+            <h5 class="desktop-add-to-cart-modal-title">{{ section.settings.add_to_cart_popup_title }}</h5>
+          </div>
+          <div class="add_to_cart_modal-subtitles">
+            <span>{{ 'add_to_cart_modal.product_message_html' | t: product_name: first_featured_product.title }}</span>
+
+            {% if total_saved_amount > 0 %}
+                {% assign total_saved_amount = total_saved_amount | money %}
+
+                <span>{{ 'add_to_cart_modal.save_money_message_html' | t: saved_amount: total_saved_amount }}</span>
+            {% endif %}
+          </div>
+          <div class="add-to-cart-modal-recommended-products">
+            {% for recommended_product_handle in recommended_products %}
+              {% assign recommended_product = all_products[recommended_product_handle] %}
+
+              {% if recommended_product.available %}
+                <div class="add-to-cart-modal-recommendation-product" data-product-id="{{ recommended_product.selected_or_first_available_variant.id  }}">
+                  <div class="recommended-product-image-wrapper">
+                    <img
+                      src="{{ recommended_product.featured_image | image_url: width: 400 }}"
+                      alt="{{ recommended_product.featured_image.alt }}"
+                      width="88px"
+                      height="100px"
+                    >
+                  </div>
+                  <div class="recommended-product-inner">
+                    <div>
+                      <h5>{{ recommended_product.title }}</h5>
+                      <span>{{ recommended_product.type }}</span>
+                    </div>
+        
+                    {% if recommended_product.first_available_variant.sku %}
+                      <div>
+                        <span>
+                          {{- 'add_to_cart_modal.sku_caption' | t: sku: recommended_product.first_available_variant.sku -}}
+                        </span>
+                      </div>
+                    {% endif %}
+
+                    {% render 'price', product: recommended_product %}
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+          <div class="add-to-cart-modal-buttons-wrapper">
+            <button
+                class="add-to-cart-modal-all"
+                data-product-id={{ first_featured_product.selected_or_first_available_variant.id }}
+            >
+                {{ 'add_to_cart_modal.add_to_cart_all' | t }}
+            </button>
+            <button 
+                class="add-to-cart-modal-item"
+                data-product-id={{ first_featured_product.selected_or_first_available_variant.id }}
+            >
+                {{ 'add_to_cart_modal.add_to_cart' | t }}
+            </button>
+          </div>
+          <span class="svg-wrapper add-to-cart-close">
+            {{- 'icon-close-new.svg' | inline_asset_content -}}
+        </span>
+        </div>
     </div>
-    <div class="add-to-cart-modal-buttons-wrapper">
-      <button>{{ 'add_to_cart_modal.add_to_cart_all' | t }}</button>
-      <button>{{ 'add_to_cart_modal.add_to_cart' | t }}</button>
-    </div>
-  </div>
 </div>
+
+<div class="add-to-cart-modal-backdrop"></div>
