@@ -8,6 +8,7 @@
 
 
 {%- liquid
+  assign is_add_to_cart_popup_enabled = section.settings.is_add_to_cart_popup_enabled
   assign featured_products = section.settings.featured_products | map: 'handle'
   assign first_featured_product = nil
 
