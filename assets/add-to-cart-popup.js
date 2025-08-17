@@ -68,10 +68,10 @@ document.addEventListener("DOMContentLoaded", function () {
     allAddToCartTileButtons.forEach(function (button) {
         button.addEventListener("click", function () {
             const productCardWrapper = this.closest(".card-wrapper");
-            const isAddToCartPopupEnabled = this.getAttribute("data-pop-up-enabled");
             const parentSectionEl = this.closest("[class*='section-template--']");
             const addToCartPopUpWrapper = parentSectionEl.querySelector(".add-to-cart-confirmation-modal-container");
 
+            let isAddToCartPopupEnabled = this.getAttribute("data-pop-up-enabled");
             let addToCartPopupDisplaysCount = addToCartPopUpWrapper.getAttribute("data-popup-displays-count");
             let popupCurrentDisplaysCount = +(localStorage.getItem("addToCartPopupDisplaysCount"));
 
