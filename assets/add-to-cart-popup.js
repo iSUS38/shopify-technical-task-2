@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const parentSectionEl = this.closest("[class*='section-template--']");
             const addToCartPopUpWrapper = parentSectionEl.querySelector(".add-to-cart-confirmation-modal-container");
             const addToCartPopupDisplaysCount = addToCartPopUpWrapper.getAttribute("data-popup-displays-count");
-            const popupCurrentDisplaysCount = localStorage.getItem("addToCartPopupDisplaysCount");
+            const popupCurrentDisplaysCount = +(localStorage.getItem("addToCartPopupDisplaysCount"));
 
             console.log(isAddToCartPopupEnabled)
             console.log(addToCartPopupDisplaysCount)
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (!(+addToCartPopupDisplaysCount)) {
                     localStorage.removeItem("addToCartPopupDisplaysCount");
                 } else {
-                    if (+popupCurrentDisplaysCount >= +addToCartPopupDisplaysCount) {
+                    if (popupCurrentDisplaysCount >= +addToCartPopupDisplaysCount) {
                         isAddToCartPopupEnabled = false;
                     }
                 }
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 addToCartPopUpWrapper.classList.add("modal-show");
                 document.body.classList.add("add-to-cart-modal-shown");
 
-                localStorage.setItem("addToCartPopupDisplaysCount", (+popupCurrentDisplaysCount ? +popupCurrentDisplaysCount + 1 : 1));
+                localStorage.setItem("addToCartPopupDisplaysCount", (popupCurrentDisplaysCount ? ++popupCurrentDisplaysCount : 1));
             } else {
                 const productID = productCardWrapper.querySelector(".card__heading[data-product-id]")?.getAttribute("data-product-id");
 
