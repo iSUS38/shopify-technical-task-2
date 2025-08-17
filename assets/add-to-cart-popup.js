@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (isAddToCartPopupEnabled && addToCartPopUpWrapper) {
                 if (!(+addToCartPopupDisplaysCount)) {
-                    localStorage.removeItem("addToCartPopupDisplaysCount");
+                    localStorage.removeItem(`template-${pageTemplateName}-addToCartPopupDisplaysCount`);
                 } else {
                     if (popupCurrentDisplaysCount >= +addToCartPopupDisplaysCount) {
                         isAddToCartPopupEnabled = false;
