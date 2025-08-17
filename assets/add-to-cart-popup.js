@@ -73,19 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const addToCartPopUpWrapper = parentSectionEl.querySelector(".add-to-cart-confirmation-modal-container");
 
             if (isAddToCartPopupEnabled && addToCartPopUpWrapper) {
-                const productImageUrl = productCardWrapper.querySelector(".media img").src;
-                const productName = productCardWrapper.querySelector(".card__heading[data-product-name]")?.getAttribute("data-product-name");
-                const productID = productCardWrapper.querySelector(".card__heading[data-product-id]")?.getAttribute("data-product-id");
-
-                const addToCartPopupMainImage = addToCartPopUpWrapper.querySelector(".add-to-cart-modal-product-image img");
-                const addToCartPopupProductTitleEl = addToCartPopUpWrapper.querySelector(".add-to-cart-modal-product-name");
-                const addToCartSingleItemButtonUpdated = addToCartPopUpWrapper.querySelector(".add-to-cart-modal-item");
-                const addToCartAllItemsButton = addToCartPopUpWrapper.querySelector(".add-to-cart-modal-all");
-
-                addToCartPopupProductTitleEl.innerHTML = productName;
-                addToCartPopupMainImage.src = productImageUrl;
-                addToCartAllItemsButton.setAttribute("data-product-id", productID)
-                addToCartSingleItemButtonUpdated.setAttribute("data-product-id", productID);
+                setNewProductData(productCardWrapper, addToCartPopUpWrapper);                
 
                 addToCartPopUpWrapper.classList.add("modal-show");
                 document.body.classList.add("add-to-cart-modal-shown");
@@ -130,4 +118,31 @@ function addToCartProducts(formData) {
 
         cart.renderContentsAfterAddToCartPopup(res);
     });
+}
+
+function setNewProductData(productCardWrapper, addToCartPopUpWrapper) {
+    const productImageUrl = productCardWrapper.querySelector(".media img")?.src;
+    const productName = productCardWrapper.querySelector(".card__heading[data-product-name]")?.getAttribute("data-product-name");
+    const productID = productCardWrapper.querySelector(".card__heading[data-product-id]")?.getAttribute("data-product-id");
+
+    const addToCartPopupMainImage = addToCartPopUpWrapper.querySelector(".add-to-cart-modal-product-image img");
+    const addToCartPopupProductTitleEl = addToCartPopUpWrapper.querySelector(".add-to-cart-modal-product-name");
+    const addToCartSingleItemButtonUpdated = addToCartPopUpWrapper.querySelector(".add-to-cart-modal-item");
+    const addToCartAllItemsButton = addToCartPopUpWrapper.querySelector(".add-to-cart-modal-all");
+
+    if (addToCartPopupProductTitleEl) {
+        addToCartPopupProductTitleEl.innerHTML = productName;
+    }
+
+    if (addToCartPopupMainImage) {
+        addToCartPopupMainImage.src = productImageUrl;
+    }
+
+    if (addToCartAllItemsButton) {
+        addToCartAllItemsButton.setAttribute("data-product-id", productID)
+    }
+
+    if (addToCartSingleItemButtonUpdated) {
+        addToCartSingleItemButtonUpdated.setAttribute("data-product-id", productID);
+    }
 }
