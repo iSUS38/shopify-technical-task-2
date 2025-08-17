@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const addToCartPopUpWrapper = parentSectionEl.querySelector(".add-to-cart-confirmation-modal-container");
 
             let isAddToCartPopupEnabled = this.getAttribute("data-pop-up-enabled");
-            let addToCartPopupDisplaysCount = addToCartPopUpWrapper.getAttribute("data-popup-displays-count");
+            let addToCartPopupDisplaysCount = addToCartPopUpWrapper?.getAttribute("data-popup-displays-count");
             let popupCurrentDisplaysCount = +(localStorage.getItem("addToCartPopupDisplaysCount"));
 
             console.log(isAddToCartPopupEnabled)
