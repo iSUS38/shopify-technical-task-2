@@ -1,1 +1,108 @@
-{"sections":{"main":{"type":"main-article","blocks":{"featured_image":{"type":"featured_image","settings":{"image_height":"adapt"}},"title":{"type":"title","settings":{"blog_show_date":true,"blog_show_author":false}},"share":{"type":"share","settings":{"share_label":"Share"}},"content":{"type":"content","settings":{}}},"block_order":["featured_image","title","share","content"],"settings":{}}},"order":["main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "tags": {
+          "type": "tags",
+          "settings": {
+            "button_style": "primary"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "enable_share": true,
+            "heading_size": "h1",
+            "show_date": true,
+            "show_author": true
+          }
+        },
+        "featured_image": {
+          "type": "featured_image",
+          "settings": {
+            "image_width": "full"
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "tags",
+        "title",
+        "featured_image",
+        "content"
+      ],
+      "settings": {
+        "horizontal_alignment": "left",
+        "container_width": "sm",
+        "color_scheme": "",
+        "padding_top": "default",
+        "padding_bottom": "default",
+        "show_top_border": false,
+        "show_bottom_border": false
+      }
+    },
+    "recent": {
+      "type": "blog-posts",
+      "blocks": {
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "layout_header": "left",
+            "subheading": "",
+            "heading": "Viimeisimmät blogikirjoitukset",
+            "page_title": false,
+            "heading_size": "h2",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          },
+          "blocks": {}
+        },
+        "button-group": {
+          "type": "button-group",
+          "static": true,
+          "settings": {
+            "horizontal_alignment": "inherit"
+          },
+          "blocks": {}
+        }
+      },
+      "settings": {
+        "blog": "",
+        "product_limit": 8,
+        "columns_desktop": "4",
+        "columns_mobile": "1",
+        "layout_desktop": "slideshow",
+        "container_type": "max",
+        "arrow_position": "overlay",
+        "counter_style": "progress",
+        "button_style": "primary",
+        "color_scheme": "",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "default",
+        "padding_bottom": "default",
+        "show_top_border": false,
+        "show_bottom_border": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "recent"
+  ]
+}

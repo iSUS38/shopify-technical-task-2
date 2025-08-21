@@ -1,36 +1,60 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
-    "banner": {
-      "type": "main-collection-banner",
+    "header": {
+      "type": "collection-header",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": false,
-        "color_scheme": "scheme-1"
+        "background_type": "color_scheme",
+        "height": "adapt",
+        "heading_size": "h2",
+        "description": "admin",
+        "layout_header": "left",
+        "show_submenu": true,
+        "color_scheme": "",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "default",
+        "padding_bottom": "default",
+        "show_top_border": false,
+        "show_bottom_border": false
       }
     },
-    "product-grid": {
-      "type": "main-collection-product-grid",
+    "main": {
+      "type": "main-collection",
       "settings": {
-        "products_per_page": 16,
-        "columns_desktop": 4,
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "enable_filtering": true,
-        "filter_type": "horizontal",
-        "enable_sorting": true,
+        "product_limit": 18,
+        "columns_desktop": "4",
         "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "container_type": "max",
+        "enable_infinite_scroll": false,
+        "link": "shopify://collections/all",
+        "enable_sorting": true,
+        "enable_filtering": true,
+        "filter_layout": "modal",
+        "enable_sticky": false,
+        "enable_max_height": false,
+        "open_filters_by_default": true,
+        "active_filter_style": "primary",
+        "color_scheme": "",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "0px",
+        "padding_bottom": "var(--space-xl)",
+        "show_top_border": false,
+        "show_bottom_border": false
       }
     }
   },
   "order": [
-    "banner",
-    "product-grid"
+    "header",
+    "main"
   ]
 }

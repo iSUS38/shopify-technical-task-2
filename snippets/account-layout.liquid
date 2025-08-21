@@ -1,0 +1,22 @@
+<h1 class="visually-hidden">{{ 'customer.account.title' | t }}</h1>
+
+<div class="customer account ui padding--section container--xl">
+  <div class="account__header center container">
+    <p class="h1 account__title">{{ 'customer.account.title' | t }} </p>
+    <a class="button button--text" href="{{ routes.account_logout_url }}">
+      <span class="button-text__label">{{ 'customer.log_out' | t }}</span>
+    </a>
+  </div>
+
+  <div class="account__body">
+    {% render 'account-details', class: 'account__details--desktop' %}
+    <div class="account__right">
+      {% render 'account-nav' %}
+      <div class="account__main">
+        {{ content }}
+      </div>
+    </div>
+
+    {% render 'account-details', class: 'account__details--mobile' %}
+  </div>
+</div>

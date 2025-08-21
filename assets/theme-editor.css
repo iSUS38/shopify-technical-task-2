@@ -1,0 +1,13 @@
+main:has([data-modal='true'] .dialog[open]) {
+  position: relative;
+  z-index: 100;
+}
+
+body:has(dialog[open]) [data-shopify-editor-section]:not(:has(dialog[open])) {
+  position: relative;
+  z-index: -1;
+}
+
+[data-shopify-editor-section] {
+  isolation: isolate;
+}

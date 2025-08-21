@@ -1,1 +1,139 @@
-{"name":"t:sections.footer.name","type":"footer","sections":{"footer":{"type":"footer","settings":{"color_scheme":"scheme-1","newsletter_enable":true,"newsletter_heading":"Subscribe to our emails","enable_follow_on_shop":true,"show_social":true,"enable_country_selector":true,"enable_language_selector":true,"payment_enable":true,"show_policy":true,"margin_top":0,"padding_top":36,"padding_bottom":36}}},"order":["footer"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "Footer",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "footer-0": {
+          "type": "image",
+          "settings": {
+            "block_size": "small",
+            "max_width": 960,
+            "image_ratio": "default",
+            "link": "",
+            "link_label": ""
+          }
+        },
+        "footer-1": {
+          "type": "link_list",
+          "settings": {
+            "block_size": "small",
+            "heading": "Pikayhteydet",
+            "menu": "footer",
+            "collapse": false
+          }
+        },
+        "footer-2": {
+          "type": "link_list",
+          "settings": {
+            "block_size": "small",
+            "heading": "Pikayhteydet",
+            "menu": "footer",
+            "collapse": false
+          }
+        },
+        "footer-3": {
+          "type": "spacer",
+          "settings": {}
+        },
+        "footer-4": {
+          "type": "newsletter",
+          "settings": {
+            "block_size": "large",
+            "heading": "Tilaa uutiskirjeemme",
+            "heading_size": "heading h5",
+            "text": "",
+            "button_style": "primary",
+            "button_width": "full",
+            "show_social": true,
+            "enable_follow_on_shop": false
+          }
+        }
+      },
+      "block_order": [
+        "footer-0",
+        "footer-1",
+        "footer-2",
+        "footer-3",
+        "footer-4"
+      ],
+      "settings": {
+        "horizontal_alignment": "left",
+        "vertical_spacing": "default",
+        "horizontal_spacing": "var(--space-l)",
+        "font_style": "heading h5",
+        "link_hover_style": "underline",
+        "color_scheme": "",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "var(--space-xl)",
+        "padding_bottom": "var(--space-2xl-3xl)",
+        "show_borders": false
+      }
+    },
+    "bottom-bar": {
+      "type": "bottom-bar",
+      "blocks": {
+        "bottom-bar-0": {
+          "type": "link_list",
+          "settings": {
+            "block_size": "small",
+            "menu": "footer",
+            "horizontal_alignment": "left"
+          }
+        },
+        "bottom-bar-1": {
+          "type": "payment_types",
+          "settings": {
+            "block_size": "small",
+            "horizontal_alignment": "center"
+          }
+        },
+        "bottom-bar-2": {
+          "type": "copyright",
+          "settings": {
+            "block_size": "small",
+            "horizontal_alignment": "right"
+          }
+        }
+      },
+      "block_order": [
+        "bottom-bar-0",
+        "bottom-bar-1",
+        "bottom-bar-2"
+      ],
+      "settings": {
+        "show_borders": true,
+        "vertical_spacing": "var(--space-xs)",
+        "color_scheme": "",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "var(--space-xs)",
+        "padding_bottom": "var(--space-xs)"
+      }
+    },
+    "back-to-top": {
+      "type": "back-to-top",
+      "settings": {
+        "position": "right",
+        "button_style": "primary",
+        "color_scheme": ""
+      }
+    }
+  },
+  "order": [
+    "footer",
+    "bottom-bar",
+    "back-to-top"
+  ]
+}

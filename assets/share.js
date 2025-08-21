@@ -1,55 +1,40 @@
 if (!customElements.get('share-button')) {
   customElements.define(
     'share-button',
-    class ShareButton extends DetailsDisclosure {
+    class ShareButton extends HTMLElement {
       constructor() {
         super();
+      }
 
-        this.elements = {
-          shareButton: this.querySelector('button'),
-          shareSummary: this.querySelector('summary'),
-          closeButton: this.querySelector('.share-button__close'),
-          successMessage: this.querySelector('[id^="ShareMessage"]'),
-          urlInput: this.querySelector('input'),
-        };
-        this.urlToShare = this.elements.urlInput ? this.elements.urlInput.value : document.location.href;
-
+      connectedCallback() {
         if (navigator.share) {
-          this.mainDetailsToggle.setAttribute('hidden', '');
-          this.elements.shareButton.classList.remove('hidden');
-          this.elements.shareButton.addEventListener('click', () => {
+          this.shareButton.addEventListener('click', () => {
             navigator.share({ url: this.urlToShare, title: document.title });
           });
         } else {
-          this.mainDetailsToggle.addEventListener('toggle', this.toggleDetails.bind(this));
-          this.mainDetailsToggle
-            .querySelector('.share-button__copy')
-            .addEventListener('click', this.copyToClipboard.bind(this));
-          this.mainDetailsToggle.querySelector('.share-button__close').addEventListener('click', this.close.bind(this));
+          this.shareButton.addEventListener('click', () => {
+            navigator.clipboard.writeText(this.urlToShare).then(() => {
+              this.shareButton.setAttribute('data-copied', true);
+              window.utils.announce(window.accessibilityStrings.shareSuccessMessage);
+
+              setTimeout(() => {
+                this.shareButton.setAttribute('data-copied', false);
+              }, 2000);
+            });
+          });
         }
       }
 
-      toggleDetails() {
-        if (!this.mainDetailsToggle.open) {
-          this.elements.successMessage.classList.add('hidden');
-          this.elements.successMessage.textContent = '';
-          this.elements.closeButton.classList.add('hidden');
-          this.elements.shareSummary.focus();
-        }
+      updateURL(url) {
+        this.dataset.shareUrl = url;
       }
 
-      copyToClipboard() {
-        navigator.clipboard.writeText(this.elements.urlInput.value).then(() => {
-          this.elements.successMessage.classList.remove('hidden');
-          this.elements.successMessage.textContent = window.accessibilityStrings.shareSuccess;
-          this.elements.closeButton.classList.remove('hidden');
-          this.elements.closeButton.focus();
-        });
+      get shareButton() {
+        return this.querySelector('button');
       }
 
-      updateUrl(url) {
-        this.urlToShare = url;
-        this.elements.urlInput.value = url;
+      get urlToShare() {
+        return this.dataset.shareUrl ? this.dataset.shareUrl : document.location.href;
       }
     }
   );

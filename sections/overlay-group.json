@@ -1,0 +1,55 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "Overlay",
+  "type": "custom.overlay",
+  "sections": {
+    "cart_drawer": {
+      "type": "cart-drawer",
+      "settings": {}
+    },
+    "sidebar": {
+      "type": "sidebar-menu",
+      "settings": {}
+    },
+    "search_modal": {
+      "type": "search-modal",
+      "settings": {}
+    },
+    "popup_newsletter": {
+      "type": "popup-newsletter",
+      "blocks": {
+        "text": {
+          "type": "text",
+          "settings": {}
+        },
+        "newsletter": {
+          "type": "_newsletter",
+          "settings": {
+            "button_width": "full"
+          }
+        }
+      },
+      "block_order": [
+        "text",
+        "newsletter"
+      ],
+      "settings": {
+        "color_scheme": "scheme-3"
+      }
+    }
+  },
+  "order": [
+    "cart_drawer",
+    "sidebar",
+    "search_modal",
+    "popup_newsletter"
+  ]
+}

@@ -2,8 +2,10 @@ class PredictiveSearch extends SearchForm {
   constructor() {
     super();
     this.cachedResults = {};
+    this.status = this.querySelector('[role="status"]');
     this.predictiveSearchResults = this.querySelector('[data-predictive-search]');
     this.allPredictiveSearchInstances = document.querySelectorAll('predictive-search');
+    this.defaultSuggestions = this.querySelector('[data-default-suggestions]');
     this.isOpen = false;
     this.abortController = new AbortController();
     this.searchTerm = '';
@@ -12,10 +14,10 @@ class PredictiveSearch extends SearchForm {
   }
 
   setupEventListeners() {
+    document.addEventListener('dialog:close:search', () => this.close(true));
     this.input.form.addEventListener('submit', this.onFormSubmit.bind(this));
 
     this.input.addEventListener('focus', this.onFocus.bind(this));
-    this.addEventListener('focusout', this.onFocusOut.bind(this));
     this.addEventListener('keyup', this.onKeyup.bind(this));
     this.addEventListener('keydown', this.onKeydown.bind(this));
   }
@@ -26,6 +28,7 @@ class PredictiveSearch extends SearchForm {
 
   onChange() {
     super.onChange();
+    this.status.classList.add('visually-hidden');
     const newSearchTerm = this.getQuery();
     if (!this.searchTerm || !newSearchTerm.startsWith(this.searchTerm)) {
       // Remove the results when they are no longer relevant for the new search term
@@ -68,10 +71,8 @@ class PredictiveSearch extends SearchForm {
     if (this.searchTerm !== currentSearchTerm) {
       // Search term was changed from other search input, treat it as a user change
       this.onChange();
-    } else if (this.getAttribute('results') === 'true') {
+    } else if (this.getAttribute('data-results') === 'true') {
       this.open();
-    } else {
-      this.getSearchResults(this.searchTerm);
     }
   }
 
@@ -126,9 +127,9 @@ class PredictiveSearch extends SearchForm {
 
     // Filter out hidden elements (duplicated page and article resources) thanks
     // to this https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetParent
-    const allVisibleElements = Array.from(this.querySelectorAll('li, button.predictive-search__item')).filter(
-      (element) => element.offsetParent !== null
-    );
+    const allVisibleElements = Array.from(
+      this.querySelectorAll('[role="option"], button.predictive-search__item')
+    ).filter((element) => element.offsetParent !== null);
     let activeElementIndex = 0;
 
     if (moveUp && !selectedElement) return;
@@ -227,6 +228,10 @@ class PredictiveSearch extends SearchForm {
 
   renderSearchResults(resultsMarkup) {
     this.predictiveSearchResults.innerHTML = resultsMarkup;
+    setTimeout(() => {
+      const fade = this.predictiveSearchResults.querySelectorAll('[data-animate-fade]');
+      fade.forEach((element) => element.classList.remove('faded-out'));
+    }, 100);
     this.setAttribute('results', true);
 
     this.setLiveRegionResults();
@@ -234,8 +239,15 @@ class PredictiveSearch extends SearchForm {
   }
 
   setLiveRegionResults() {
+    const countEl = this.querySelector('[data-predictive-search-live-region-count-value]');
     this.removeAttribute('loading');
-    this.setLiveRegionText(this.querySelector('[data-predictive-search-live-region-count-value]').textContent);
+    if (countEl) {
+      this.setLiveRegionText(countEl.textContent);
+      const count = parseInt(countEl.getAttribute('data-predictive-search-live-region-count-value'));
+      if (count === 0) {
+        this.status.classList.remove('visually-hidden');
+      }
+    }
   }
 
   getResultsMaxHeight() {
@@ -252,8 +264,10 @@ class PredictiveSearch extends SearchForm {
   }
 
   close(clearSearchTerm = false) {
+    this.status.classList.add('visually-hidden');
     this.closeResults(clearSearchTerm);
     this.isOpen = false;
+    this.defaultSuggestions.removeAttribute('hidden');
   }
 
   closeResults(clearSearchTerm = false) {

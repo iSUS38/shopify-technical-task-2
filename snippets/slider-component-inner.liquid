@@ -1,0 +1,9 @@
+
+<div
+  class="slider-component__inner {% if text == true %}slider-component__inner--text{% endif %} slider-component__inner--{{ container_type }} {% if column_behavior == 'grid' %}slider-component__inner--stack{% endif %}"
+  style="--container-width: 87.5rem; --columns-desktop: {{ columns_desktop }}; --columns-mobile: {{ columns_mobile }}; {{  styles }}"
+>
+  <div id="Slider-{{ id }}" class="slider-component__slider">
+    {{ content }}
+  </div>
+</div>

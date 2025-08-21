@@ -1,0 +1,58 @@
+{%- liquid
+  assign widths = '200, 300, 400, 500, 600, 800, 1000, 1200'
+  assign is_open = false
+-%}
+{% # theme-check-disable UnclosedHTMLElement %}
+{%- for block in section.blocks %}
+  {%- liquid
+    assign show_menu = false
+    if block.settings.menu == link_title
+      assign show_menu = true
+    endif
+    if block.settings.menu == blank and link_title == ''
+      assign show_menu = true
+    endif
+
+    assign image_ratio = block.settings.image_ratio
+    if block.settings.image_ratio == 'default'
+      assign image_ratio = block.settings.image.aspect_ratio
+    endif
+  -%}
+  {%- if show_menu == true -%}
+    {% if is_open == false %}
+      <div class="menu-drawer__promo">
+      {%- assign is_open = true -%}
+    {% endif %}
+    {% if block.settings.image != blank %}
+      <div class="menu-drawer__promo-link image-card expand-link faded-out" data-animate-fade >
+        <div class="image-ratio image-card__image-wrapper" style="--image-ratio: {{ image_ratio }}">
+          {{
+            block.settings.image
+            | image_url: width: 800
+            | image_tag: sizes: '50vw', widths: widths, class: 'image-card__image', loading: 'lazy'
+          }}
+        </div>
+        {%- if block.settings.link != blank -%}
+          <a class="expand-link__link" href="{{ block.settings.link }}">
+            {%- if block.settings.label != blank -%}
+              <div class="image-card__text">
+                <span class="button button--text">
+                  <span class="button-text__label ">{{- block.settings.label -}}</span>
+                </span>
+              </div>
+            {% endif %}
+          </a>
+        {%- else -%}
+          <div class="image-card__text caption">
+            {{- block.settings.label -}}
+          </div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{% if is_open == true %}
+</div>
+{% endif %}
+{% # theme-check-enable UnclosedHTMLElement %}

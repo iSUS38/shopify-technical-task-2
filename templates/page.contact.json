@@ -1,25 +1,91 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-page",
       "settings": {
-        "padding_top": 36,
-        "padding_bottom": 36
+        "show_title": true,
+        "show_content": true,
+        "heading_size": "h1",
+        "horizontal_alignment": "left",
+        "container_width": "xs",
+        "color_scheme": "",
+        "padding_top": "default",
+        "padding_bottom": "0px",
+        "show_top_border": false,
+        "show_bottom_border": false
       }
     },
-    "form": {
+    "contact": {
       "type": "contact-form",
+      "blocks": {
+        "name": {
+          "type": "text",
+          "settings": {
+            "field_label": "Nimi",
+            "required": false,
+            "columns": "2"
+          }
+        },
+        "email": {
+          "type": "email",
+          "settings": {
+            "field_label": "Sähköposti",
+            "columns": "2"
+          }
+        },
+        "telephone": {
+          "type": "telephone",
+          "settings": {
+            "field_label": "Puhelinnumero",
+            "required": false,
+            "columns": "2"
+          }
+        },
+        "message": {
+          "type": "textarea",
+          "settings": {
+            "field_label": "Kommentti",
+            "required": false
+          }
+        }
+      },
+      "block_order": [
+        "name",
+        "email",
+        "telephone",
+        "message"
+      ],
       "settings": {
+        "subheading": "",
         "heading": "",
-        "heading_size": "h1",
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "page_title": false,
+        "heading_size": "h2",
+        "text": "",
+        "button_style": "primary",
+        "button_width": "default",
+        "horizontal_alignment": "left",
+        "container_width": "xs",
+        "color_scheme": "",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "default",
+        "padding_bottom": "default",
+        "show_top_border": false,
+        "show_bottom_border": false
       }
     }
   },
   "order": [
     "main",
-    "form"
+    "contact"
   ]
 }

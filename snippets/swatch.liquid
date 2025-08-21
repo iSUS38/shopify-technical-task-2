@@ -20,13 +20,17 @@
   elsif swatch.color
     assign swatch_value = 'rgb(' | append: swatch.color.rgb | append: ')'
   endif
+
+  if size == nil
+    assign size = 'large'
+  endif
 -%}
 
 <span
   {% if swatch_value %}
-    class="swatch{% if shape == 'square' %} swatch--square{% endif %}"
-    style="--swatch--background: {{ swatch_value }};{% if swatch_focal_point %} --swatch-focal-point: {{ swatch_focal_point }};{% endif %}"
+    class="swatch swatch--{{ settings.swatch_style }} swatch--{{ size }}"
+    style="--swatch--background: {{ swatch_value }};{% if swatch_focal_point %} --swatch-focal-point: {{ swatch_focal_point }};{% endif %}'}"
   {% else %}
-    class="swatch swatch--unavailable{% if shape == 'square' %} swatch--square{% endif %}"
+    class="swatch swatch--unavailable swatch--{{ settings.swatch_style }}"
   {% endif %}
 ></span>

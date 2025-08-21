@@ -1,0 +1,25 @@
+{%- assign show_icon_setting = true -%}
+{%- if show_icon == false -%}
+  {%- assign show_icon_setting = false -%}
+{%- endif -%}
+
+{%- if label != blank -%}
+  <a
+    {% if url == blank %}
+      role="link" aria-disabled="true"
+    {% else %}
+      href="{{ url }}"
+    {% endif %}
+    class="button button--text{% if class %} {{ class }}{% endif %}"
+    {% if aria_label %}
+      aria-label="{{ aria_label }}"
+    {% endif %}
+    {{ attributes }}
+    {{ block.shopify_attributes }}
+  >
+    <span class="button-text__label">{{ label }}</span>
+    {%- if settings.font_text_button_decoration == 'arrow' and show_icon_setting -%}
+      {%- render 'icon' with 'arrow-right', class: 'icon--s' -%}
+    {%- endif -%}
+  </a>
+{%- endif -%}

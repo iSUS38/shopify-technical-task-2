@@ -1,0 +1,28 @@
+{%- liquid
+  assign image_settings = image_settings | default: settings
+  assign image = image | default: image_settings.video | default: image_settings.image
+  assign mobile_image = image_settings.mobile_video | default: image_settings.mobile_image | default: image
+
+  if settings.height == 'adapt'
+    assign padding_aspect_ratio = 1.0 | divided_by: image.aspect_ratio | times: 100 | append: '%'
+  endif
+
+  if settings.mobile_height == 'adapt'
+    assign mobile_padding_aspect_ratio = 1.0 | divided_by: mobile_image.aspect_ratio | times: 100 | append: '%'
+  endif
+-%}
+{%- style -%}
+  .padding-{{ id }} {
+    --padding-aspect-ratio: {{ padding_aspect_ratio }};
+  }
+
+  @media (max-width: 47.999em) {
+    .padding-{{ id }} {
+      {%- if mobile_padding_aspect_ratio -%}
+        --padding-aspect-ratio: {{ mobile_padding_aspect_ratio }};
+      {%- else -%}
+        --padding-aspect-ratio: unset;
+      {%- endif -%}
+    }
+  }
+{%- endstyle -%}

@@ -1,0 +1,44 @@
+{%- for i in (1..3) -%}
+  {%- capture option_id -%}option_{{ i }}{%- endcapture -%}
+  {%- assign option_name = block.settings[option_id] -%}
+
+  {%- if option_name == option.name -%}
+    {%- capture option_id_page -%}option_{{ i }}_page{%- endcapture -%}
+    {%- capture option_id_label -%}option_{{ i }}_label{%- endcapture -%}
+    {%- capture dialog_name -%}dialog-{{ section.id }}-block-{{ forloop.index }}-{{ i }}{% endcapture %}
+    {%- capture title_id -%}dialog-title-{{ section.id }}-block-{{ forloop.index }}-{{ i }}{% endcapture %}
+    {%- liquid
+      assign page = block.settings[option_id_page]
+      assign content = page.content
+      assign title = page.title
+      assign label = block.settings[option_id_label]
+    -%}
+
+    {%- if page != blank -%}
+      <custom-dialog data-modal="true" data-overlay="true" data-name="{{ dialog_name }}" data-display="flex">
+        {%- if label == 'text' -%}
+          <button type="button" class="variant-picker__modal-text-button button button--text" aria-haspopup="dialog" data-toggle>
+            <span class="button-text__label">{{ title }}</span>
+            {%- render 'icon' with 'plus', class: 'icon--xs' -%}
+          </button>
+        {%- else -%}
+          <button type="button" class="variant-picker__modal-button button" aria-haspopup="dialog" data-toggle>
+            <span class="visually-hidden">{{ title }}</span>
+            {%- render 'icon' with 'info', class: 'icon--s' -%}
+          </button>
+        {%- endif -%}
+        <dialog class="dialog" aria-labelledby="{{ title_id }}">
+          <div class="dialog__window dialog__animateable dialog__window--drawer variant-picker__modal" data-color-scheme="{{ section.settings.color_scheme }}">
+            <div class="dialog__header">
+              <h2 id="{{ title_id }}" class="h4">{{ title }}</h2>
+              {% render 'close-button' %}
+            </div>
+            <div class="dialog__body rte">
+              {{ content }}
+            </div>
+          </div>
+        </dialog>
+      </custom-dialog>
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}

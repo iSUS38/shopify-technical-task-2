@@ -1,1 +1,113 @@
-{"name":"t:sections.header.name","type":"header","sections":{"announcement-bar":{"type":"announcement-bar","blocks":{"announcement-bar-0":{"type":"announcement","settings":{"text":"Welcome to our store","link":""}}},"block_order":["announcement-bar-0"],"settings":{"auto_rotate":false,"change_slides_speed":5,"color_scheme":"scheme-1","show_line_separator":true,"show_social":false,"enable_country_selector":false,"enable_language_selector":false}},"header":{"type":"header","settings":{"logo_position":"middle-left","mobile_logo_position":"center","menu":"main-menu","menu_type_desktop":"dropdown","sticky_header_type":"on-scroll-up","show_line_separator":true,"color_scheme":"scheme-1","menu_color_scheme":"scheme-1","enable_country_selector":true,"enable_language_selector":true,"enable_customer_avatar":true,"margin_bottom":0,"padding_top":20,"padding_bottom":20}}},"order":["announcement-bar","header"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "Header",
+  "type": "header",
+  "sections": {
+    "announcement_bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>KESÄALE! Saat Luxury Glow Boosterin ilmaiseksi, kun ostat yli 50 €</strong></p>",
+            "font_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "text"
+      ],
+      "settings": {
+        "enable_autoplay": false,
+        "autoplay_speed": 5,
+        "animation_style": "fade",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "show_borders": false,
+        "color_scheme": "scheme-2",
+        "padding_top": "var(--space-3xs)",
+        "padding_bottom": "var(--space-3xs)"
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "megamenu_itwHXB": {
+          "type": "megamenu",
+          "settings": {
+            "menu": "Tuotteet",
+            "color_scheme": "scheme-3",
+            "color_scheme_style": "split",
+            "use_alt_logo": false,
+            "image_1": "shopify://shop_images/BEAUTY_OILROSESHIP_BOX_50ML_851d6190-ace5-4d06-8dc1-ff7dc3365004.jpg",
+            "image_ratio_1": "default",
+            "label_1": "Test 1",
+            "link_1": "shopify://products/annostelijapumppu-lemmikkien-lohioljyyn",
+            "image_2": "shopify://shop_images/Bromelaiini_60taustalla.jpg",
+            "image_ratio_2": "default",
+            "label_2": "Test 2",
+            "link_2": "shopify://products/puhdas-bakuchiol-lahjapakkaus",
+            "image_3": "shopify://shop_images/60kaps_0e2e2f46-40e0-4aa1-af49-096a00f3e7d3.jpg",
+            "image_ratio_3": "default",
+            "label_3": "Test 3",
+            "link_3": "shopify://products/beautydna-elastic-serum-for-saggy-and-tired-skin"
+          }
+        },
+        "megamenu_EmhcYy": {
+          "type": "megamenu",
+          "disabled": true,
+          "settings": {
+            "menu": "",
+            "color_scheme": "scheme-1",
+            "color_scheme_style": "split",
+            "use_alt_logo": false,
+            "image_ratio_1": "default",
+            "label_1": "",
+            "link_1": "",
+            "image_ratio_2": "default",
+            "label_2": "",
+            "link_2": "",
+            "image_ratio_3": "default",
+            "label_3": "",
+            "link_3": ""
+          }
+        }
+      },
+      "block_order": [
+        "megamenu_itwHXB",
+        "megamenu_EmhcYy"
+      ],
+      "custom_css": [
+        ".header__megamenu-item--accent {font-size: 20px; color: #9265a2;}"
+      ],
+      "settings": {
+        "menu": "main-menu",
+        "layout_desktop": "horizontal",
+        "sticky_type": "none",
+        "enable_search": true,
+        "enable_icons": true,
+        "enable_overlay": true,
+        "enable_transparent_header": false,
+        "enable_blur": false,
+        "use_alt_logo": false,
+        "transparent_header_color": "#ffffff",
+        "color_scheme": "",
+        "padding_top": "default",
+        "padding_bottom": "default",
+        "show_borders": false
+      }
+    }
+  },
+  "order": [
+    "announcement_bar",
+    "header"
+  ]
+}

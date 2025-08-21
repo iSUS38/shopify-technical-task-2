@@ -25,28 +25,59 @@
     %}
 {% endcomment %}
 
-<input
-  type="{{ type | default: 'radio' }}"
-  id="{{ id }}"
-  name="{{ name }}"
-  value="{{ value }}"
-  form="{{ product_form_id }}"
-  class="swatch-input__input{% if visually_disabled %} visually-disabled{% endif %}"
-  {% if checked %}
-    checked
-  {% endif %}
-  {% if disabled %}
-    disabled
-  {% endif %}
-  {% if additional_props %}
-    {{ additional_props }}
-  {% endif %}
->
 <label
   for="{{ id }}"
-  title="{{ value }}"
-  class="swatch-input__label{% if shape == 'square' %} swatch-input__label--square{% endif %}"
+  title="{{ value.value }}"
+  class="checkbox__label swatch-input__label{% if disabled %} disabled{% endif %}"
 >
+  <input
+    type="{{ type | default: 'radio' }}"
+    id="{{ id }}"
+    name="{{ name }}"
+    value="{{ value.value }}"
+    form="{{ product_form_id }}"
+    class="swatch-input__input{% if visually_disabled %} visually-disabled{% endif %} checkbox__input"
+    {% if checked %}
+      checked
+    {% endif %}
+    {% if disabled %}
+      disabled
+    {% endif %}
+    {% if additional_props %}
+      {{ additional_props }}
+    {% endif %}
+  >
+  {%- if settings.button_border_radius== 'rounded' or settings.button_border_radius== 'slightly_rounded' -%}
+    <svg class="checkbox__icon-unchecked" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0.5" y="0.5" width="15" height="15" rx="1.5" fill="" stroke="currentColor"/>
+    </svg>
+    <svg class="checkbox__icon-checked" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0.5" y="0.5" width="15" height="15" rx="1.5" fill="currentColor" stroke="currentColor"/>
+      <path d="M12.8979 5.77299L6.89795 11.773C6.84569 11.8254 6.78359 11.867 6.71522 11.8954C6.64685 11.9238 6.57354 11.9384 6.49951 11.9384C6.42548 11.9384 6.35217 11.9238 6.2838 11.8954C6.21543 11.867 6.15333 11.8254 6.10107 11.773L3.47607 9.14799C3.42375 9.09566 3.38224 9.03355 3.35393 8.96518C3.32561 8.89682 3.31104 8.82355 3.31104 8.74955C3.31104 8.67555 3.32561 8.60228 3.35393 8.53392C3.38224 8.46555 3.42375 8.40344 3.47607 8.35111C3.5284 8.29879 3.59051 8.25728 3.65888 8.22897C3.72724 8.20065 3.80051 8.18607 3.87451 8.18607C3.94851 8.18607 4.02178 8.20065 4.09014 8.22897C4.15851 8.25728 4.22062 8.29879 4.27295 8.35111L6.49998 10.5781L12.102 4.97705C12.2077 4.87138 12.351 4.81201 12.5004 4.81201C12.6499 4.81201 12.7932 4.87138 12.8989 4.97705C13.0046 5.08272 13.0639 5.22604 13.0639 5.37549C13.0639 5.52493 13.0046 5.66825 12.8989 5.77393L12.8979 5.77299Z" fill=""/>
+    </svg>
+  {%- else -%}
+    <svg class="checkbox__icon-unchecked" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0.5" y="0.5" width="15" height="15" fill="" stroke="currentColor"/>
+    </svg>
+    <svg class="checkbox__icon-checked" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0.5" y="0.5" width="15" height="15" fill="currentColor" stroke="currentColor"/>
+      <path d="M12.8979 5.77299L6.89795 11.773C6.84569 11.8254 6.78359 11.867 6.71522 11.8954C6.64685 11.9238 6.57354 11.9384 6.49951 11.9384C6.42548 11.9384 6.35217 11.9238 6.2838 11.8954C6.21543 11.867 6.15333 11.8254 6.10107 11.773L3.47607 9.14799C3.42375 9.09566 3.38224 9.03355 3.35393 8.96518C3.32561 8.89682 3.31104 8.82355 3.31104 8.74955C3.31104 8.67555 3.32561 8.60228 3.35393 8.53392C3.38224 8.46555 3.42375 8.40344 3.47607 8.35111C3.5284 8.29879 3.59051 8.25728 3.65888 8.22897C3.72724 8.20065 3.80051 8.18607 3.87451 8.18607C3.94851 8.18607 4.02178 8.20065 4.09014 8.22897C4.15851 8.25728 4.22062 8.29879 4.27295 8.35111L6.49998 10.5781L12.102 4.97705C12.2077 4.87138 12.351 4.81201 12.5004 4.81201C12.6499 4.81201 12.7932 4.87138 12.8989 4.97705C13.0046 5.08272 13.0639 5.22604 13.0639 5.37549C13.0639 5.52493 13.0046 5.66825 12.8989 5.77393L12.8979 5.77299Z" fill=""/>
+    </svg>
+  {%- endif -%}
+
   {% render 'swatch', swatch: swatch, shape: shape %}
   {{ help_text }}
+
+  <span class="facet-checkbox__text" aria-hidden="true">
+    <span class="facet-checkbox__text-label">{{- value.label | escape }}</span> ({{- value.count -}})
+  </span>
+  <span class="visually-hidden">
+    {{- value.label | escape }} (
+    {%- if value.count == '1' -%}
+      {{- 'products.facets.product_count_simple.one' | t: count: value.count -}}
+    {%- else -%}
+      {{- 'products.facets.product_count_simple.other' | t: count: value.count -}}
+    {%- endif -%}
+    )
+  </span>
 </label>

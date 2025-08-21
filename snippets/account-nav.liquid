@@ -1,0 +1,21 @@
+<nav class="account__nav tab-nav" aria-label="{{ 'customer.account.title' }}">
+  <ul class="tab-nav__list">
+    <li class="tab-nav__item">
+      <a class="h4 tab-nav__link" href="{{ routes.account_url }}" {% if request.path == routes.account_url %}aria-current="page" {% endif %}>{{ 'customer.orders.title' | t }}</a>
+    </li>
+    <li class="tab-nav__item">
+      <a class="h4 tab-nav__link" href="{{ routes.account_addresses_url }}" {% if request.path == routes.account_addresses_url %}aria-current="page" {% endif %}>{{ 'customer.addresses.title' | t }}</a>
+    </li>
+    {%- assign link_list = linklists['account'] -%}
+    {% for link in link_list.links %}
+      <li class="tab-nav__item">
+        <a class="h4 tab-nav__link" href="{{ link.url }}">{{ link.title | escape }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  <div class="account__logout--desktop">
+    <a class="button button--text" href="{{ routes.account_logout_url }}">
+      <span class="button-text__label">{{ 'customer.log_out' | t }}</span>
+    </a>
+  </div>
+</nav>

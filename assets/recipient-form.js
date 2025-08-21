@@ -30,36 +30,27 @@ if (!customElements.get('recipient-form')) {
       cartErrorUnsubscriber = undefined;
 
       connectedCallback() {
-        this.cartUpdateUnsubscriber = subscribe(PUB_SUB_EVENTS.cartUpdate, (event) => {
-          if (event.source === 'product-form' && event.productVariantId.toString() === this.currentProductVariantId) {
-            this.resetRecipientForm();
-          }
-        });
-
-        this.variantChangeUnsubscriber = subscribe(PUB_SUB_EVENTS.variantChange, (event) => {
-          if (event.data.sectionId === this.dataset.sectionId) {
-            this.currentProductVariantId = event.data.variant.id.toString();
-          }
-        });
-
-        this.cartUpdateUnsubscriber = subscribe(PUB_SUB_EVENTS.cartError, (event) => {
-          if (event.source === 'product-form' && event.productVariantId.toString() === this.currentProductVariantId) {
-            this.displayErrorMessage(event.message, event.errors);
-          }
-        });
+        document.addEventListener('cart:update', this.onCartUpdate.bind(this));
+        document.addEventListener('variant:change', this.onVariantUpdate.bind(this));
       }
 
       disconnectedCallback() {
-        if (this.cartUpdateUnsubscriber) {
-          this.cartUpdateUnsubscriber();
-        }
+        document.removeEventListener('cart:update', this.onCartUpdate.bind(this));
+        document.removeEventListener('variant:change', this.onVariantUpdate.bind(this));
+      }
 
-        if (this.variantChangeUnsubscriber) {
-          this.variantChangeUnsubscriber();
+      onCartUpdate(event) {
+        if (
+          event.detail.source === 'product-form' &&
+          event.detail.productVariantId.toString() === this.currentProductVariantId
+        ) {
+          this.resetRecipientForm();
         }
+      }
 
-        if (this.cartErrorUnsubscriber) {
-          this.cartErrorUnsubscriber();
+      onVariantUpdate(event) {
+        if (event.detail.sectionId === this.dataset.sectionId) {
+          this.currentProductVariantId = event.detail.variant.id.toString();
         }
       }
 

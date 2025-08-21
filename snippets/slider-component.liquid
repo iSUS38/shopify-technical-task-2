@@ -1,0 +1,10 @@
+<slider-component
+  data-label="{{ section.id }}-Section-Heading"
+  class=""
+  {% unless show_desktop_slider == true %}data-destroy="(min-width: 64em)"{% endunless %}
+>
+  {{ content }}
+  <div class="slideshow__pagination slider-component__pagination slider-component__pagination--{{ arrow_style }}  slider-component__pagination--counter-{{ counter_style }}">
+    {%- render 'pagination-slideshow' with button_style: button_style, arrow_style: arrow_style, counter_style: counter_style -%}
+  </div>
+</slider-component>

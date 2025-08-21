@@ -1,0 +1,36 @@
+[dir='rtl']
+  :where(
+    .icon--arrow-right,
+    .icon--arrow-left,
+    .icon--caret-left,
+    .icon--caret-right,
+    .icon--double-caret-right,
+    .icon--double-caret-left
+  ) {
+  transform: rotate(180deg);
+}
+
+[dir='rtl'] .label--floating.input--box .field__label {
+  transform: scale(0.75) translateY(-50%) translateX(var(--padding-inline));
+  inset-inline-start: 0;
+}
+
+[dir='rtl'] :is(.header--vertical .header__megamenu, menu-drawer [data-state='next']) {
+  transform: translateX(-100%);
+}
+
+[dir='rtl'] :is(menu-drawer [data-state='previous']) {
+  transform: translateX(100%);
+}
+
+[dir='rtl'] .slider-component__progress::before {
+  transform: translateX(calc(100% - var(--progress)));
+}
+
+[dir='rtl'] .before-after__before {
+  mask: linear-gradient(to left, #000 0, var(--position, 50%), #0000 0);
+}
+
+[dir='rtl'] .before-after__after {
+  mask: linear-gradient(to left, #0000 0, var(--position, 50%), #000 0);
+}

@@ -1,0 +1,15 @@
+<div class="{{ class }} account__details gap--section container">
+  <h2 class="account__details-heading h4">{{ 'customer.account.details' | t }}</h2>
+
+  <div class="account__block">
+    <h3 class="h6">{{ 'customer.login_page.email' | t }}</h3>
+    <p class="secondary">{{ customer.email }}</p>
+  </div>
+
+  <div class="account__block">
+    <h3 class="h6">{{ 'customer.account.primary_address' | t }}</h3>
+    <div class="secondary">
+      {{ customer.default_address | format_address }}
+    </div>
+  </div>
+</div>

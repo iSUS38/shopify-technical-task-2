@@ -1,0 +1,15 @@
+<video-description-modal data-modal="true" data-overlay='false' data-name="video-description" data-display="flex">
+  <dialog class="dialog dialog--notification" aria-labelledby="video-description-heading">
+    <div class="dialog__window dialog__animateable dialog__window--custom-alignment" data-color-scheme="{{ settings.overlay_color_scheme }}">
+      <header class="dialog__header dialog__header--border">
+        <h2 id="video-description-heading" class="h5">
+          {{ 'accessibility.video_description' | t }}
+        </h2>
+        {% render 'close-button' %}
+      </header>
+      <div class="rte">
+        <div data-body></div>
+      </div>
+    </div>
+  </dialog>
+</video-description-modal>

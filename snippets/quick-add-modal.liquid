@@ -1,0 +1,13 @@
+<quick-add-modal data-modal="true" data-overlay="true" data-name="quick-add"
+      data-section="{{ section.id }}">
+  <dialog class="dialog" aria-labelledby="quick-add-heading">
+    <div class="dialog__window dialog__animateable dialog__window--drawer quick-add__dialog {% if settings.card_image_ratio == '1' %}quick-add__dialog--square{% endif %}">
+      <h1 id="quick-add-heading" class="h4 visually-hidden">{{ 'products.product.quick_add' | t }}</h1>
+      <div class="quick-add__dialog-header dialog__header justify-right" data-header>
+        {% render 'close-button' %}
+      </div>
+      <div class="quick-add__body " data-body>
+      </div>
+    </div>
+  </dialog>
+</quick-add-modal>

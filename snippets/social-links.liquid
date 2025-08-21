@@ -1,0 +1,83 @@
+{% unless horizontal_alignment %}
+  {% assign horizontal_alignment = 'left' %}
+{% endunless %}
+
+<ul class="social-links list-unstyled {{ horizontal_alignment }}" role="list">
+  {%- if settings.social_bluesky_link != blank -%}
+    <li class="">
+      <a href="{{ settings.social_bluesky_link }}" class="footer__menu-item link-hover-{{ section.settings.link_hover_style }}">
+        <span lang="en-US">Bluesky</span>
+      </a>
+    </li>
+  {%- endif -%}
+  {%- if settings.social_facebook_link != blank -%}
+    <li class="">
+      <a href="{{ settings.social_facebook_link }}" class="footer__menu-item link-hover-{{ section.settings.link_hover_style }}">
+        <span lang="en-US">Facebook</span>
+      </a>
+    </li>
+  {%- endif -%}
+  {%- if settings.social_instagram_link != blank -%}
+    <li class="">
+      <a href="{{ settings.social_instagram_link }}" class="footer__menu-item link-hover-{{ section.settings.link_hover_style }}">
+        <span lang="en-US">Instagram</span>
+      </a>
+    </li>
+  {%- endif -%}
+  {%- if settings.social_youtube_link != blank -%}
+    <li class="">
+      <a href="{{ settings.social_youtube_link }}" class="footer__menu-item link-hover-{{ section.settings.link_hover_style }}">
+        <span lang="en-US">YouTube</span>
+      </a>
+    </li>
+  {%- endif -%}
+  {%- if settings.social_tiktok_link != blank -%}
+    <li class="">
+      <a href="{{ settings.social_tiktok_link }}" class="footer__menu-item link-hover-{{ section.settings.link_hover_style }}">
+        <span lang="en-US">TikTok</span>
+      </a>
+    </li>
+  {%- endif -%}
+  {%- if settings.social_twitter_link != blank -%}
+    <li class="">
+      <a href="{{ settings.social_twitter_link }}" class="footer__menu-item link-hover-{{ section.settings.link_hover_style }}">
+        <span lang="en-US">X (Twitter)</span>
+      </a>
+    </li>
+  {%- endif -%}
+  {%- if settings.social_pinterest_link != blank -%}
+    <li class="">
+      <a href="{{ settings.social_pinterest_link }}" class="footer__menu-item link-hover-{{ section.settings.link_hover_style }}">
+        <span lang="en-US">Pinterest</span>
+      </a>
+    </li>
+  {%- endif -%}
+  {%- if settings.social_snapchat_link != blank -%}
+    <li class="">
+      <a href="{{ settings.social_snapchat_link }}" class="footer__menu-item link-hover-{{ section.settings.link_hover_style }}">
+        <span lang="en-US">Snapchat</span>
+      </a>
+    </li>
+  {%- endif -%}
+  {%- if settings.social_threads_link != blank -%}
+    <li class="">
+      <a href="{{ settings.social_threads_link }}" class="footer__menu-item link-hover-{{ section.settings.link_hover_style }}">
+        <span lang="en-US">Threads</span>
+      </a>
+    </li>
+  {%- endif -%}
+  {%- if settings.social_tumblr_link != blank -%}
+    <li class="">
+      <a href="{{ settings.social_tumblr_link }}" class="footer__menu-item link-hover-{{ section.settings.link_hover_style }}">
+        <span lang="en-US">Tumblr</span>
+      </a>
+    </li>
+  {%- endif -%}
+  {%- if settings.social_vimeo_link != blank -%}
+    <li class="">
+      <a href="{{ settings.social_vimeo_link }}" class="footer__menu-item link-hover-{{ section.settings.link_hover_style }}">
+        <span lang="en-US">Vimeo</span>
+      </a>
+    </li>
+  {%- endif -%}
+</ul>
