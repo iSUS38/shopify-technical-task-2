@@ -1,0 +1,494 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "section_header_Rq3TaB": {
+      "type": "section-header",
+      "settings": {
+        "layout_header": "center",
+        "subheading": "",
+        "heading": "Locations",
+        "page_title": true,
+        "heading_size": "h1",
+        "text": "",
+        "button_label": "",
+        "padding_bottom": "0px"
+      }
+    },
+    "image_with_text_DwQdEf": {
+      "type": "image-with-text",
+      "blocks": {
+        "rich_text_column_VpWnJQ": {
+          "type": "_rich-text-column",
+          "settings": {},
+          "blocks": {
+            "image_dwgfEp": {
+              "type": "image",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "image_dwgfEp"
+          ]
+        },
+        "rich_text_column_cEtxqQ": {
+          "type": "_rich-text-column",
+          "settings": {
+            "horizontal_alignment": "center"
+          },
+          "blocks": {
+            "badges_YCtCUz": {
+              "type": "badges",
+              "settings": {
+                "badges": "Womenswear, Menswear, Home"
+              }
+            },
+            "heading_group_hpXGCG": {
+              "type": "heading-group",
+              "settings": {},
+              "blocks": {
+                "heading_WGwVye": {
+                  "type": "_heading",
+                  "settings": {
+                    "heading": "Flagship Boutique",
+                    "heading_size": "h3"
+                  }
+                }
+              },
+              "block_order": [
+                "heading_WGwVye"
+              ]
+            },
+            "text_6d8EXr": {
+              "type": "text",
+              "settings": {
+                "text": "<p>123 Main Street, New York, NY<br/><a href=\"tel:+11234567890\" title=\"tel:+11234567890\">+1-123-456-7890</a></p>",
+                "font_style": "body"
+              }
+            },
+            "text_4Ezq9T": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Opening hours: Mon - Sun, 10 - 7pm</p>",
+                "font_style": "caption"
+              }
+            },
+            "button_group_RfW9hc": {
+              "type": "button-group",
+              "settings": {},
+              "blocks": {
+                "button_yXMeE4": {
+                  "type": "_button",
+                  "settings": {
+                    "button_label": "Directions"
+                  }
+                }
+              },
+              "block_order": [
+                "button_yXMeE4"
+              ]
+            }
+          },
+          "block_order": [
+            "badges_YCtCUz",
+            "heading_group_hpXGCG",
+            "text_6d8EXr",
+            "text_4Ezq9T",
+            "button_group_RfW9hc"
+          ]
+        }
+      },
+      "block_order": [
+        "rich_text_column_VpWnJQ",
+        "rich_text_column_cEtxqQ"
+      ],
+      "settings": {}
+    },
+    "image_with_text_PXFTmq": {
+      "type": "image-with-text",
+      "blocks": {
+        "rich_text_column_DRd4CQ": {
+          "type": "_rich-text-column",
+          "settings": {},
+          "blocks": {
+            "image_CFRVYj": {
+              "type": "image",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "image_CFRVYj"
+          ]
+        },
+        "rich_text_column_8yPmpC": {
+          "type": "_rich-text-column",
+          "settings": {
+            "horizontal_alignment": "center"
+          },
+          "blocks": {
+            "badges_K7fh6r": {
+              "type": "badges",
+              "settings": {
+                "badges": "Womenswear, Menswear"
+              }
+            },
+            "heading_group_D3WXCt": {
+              "type": "heading-group",
+              "settings": {},
+              "blocks": {
+                "heading_fD63CK": {
+                  "type": "_heading",
+                  "settings": {
+                    "heading": "Boutique",
+                    "heading_size": "h3"
+                  }
+                }
+              },
+              "block_order": [
+                "heading_fD63CK"
+              ]
+            },
+            "text_zKa3qY": {
+              "type": "text",
+              "settings": {
+                "text": "<p>123 Main Street, New York, NY<br/><a href=\"tel:+11234567890\" title=\"tel:+11234567890\">+1-123-456-7890</a></p>",
+                "font_style": "body"
+              }
+            },
+            "text_Nw3b9F": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Opening hours: Mon - Sun, 10 - 7pm</p>",
+                "font_style": "caption"
+              }
+            },
+            "button_group_Qmmq4y": {
+              "type": "button-group",
+              "settings": {},
+              "blocks": {
+                "button_Q98Cg6": {
+                  "type": "_button",
+                  "settings": {
+                    "button_label": "Directions"
+                  }
+                }
+              },
+              "block_order": [
+                "button_Q98Cg6"
+              ]
+            }
+          },
+          "block_order": [
+            "badges_K7fh6r",
+            "heading_group_D3WXCt",
+            "text_zKa3qY",
+            "text_Nw3b9F",
+            "button_group_Qmmq4y"
+          ]
+        }
+      },
+      "block_order": [
+        "rich_text_column_DRd4CQ",
+        "rich_text_column_8yPmpC"
+      ],
+      "settings": {
+        "show_top_border": true
+      }
+    },
+    "image_with_text_CJ63HW": {
+      "type": "image-with-text",
+      "blocks": {
+        "rich_text_column_xECYKi": {
+          "type": "_rich-text-column",
+          "settings": {},
+          "blocks": {
+            "image_QdeQCA": {
+              "type": "image",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "image_QdeQCA"
+          ]
+        },
+        "rich_text_column_tAYVPm": {
+          "type": "_rich-text-column",
+          "settings": {
+            "horizontal_alignment": "center"
+          },
+          "blocks": {
+            "badges_aLjGXC": {
+              "type": "badges",
+              "settings": {
+                "badges": "Home"
+              }
+            },
+            "heading_group_D3eCdi": {
+              "type": "heading-group",
+              "settings": {},
+              "blocks": {
+                "heading_m4fXdP": {
+                  "type": "_heading",
+                  "settings": {
+                    "heading": "Boutique",
+                    "heading_size": "h3"
+                  }
+                }
+              },
+              "block_order": [
+                "heading_m4fXdP"
+              ]
+            },
+            "text_bffDeN": {
+              "type": "text",
+              "settings": {
+                "text": "<p>123 Main Street, New York, NY<br/><a href=\"tel:+11234567890\" title=\"tel:+11234567890\">+1-123-456-7890</a></p>",
+                "font_style": "body"
+              }
+            },
+            "text_GXzhjY": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Opening hours: Mon - Sun, 10 - 7pm</p>",
+                "font_style": "caption"
+              }
+            },
+            "button_group_RnRqtY": {
+              "type": "button-group",
+              "settings": {},
+              "blocks": {
+                "button_hpMTTT": {
+                  "type": "_button",
+                  "settings": {
+                    "button_label": "Directions"
+                  }
+                }
+              },
+              "block_order": [
+                "button_hpMTTT"
+              ]
+            }
+          },
+          "block_order": [
+            "badges_aLjGXC",
+            "heading_group_D3eCdi",
+            "text_bffDeN",
+            "text_GXzhjY",
+            "button_group_RnRqtY"
+          ]
+        }
+      },
+      "block_order": [
+        "rich_text_column_xECYKi",
+        "rich_text_column_tAYVPm"
+      ],
+      "settings": {
+        "show_top_border": true
+      }
+    },
+    "multicolumn_fF4cRF": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_nWHgbJ": {
+          "type": "_column",
+          "settings": {},
+          "blocks": {
+            "single_heading_YqNPdX": {
+              "type": "_single-heading",
+              "settings": {
+                "heading": "Retailer",
+                "heading_size": "h6"
+              }
+            },
+            "text_wdRjXz": {
+              "type": "text",
+              "settings": {
+                "text": "<p>123 Main Street, New York, NY<br/><a href=\"tel:+11234567890\" title=\"tel:+11234567890\">+1-123-456-7890</a></p>",
+                "font_style": "body"
+              }
+            }
+          },
+          "block_order": [
+            "single_heading_YqNPdX",
+            "text_wdRjXz"
+          ]
+        },
+        "column_aUypVn": {
+          "type": "_column",
+          "settings": {},
+          "blocks": {
+            "single_heading_gXAAiV": {
+              "type": "_single-heading",
+              "settings": {
+                "heading": "Retailer",
+                "heading_size": "h6"
+              }
+            },
+            "text_7nCV8B": {
+              "type": "text",
+              "settings": {
+                "text": "<p>123 Main Street, New York, NY<br/><a href=\"tel:+11234567890\" title=\"tel:+11234567890\">+1-123-456-7890</a></p>",
+                "font_style": "body"
+              }
+            }
+          },
+          "block_order": [
+            "single_heading_gXAAiV",
+            "text_7nCV8B"
+          ]
+        },
+        "column_kDPqNf": {
+          "type": "_column",
+          "settings": {},
+          "blocks": {
+            "single_heading_WniC3i": {
+              "type": "_single-heading",
+              "settings": {
+                "heading": "Retailer",
+                "heading_size": "h6"
+              }
+            },
+            "text_F4VNT8": {
+              "type": "text",
+              "settings": {
+                "text": "<p>123 Main Street, New York, NY<br/><a href=\"tel:+11234567890\" title=\"tel:+11234567890\">+1-123-456-7890</a></p>",
+                "font_style": "body"
+              }
+            }
+          },
+          "block_order": [
+            "single_heading_WniC3i",
+            "text_F4VNT8"
+          ]
+        },
+        "column_ReLtnz": {
+          "type": "_column",
+          "settings": {},
+          "blocks": {
+            "single_heading_LPMADA": {
+              "type": "_single-heading",
+              "settings": {
+                "heading": "Retailer",
+                "heading_size": "h6"
+              }
+            },
+            "text_eMmbej": {
+              "type": "text",
+              "settings": {
+                "text": "<p>123 Main Street, New York, NY<br/><a href=\"tel:+11234567890\" title=\"tel:+11234567890\">+1-123-456-7890</a></p>",
+                "font_style": "body"
+              }
+            }
+          },
+          "block_order": [
+            "single_heading_LPMADA",
+            "text_eMmbej"
+          ]
+        },
+        "column_BVWMke": {
+          "type": "_column",
+          "settings": {},
+          "blocks": {
+            "single_heading_QKcwXP": {
+              "type": "_single-heading",
+              "settings": {
+                "heading": "Retailer",
+                "heading_size": "h6"
+              }
+            },
+            "text_tidNQh": {
+              "type": "text",
+              "settings": {
+                "text": "<p>123 Main Street, New York, NY<br/><a href=\"tel:+11234567890\" title=\"tel:+11234567890\">+1-123-456-7890</a></p>",
+                "font_style": "body"
+              }
+            }
+          },
+          "block_order": [
+            "single_heading_QKcwXP",
+            "text_tidNQh"
+          ]
+        },
+        "column_AKUMmW": {
+          "type": "_column",
+          "settings": {},
+          "blocks": {
+            "single_heading_4wYHnU": {
+              "type": "_single-heading",
+              "settings": {
+                "heading": "Retailer",
+                "heading_size": "h6"
+              }
+            },
+            "text_ebBYVE": {
+              "type": "text",
+              "settings": {
+                "text": "<p>123 Main Street, New York, NY<br/><a href=\"tel:+11234567890\" title=\"tel:+11234567890\">+1-123-456-7890</a></p>",
+                "font_style": "body"
+              }
+            }
+          },
+          "block_order": [
+            "single_heading_4wYHnU",
+            "text_ebBYVE"
+          ]
+        },
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "layout_header": "center",
+            "subheading": "",
+            "heading": "Authorized Retailers",
+            "heading_size": "h3",
+            "text": "",
+            "button_label": ""
+          }
+        },
+        "button-group": {
+          "type": "button-group",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "button_dpw9qh": {
+              "type": "_button",
+              "settings": {
+                "button_style": "primary",
+                "button_label": ""
+              }
+            }
+          },
+          "block_order": [
+            "button_dpw9qh"
+          ]
+        }
+      },
+      "block_order": [
+        "column_nWHgbJ",
+        "column_aUypVn",
+        "column_kDPqNf",
+        "column_ReLtnz",
+        "column_BVWMke",
+        "column_AKUMmW"
+      ],
+      "settings": {
+        "column_behavior": "grid",
+        "show_top_border": true
+      }
+    }
+  },
+  "order": [
+    "section_header_Rq3TaB",
+    "image_with_text_DwQdEf",
+    "image_with_text_PXFTmq",
+    "image_with_text_CJ63HW",
+    "multicolumn_fF4cRF"
+  ]
+}

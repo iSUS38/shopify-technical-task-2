@@ -1,0 +1,197 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image-banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading-group",
+          "settings": {
+            "page_title": true
+          },
+          "blocks": {
+            "heading": {
+              "type": "_heading",
+              "settings": {
+                "heading": "FAQ",
+                "heading_size": "h1"
+              }
+            }
+          },
+          "block_order": [
+            "heading"
+          ]
+        }
+      },
+      "block_order": [
+        "heading"
+      ],
+      "settings": {
+        "height": "small",
+        "mobile_height": "small"
+      }
+    },
+    "collapsible-content": {
+      "type": "collapsible-content",
+      "blocks": {
+        "heading_1": {
+          "type": "heading-group",
+          "settings": {},
+          "blocks": {
+            "heading": {
+              "type": "_heading",
+              "settings": {
+                "heading": "Topic",
+                "heading_size": "h3"
+              }
+            }
+          },
+          "block_order": [
+            "heading"
+          ]
+        },
+        "collapsible_1": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Question"
+          },
+          "blocks": {
+            "text": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Answer</p>"
+              }
+            }
+          },
+          "block_order": [
+            "text"
+          ]
+        },
+        "collapsible_2": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Question"
+          },
+          "blocks": {
+            "text": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Answer</p>"
+              }
+            }
+          },
+          "block_order": [
+            "text"
+          ]
+        },
+        "collapsible_3": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Question"
+          },
+          "blocks": {
+            "text": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Answer</p>"
+              }
+            }
+          },
+          "block_order": [
+            "text"
+          ]
+        },
+        "heading_2": {
+          "type": "heading-group",
+          "settings": {},
+          "blocks": {
+            "heading": {
+              "type": "_heading",
+              "settings": {
+                "heading": "Topic",
+                "heading_size": "h3"
+              }
+            }
+          },
+          "block_order": [
+            "heading"
+          ]
+        },
+        "collapsible_4": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Question"
+          },
+          "blocks": {
+            "text": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Answer</p>"
+              }
+            }
+          },
+          "block_order": [
+            "text"
+          ]
+        },
+        "collapsible_5": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Question"
+          },
+          "blocks": {
+            "text": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Answer</p>"
+              }
+            }
+          },
+          "block_order": [
+            "text"
+          ]
+        },
+        "collapsible_6": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Question"
+          },
+          "blocks": {
+            "text": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Answer</p>"
+              }
+            }
+          },
+          "block_order": [
+            "text"
+          ]
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "collapsible_1",
+        "collapsible_2",
+        "collapsible_3",
+        "heading_2",
+        "collapsible_4",
+        "collapsible_5",
+        "collapsible_6"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "image-banner",
+    "collapsible-content"
+  ]
+}

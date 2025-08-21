@@ -1,0 +1,405 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image-banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading-group",
+          "settings": {
+            "page_title": true
+          },
+          "blocks": {
+            "heading": {
+              "type": "_heading",
+              "settings": {
+                "heading": "About",
+                "heading_size": "h1"
+              }
+            }
+          },
+          "block_order": [
+            "heading"
+          ]
+        }
+      },
+      "block_order": [
+        "heading"
+      ],
+      "settings": {
+        "height": "small",
+        "mobile_height": "small"
+      }
+    },
+    "stacked_images_with_text_gJPcDk": {
+      "type": "stacked-images-with-text",
+      "blocks": {
+        "heading_group_38T7pU": {
+          "type": "heading-group",
+          "settings": {},
+          "blocks": {
+            "subheading_AiBqKz": {
+              "type": "_subheading",
+              "settings": {}
+            },
+            "heading_Yty6WD": {
+              "type": "_heading",
+              "settings": {
+                "heading": "Stacked images with text"
+              }
+            }
+          },
+          "block_order": [
+            "subheading_AiBqKz",
+            "heading_Yty6WD"
+          ]
+        },
+        "text_QFNzqz": {
+          "type": "text",
+          "settings": {}
+        },
+        "button_group_kaMPfD": {
+          "type": "button-group",
+          "settings": {},
+          "blocks": {
+            "button_BxKULQ": {
+              "type": "_button",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "button_BxKULQ"
+          ]
+        },
+        "stacked-images": {
+          "type": "_stacked-images",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "stacked_image_UpcW84": {
+              "type": "_stacked-image",
+              "settings": {
+                "image_ratio": "1",
+                "max_width": 90
+              }
+            },
+            "stacked_image_JnKHFw": {
+              "type": "_stacked-image",
+              "settings": {
+                "image_ratio": "2 / 3",
+                "max_width": 80
+              }
+            },
+            "stacked_image_TpezwM": {
+              "type": "_stacked-image",
+              "settings": {
+                "image_ratio": "3 / 2",
+                "max_width": 100
+              }
+            }
+          },
+          "block_order": [
+            "stacked_image_UpcW84",
+            "stacked_image_JnKHFw",
+            "stacked_image_TpezwM"
+          ]
+        }
+      },
+      "block_order": [
+        "heading_group_38T7pU",
+        "text_QFNzqz",
+        "button_group_kaMPfD"
+      ],
+      "settings": {}
+    },
+    "image-with-text-1": {
+      "type": "image-with-text",
+      "blocks": {
+        "column_1": {
+          "type": "_rich-text-column",
+          "settings": {},
+          "blocks": {
+            "image": {
+              "type": "image",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "image"
+          ]
+        },
+        "column_2": {
+          "type": "_rich-text-column",
+          "settings": {
+            "horizontal_alignment": "center"
+          },
+          "blocks": {
+            "heading": {
+              "type": "heading-group",
+              "settings": {},
+              "blocks": {
+                "subheading": {
+                  "type": "_subheading",
+                  "settings": {}
+                },
+                "heading": {
+                  "type": "_heading",
+                  "settings": {}
+                }
+              },
+              "block_order": [
+                "subheading",
+                "heading"
+              ]
+            },
+            "text": {
+              "type": "text",
+              "settings": {}
+            },
+            "button-group": {
+              "type": "button-group",
+              "settings": {},
+              "blocks": {
+                "button": {
+                  "type": "_button",
+                  "settings": {}
+                }
+              },
+              "block_order": [
+                "button"
+              ]
+            }
+          },
+          "block_order": [
+            "heading",
+            "text",
+            "button-group"
+          ]
+        }
+      },
+      "block_order": [
+        "column_1",
+        "column_2"
+      ],
+      "settings": {}
+    },
+    "image-with-text-2": {
+      "type": "image-with-text",
+      "blocks": {
+        "column_1": {
+          "type": "_rich-text-column",
+          "settings": {},
+          "blocks": {
+            "image": {
+              "type": "image",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "image"
+          ]
+        },
+        "column_2": {
+          "type": "_rich-text-column",
+          "settings": {
+            "horizontal_alignment": "center"
+          },
+          "blocks": {
+            "heading": {
+              "type": "heading-group",
+              "settings": {},
+              "blocks": {
+                "subheading": {
+                  "type": "_subheading",
+                  "settings": {}
+                },
+                "heading": {
+                  "type": "_heading",
+                  "settings": {}
+                }
+              },
+              "block_order": [
+                "subheading",
+                "heading"
+              ]
+            },
+            "text": {
+              "type": "text",
+              "settings": {}
+            },
+            "button-group": {
+              "type": "button-group",
+              "settings": {},
+              "blocks": {
+                "button": {
+                  "type": "_button",
+                  "settings": {}
+                }
+              },
+              "block_order": [
+                "button"
+              ]
+            }
+          },
+          "block_order": [
+            "heading",
+            "text",
+            "button-group"
+          ]
+        }
+      },
+      "block_order": [
+        "column_2",
+        "column_1"
+      ],
+      "settings": {
+        "padding_top": "0px"
+      }
+    },
+    "media_grid_fVpaE8": {
+      "type": "media-grid",
+      "blocks": {
+        "media_grid_image_B4TzGq": {
+          "type": "_media-grid-image",
+          "settings": {}
+        },
+        "media_grid_text_dkzDqp": {
+          "type": "_media-grid-text",
+          "settings": {},
+          "blocks": {
+            "heading_group_xiX7Ky": {
+              "type": "heading-group",
+              "settings": {
+                "page_title": false
+              },
+              "blocks": {
+                "subheading_W8qGFU": {
+                  "type": "_subheading",
+                  "settings": {
+                    "subheading": "Follow us"
+                  }
+                },
+                "heading_nqkXMz": {
+                  "type": "_heading",
+                  "settings": {
+                    "heading": "#TAG",
+                    "heading_size": "h2"
+                  }
+                }
+              },
+              "block_order": [
+                "subheading_W8qGFU",
+                "heading_nqkXMz"
+              ]
+            },
+            "button_group_QqYg7N": {
+              "type": "button-group",
+              "settings": {},
+              "blocks": {
+                "button_BG3wWj": {
+                  "type": "_button",
+                  "settings": {
+                    "button_style": "text"
+                  }
+                }
+              },
+              "block_order": [
+                "button_BG3wWj"
+              ]
+            }
+          },
+          "block_order": [
+            "heading_group_xiX7Ky",
+            "button_group_QqYg7N"
+          ]
+        },
+        "media_grid_image_RyEm8X": {
+          "type": "_media-grid-image",
+          "settings": {}
+        },
+        "media_grid_image_pMhgT3": {
+          "type": "_media-grid-image",
+          "settings": {}
+        },
+        "media_grid_image_w7hcG3": {
+          "type": "_media-grid-image",
+          "settings": {}
+        },
+        "section-header": {
+          "type": "_section-header",
+          "disabled": true,
+          "static": true,
+          "settings": {}
+        },
+        "button-group": {
+          "type": "button-group",
+          "static": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "media_grid_image_B4TzGq",
+        "media_grid_text_dkzDqp",
+        "media_grid_image_RyEm8X",
+        "media_grid_image_pMhgT3",
+        "media_grid_image_w7hcG3"
+      ],
+      "settings": {}
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "blocks": {
+        "heading": {
+          "type": "heading-group",
+          "settings": {},
+          "blocks": {
+            "subheading": {
+              "type": "_subheading",
+              "settings": {}
+            },
+            "heading": {
+              "type": "_heading",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "subheading",
+            "heading"
+          ]
+        },
+        "text": {
+          "type": "text",
+          "settings": {}
+        },
+        "newsletter": {
+          "type": "_newsletter",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "newsletter"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2"
+      }
+    }
+  },
+  "order": [
+    "image-banner",
+    "stacked_images_with_text_gJPcDk",
+    "image-with-text-1",
+    "image-with-text-2",
+    "media_grid_fVpaE8",
+    "newsletter"
+  ]
+}

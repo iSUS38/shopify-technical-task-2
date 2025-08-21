@@ -1,0 +1,203 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "pdp-product-information": {
+          "type": "_pdp-product-information",
+          "static": true,
+          "settings": {
+            "horizontal_alignment": "center",
+            "vertical_alignment": "middle",
+            "container_width": "xxs",
+            "padding_top": "default",
+            "padding_bottom": "default"
+          },
+          "blocks": {
+            "title": {
+              "type": "_pdp-title",
+              "settings": {
+                "heading_size": "h2",
+                "enable_share": false,
+                "share_color_scheme": ""
+              },
+              "blocks": {}
+            },
+            "price": {
+              "type": "_pdp-price",
+              "settings": {
+                "font_style": "caption"
+              },
+              "blocks": {}
+            },
+            "description": {
+              "type": "_pdp-description",
+              "settings": {
+                "text": "{{ closest.product.description }}",
+                "enable_truncation": false,
+                "word_limit": 40,
+                "title": "{{ closest.product.title }}"
+              },
+              "blocks": {}
+            },
+            "variant_picker": {
+              "type": "_pdp-variant-picker",
+              "settings": {
+                "variant_picker_style": "buttons",
+                "swatch_style": "default",
+                "option_1": "",
+                "option_1_page": "",
+                "option_1_label": "icon",
+                "option_2": "",
+                "option_2_page": "",
+                "option_2_label": "icon",
+                "option_3": "",
+                "option_3_page": "",
+                "option_3_label": "icon"
+              },
+              "blocks": {}
+            },
+            "buy_buttons": {
+              "type": "_pdp-buy-buttons",
+              "settings": {
+                "show_dynamic_checkout": true,
+                "show_quantity_selector": true,
+                "show_gift_card_recipient": true
+              },
+              "blocks": {}
+            },
+            "pdp_collapsible_8qNjqJ": {
+              "type": "_pdp-collapsible",
+              "name": "t:collapsible",
+              "settings": {
+                "heading": "Lisätietoja",
+                "font_style": "subheading",
+                "text": ""
+              },
+              "blocks": {}
+            },
+            "pdp_collapsible_wY3jRe": {
+              "type": "_pdp-collapsible",
+              "name": "t:collapsible",
+              "settings": {
+                "heading": "Käyttöohje",
+                "font_style": "subheading",
+                "text": ""
+              },
+              "blocks": {}
+            },
+            "pdp_collapsible_eBQT6K": {
+              "type": "_pdp-collapsible",
+              "name": "t:collapsible",
+              "settings": {
+                "heading": "Ainesosat",
+                "font_style": "subheading",
+                "text": ""
+              },
+              "blocks": {}
+            },
+            "pdp_collapsible_4yEMbE": {
+              "type": "_pdp-collapsible",
+              "name": "t:collapsible",
+              "settings": {
+                "heading": "Toimitus",
+                "font_style": "subheading",
+                "text": ""
+              },
+              "blocks": {}
+            },
+            "pdp_collapsible_YYQ8zC": {
+              "type": "_pdp-collapsible",
+              "name": "t:collapsible",
+              "settings": {
+                "heading": "Palautus",
+                "font_style": "subheading",
+                "text": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "title",
+            "price",
+            "description",
+            "variant_picker",
+            "buy_buttons",
+            "pdp_collapsible_8qNjqJ",
+            "pdp_collapsible_wY3jRe",
+            "pdp_collapsible_eBQT6K",
+            "pdp_collapsible_4yEMbE",
+            "pdp_collapsible_YYQ8zC"
+          ]
+        }
+      },
+      "settings": {
+        "media_style": "thumbnails",
+        "mobile_max_width": "100%",
+        "enable_zoom": false,
+        "enable_autoplay": true,
+        "media_color_scheme": "",
+        "spacing": "0px",
+        "button_style": "primary",
+        "image_aspect_ratio": "adapt",
+        "animation_style": "fade",
+        "counter_style": "hidden",
+        "enable_looping": true,
+        "color_scheme": "",
+        "show_top_border": false,
+        "show_bottom_border": false,
+        "show_block_borders": false,
+        "enable_transparent_header": false
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "blocks": {
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "layout_header": "left",
+            "subheading": "",
+            "heading": "You may also like",
+            "page_title": false,
+            "heading_size": "h2",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          },
+          "blocks": {}
+        }
+      },
+      "settings": {
+        "product_limit": 4,
+        "layout_header": "left",
+        "columns_desktop": "4",
+        "columns_mobile": "2",
+        "layout_desktop": "slideshow",
+        "container_type": "max",
+        "arrow_position": "overlay",
+        "counter_style": "progress",
+        "button_style": "primary",
+        "color_scheme": "",
+        "padding_top": "default",
+        "padding_bottom": "default",
+        "show_top_border": false,
+        "show_bottom_border": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products"
+  ]
+}

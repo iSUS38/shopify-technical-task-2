@@ -1,0 +1,211 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "section_header_YQ6mWJ": {
+      "type": "section-header",
+      "settings": {
+        "layout_header": "center",
+        "subheading": "Spring/Summer",
+        "heading": "Lookbook",
+        "page_title": true,
+        "heading_size": "h2",
+        "text": "",
+        "button_label": ""
+      }
+    },
+    "rich_text_columns_rKh3rc": {
+      "type": "rich-text-columns",
+      "blocks": {
+        "rich_text_column_CeiHkH": {
+          "type": "_rich-text-column",
+          "settings": {},
+          "blocks": {
+            "image_MbPtC8": {
+              "type": "image",
+              "settings": {
+                "image_ratio": "2 / 3"
+              }
+            }
+          },
+          "block_order": [
+            "image_MbPtC8"
+          ]
+        },
+        "rich_text_column_q7YjzJ": {
+          "type": "_rich-text-column",
+          "settings": {
+            "horizontal_alignment": "center"
+          },
+          "blocks": {
+            "image_3tmVdz": {
+              "type": "image",
+              "settings": {
+                "image_ratio": "3 / 2"
+              }
+            },
+            "text_pK3kTT": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Look 1</p>",
+                "font_style": "caption"
+              }
+            },
+            "text_UcEB9b": {
+              "type": "text",
+              "settings": {
+                "text": "<p>A short paragraph explaining the different products shown in this look. <a href=\"https://primavera-precision.myshopify.com/pages/about?&view=lookbook#\" title=\"#\">Link to product</a>.</p>"
+              }
+            }
+          },
+          "block_order": [
+            "image_3tmVdz",
+            "text_pK3kTT",
+            "text_UcEB9b"
+          ]
+        }
+      },
+      "block_order": [
+        "rich_text_column_CeiHkH",
+        "rich_text_column_q7YjzJ"
+      ],
+      "settings": {
+        "vertical_alignment": "middle",
+        "padding_top": "0px"
+      }
+    },
+    "rich_text_columns_Xyizdc": {
+      "type": "rich-text-columns",
+      "blocks": {
+        "rich_text_column_8XzkKR": {
+          "type": "_rich-text-column",
+          "settings": {
+            "horizontal_alignment": "center"
+          },
+          "blocks": {
+            "image_XphGaa": {
+              "type": "image",
+              "settings": {
+                "image_ratio": "3 / 2"
+              }
+            },
+            "text_rqpa4a": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Look 2</p>",
+                "font_style": "caption"
+              }
+            },
+            "text_JkYmP6": {
+              "type": "text",
+              "settings": {
+                "text": "<p>A short paragraph explaining the different products shown in this look. <a href=\"https://primavera-precision.myshopify.com/pages/about?&view=lookbook#\" title=\"#\">Link to product</a>.</p>"
+              }
+            }
+          },
+          "block_order": [
+            "image_XphGaa",
+            "text_rqpa4a",
+            "text_JkYmP6"
+          ]
+        },
+        "rich_text_column_iwip6b": {
+          "type": "_rich-text-column",
+          "settings": {},
+          "blocks": {
+            "image_xjgWmp": {
+              "type": "image",
+              "settings": {
+                "image_ratio": "2 / 3"
+              }
+            }
+          },
+          "block_order": [
+            "image_xjgWmp"
+          ]
+        }
+      },
+      "block_order": [
+        "rich_text_column_8XzkKR",
+        "rich_text_column_iwip6b"
+      ],
+      "settings": {
+        "vertical_alignment": "middle",
+        "padding_top": "0px"
+      }
+    },
+    "rich_text_columns_zHjA3m": {
+      "type": "rich-text-columns",
+      "blocks": {
+        "rich_text_column_KcFTVz": {
+          "type": "_rich-text-column",
+          "settings": {},
+          "blocks": {
+            "image_NDVY9e": {
+              "type": "image",
+              "settings": {
+                "image_ratio": "2 / 3"
+              }
+            }
+          },
+          "block_order": [
+            "image_NDVY9e"
+          ]
+        },
+        "rich_text_column_FFdykj": {
+          "type": "_rich-text-column",
+          "settings": {
+            "horizontal_alignment": "center"
+          },
+          "blocks": {
+            "image_zHCgQB": {
+              "type": "image",
+              "settings": {
+                "image_ratio": "3 / 2"
+              }
+            },
+            "text_bLwJ4k": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Look 3</p>",
+                "font_style": "caption"
+              }
+            },
+            "text_jTraRK": {
+              "type": "text",
+              "settings": {
+                "text": "<p>A short paragraph explaining the different products shown in this look. <a href=\"https://primavera-precision.myshopify.com/pages/about?&view=lookbook#\" title=\"#\">Link to product</a>.</p>"
+              }
+            }
+          },
+          "block_order": [
+            "image_zHCgQB",
+            "text_bLwJ4k",
+            "text_jTraRK"
+          ]
+        }
+      },
+      "block_order": [
+        "rich_text_column_KcFTVz",
+        "rich_text_column_FFdykj"
+      ],
+      "settings": {
+        "vertical_alignment": "middle",
+        "padding_top": "0px"
+      }
+    }
+  },
+  "order": [
+    "section_header_YQ6mWJ",
+    "rich_text_columns_rKh3rc",
+    "rich_text_columns_Xyizdc",
+    "rich_text_columns_zHjA3m"
+  ]
+}

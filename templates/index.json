@@ -9,101 +9,730 @@
  */
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "slideshow_CBjRQG": {
+      "type": "slideshow",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "slide_image_banner_fwnUQB": {
+          "type": "_slide-image-banner",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
-          }
+            "image": "shopify://shop_images/New_ratio2_1.png",
+            "spacing": "0px",
+            "media_content_padding": "default",
+            "container_width": "md",
+            "horizontal_alignment": "center",
+            "vertical_alignment": "middle",
+            "enable_overlay": false,
+            "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)",
+            "color_scheme": "",
+            "enable_color_scheme_transition": false,
+            "color_scheme_transition": ""
+          },
+          "blocks": {
+            "heading_group_LYUArV": {
+              "type": "heading-group",
+              "settings": {
+                "page_title": false
+              },
+              "blocks": {
+                "heading_Fi3tV4": {
+                  "type": "_heading",
+                  "settings": {
+                    "heading": "Slide 1",
+                    "heading_size": "h2"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_Fi3tV4"
+              ]
+            },
+            "text_EzX8kA": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Use this text to share information about your brand, collections or products with your customers.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            },
+            "button_group_EHV8h4": {
+              "type": "button-group",
+              "settings": {
+                "horizontal_alignment": "inherit"
+              },
+              "blocks": {
+                "button_zCU34p": {
+                  "type": "_button",
+                  "settings": {
+                    "button_style": "primary",
+                    "button_label": "Button label",
+                    "button_link": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "button_zCU34p"
+              ]
+            }
+          },
+          "block_order": [
+            "heading_group_LYUArV",
+            "text_EzX8kA",
+            "button_group_EHV8h4"
+          ]
         },
-        "button": {
-          "type": "buttons",
+        "slide_image_banner_yWcRKt": {
+          "type": "_slide-image-banner",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
+            "image": "shopify://shop_images/banner1.png",
+            "spacing": "0px",
+            "media_content_padding": "default",
+            "container_width": "md",
+            "horizontal_alignment": "center",
+            "vertical_alignment": "middle",
+            "enable_overlay": false,
+            "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)",
+            "color_scheme": "",
+            "enable_color_scheme_transition": false,
+            "color_scheme_transition": ""
+          },
+          "blocks": {
+            "heading_group_Ramg3n": {
+              "type": "heading-group",
+              "settings": {
+                "page_title": false
+              },
+              "blocks": {
+                "heading_xQnQKF": {
+                  "type": "_heading",
+                  "settings": {
+                    "heading": "Slide 2",
+                    "heading_size": "h2"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_xQnQKF"
+              ]
+            },
+            "text_7J3JLf": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Use this text to share information about your brand, collections or products with your customers.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            },
+            "button_group_7aHCEr": {
+              "type": "button-group",
+              "settings": {
+                "horizontal_alignment": "inherit"
+              },
+              "blocks": {
+                "button_XR4YDU": {
+                  "type": "_button",
+                  "settings": {
+                    "button_style": "primary",
+                    "button_label": "Button label",
+                    "button_link": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "button_XR4YDU"
+              ]
+            }
+          },
+          "block_order": [
+            "heading_group_Ramg3n",
+            "text_7J3JLf",
+            "button_group_7aHCEr"
+          ]
         }
       },
       "block_order": [
-        "heading",
-        "button"
+        "slide_image_banner_fwnUQB",
+        "slide_image_banner_yWcRKt"
       ],
+      "custom_css": [
+        ".slideshow__play-pause,.pagination__item {display: none;}"
+      ],
+      "name": "t:slideshow",
       "settings": {
-        "image": "shopify://shop_images/New_ratio2_1.png",
-        "image_overlay_opacity": 10,
-        "image_height": "large",
-        "image_behavior": "none",
-        "desktop_content_position": "bottom-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": false,
-        "color_scheme": "scheme-3",
-        "stack_images_on_mobile": false,
-        "mobile_content_alignment": "center",
-        "show_text_below": false
+        "height": "adapt",
+        "mobile_height": "adapt",
+        "stack": "none",
+        "enable_autoplay": true,
+        "autoplay_speed": 4,
+        "enable_looping": false,
+        "animation_style": "fade",
+        "arrow_style": "overlay",
+        "button_style": "primary",
+        "counter_position": "overlay",
+        "counter_style": "progress",
+        "button_alignment": "top-left",
+        "play_button_display": "always",
+        "color_scheme": "",
+        "show_top_border": false,
+        "show_bottom_border": false
       }
     },
-    "featured_products_YWh6RY": {
-      "type": "featured-products",
-      "name": "t:sections.featured-products.name",
+    "split_card_xXGdTW": {
+      "type": "split-card",
+      "blocks": {
+        "image_banner_yxhRxH": {
+          "type": "_image-banner",
+          "settings": {
+            "image": "shopify://shop_images/puhdas__kombucha_blueberrytaustalla.jpg",
+            "height": "large",
+            "mobile_height": "adapt",
+            "stack": "none",
+            "spacing": "0px",
+            "media_content_padding": "default",
+            "container_width": "md",
+            "horizontal_alignment": "center",
+            "vertical_alignment": "bottom",
+            "enable_banner_click": false,
+            "enable_overlay": false,
+            "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)",
+            "color_scheme": "",
+            "enable_color_scheme_transition": false,
+            "color_scheme_transition": ""
+          },
+          "blocks": {
+            "mini_product_CKhwFy": {
+              "type": "mini-product",
+              "name": "t:mini-product",
+              "settings": {
+                "product": "kombucha-villi-mustikka",
+                "style": "card",
+                "color_scheme": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "mini_product_CKhwFy"
+          ]
+        },
+        "block_rich_text_LbHfUV": {
+          "type": "_block-rich-text",
+          "settings": {
+            "vertical_alignment": "middle",
+            "horizontal_alignment": "center",
+            "container_width": "md",
+            "color_scheme": "scheme-3",
+            "enable_color_scheme_transition": true,
+            "color_scheme_transition": "",
+            "padding_top": "default",
+            "padding_bottom": "default"
+          },
+          "blocks": {
+            "countdown_GUmAig": {
+              "type": "_countdown",
+              "name": "t:countdown-timer",
+              "settings": {
+                "date": "2025-08-17 23:59",
+                "hide_section": true,
+                "font_style": "heading h1",
+                "color_scheme": "",
+                "opacity": 60,
+                "enable_blur": true,
+                "accessibility_description": "Countdown timer"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "countdown_GUmAig"
+          ]
+        }
+      },
+      "block_order": [
+        "image_banner_yxhRxH",
+        "block_rich_text_LbHfUV"
+      ],
+      "name": "t:split-card",
       "settings": {
-        "title": "New featured products",
-        "featured_products": [
-          "beautydna-elastic-serum-for-saggy-and-tired-skin",
-          "bee-venom-serum-30-ml",
-          "berberiini-60-kaps",
-          "puhdas-beta-alaniini-200-g",
-          "beauty-oil-bronzing-carrot-oil-porkkanaoljy-100-ml",
-          "chlorella-spirulina",
-          "cla-800-mg"
-        ],
-        "is_add_to_cart_popup_enabled": true,
-        "add_to_cart_popup_displays_count": 1,
-        "add_to_cart_popup_title": "Complete your purchase",
-        "add_to_cart_popup_products": [
-          "kombucha-ihana-inkivaari",
-          "kombucha-villi-mustikka"
-        ]
+        "container_type": "max",
+        "border_radius": "section",
+        "color_scheme": "",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "var(--space-s)",
+        "padding_bottom": "0px",
+        "show_top_border": false,
+        "show_bottom_border": false,
+        "show_borders": false
       }
     },
     "featured_collection": {
       "type": "featured-collection",
+      "blocks": {
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "layout_header": "left",
+            "subheading": "",
+            "heading": "Featured collection",
+            "page_title": false,
+            "heading_size": "h2",
+            "text": "",
+            "button_label": "Button label",
+            "button_link": ""
+          },
+          "blocks": {}
+        },
+        "button-group": {
+          "type": "button-group",
+          "static": true,
+          "settings": {
+            "horizontal_alignment": "center"
+          },
+          "blocks": {
+            "button_M3NCUL": {
+              "type": "_button",
+              "settings": {
+                "button_style": "primary",
+                "button_label": "",
+                "button_link": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "button_M3NCUL"
+          ]
+        }
+      },
       "settings": {
-        "collection": "all",
-        "products_to_show": 8,
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
+        "collection": "",
+        "product_list": [
+          "beautydna-elastic-serum-for-saggy-and-tired-skin",
+          "beauty-sleep-kollageeni-melatoniini",
+          "puhdas-bakuchiol-lahjapakkaus",
+          "puhdas-bakuchiol-beauty-booster-elixir-15-ml",
+          "beauty-oil-bronzing-carrot-oil-porkkanaoljy-100-ml",
+          "c-vitamiini-60kaps",
+          "chlorella-spirulina",
+          "cla-800-mg",
+          "vartalo-hierontaoljy-150ml-appelsiini-vanilja",
+          "vartalo-hierontaoljy-150ml-laventeli",
+          "elektrolyyttijauhe-maustamaton"
+        ],
+        "columns_desktop": "4",
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 44,
-        "padding_bottom": 36
+        "layout_desktop": "slideshow",
+        "container_type": "padded",
+        "product_limit": 8,
+        "arrow_position": "overlay",
+        "counter_style": "progress",
+        "button_style": "primary",
+        "color_scheme": "",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "var(--space-m)",
+        "padding_bottom": "default",
+        "show_top_border": false,
+        "show_bottom_border": false
+      }
+    },
+    "banner_grid_L3xzGe": {
+      "type": "banner-grid",
+      "blocks": {
+        "banner_grid_item_MzWKEK": {
+          "type": "_banner-grid-item",
+          "settings": {
+            "column_desktop": 2,
+            "row_desktop": 2,
+            "column_mobile": "2",
+            "row_mobile": "1"
+          },
+          "blocks": {
+            "grid_image_banner_q7JyfQ": {
+              "type": "_grid-image-banner",
+              "settings": {
+                "image": "shopify://shop_images/ConvertOut-Resized-8bfdf9b3-7565-4eab-8d09-bf28f5ecd136-1.webp",
+                "spacing": "0px",
+                "media_content_padding": "default",
+                "horizontal_alignment": "left",
+                "vertical_alignment": "bottom",
+                "enable_overlay": false,
+                "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)",
+                "color_scheme": "scheme-4",
+                "enable_color_scheme_transition": false,
+                "color_scheme_transition": ""
+              },
+              "blocks": {
+                "heading_group_t3z9GL": {
+                  "type": "heading-group",
+                  "settings": {
+                    "page_title": false
+                  },
+                  "blocks": {
+                    "heading_a7FwrW": {
+                      "type": "_heading",
+                      "settings": {
+                        "heading": "Banner grid item",
+                        "heading_size": "h6"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_a7FwrW"
+                  ]
+                },
+                "button_group_eaxRAN": {
+                  "type": "button-group",
+                  "settings": {
+                    "horizontal_alignment": "inherit"
+                  },
+                  "blocks": {
+                    "button_BGj3Xy": {
+                      "type": "_button",
+                      "settings": {
+                        "button_style": "primary",
+                        "button_label": "Button label",
+                        "button_link": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "button_BGj3Xy"
+                  ]
+                }
+              },
+              "block_order": [
+                "heading_group_t3z9GL",
+                "button_group_eaxRAN"
+              ]
+            }
+          },
+          "block_order": [
+            "grid_image_banner_q7JyfQ"
+          ]
+        },
+        "banner_grid_item_AhLnDh": {
+          "type": "_banner-grid-item",
+          "settings": {
+            "column_desktop": 2,
+            "row_desktop": 1,
+            "column_mobile": "2",
+            "row_mobile": "1"
+          },
+          "blocks": {
+            "grid_image_banner_gjBaiX": {
+              "type": "_grid-image-banner",
+              "settings": {
+                "image": "shopify://shop_images/vitamin_drinks_banner_1.png",
+                "spacing": "0px",
+                "media_content_padding": "default",
+                "horizontal_alignment": "left",
+                "vertical_alignment": "bottom",
+                "enable_overlay": false,
+                "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)",
+                "color_scheme": "scheme-4",
+                "enable_color_scheme_transition": false,
+                "color_scheme_transition": ""
+              },
+              "blocks": {
+                "heading_group_KJbfJh": {
+                  "type": "heading-group",
+                  "settings": {
+                    "page_title": false
+                  },
+                  "blocks": {
+                    "heading_dT4nC8": {
+                      "type": "_heading",
+                      "settings": {
+                        "heading": "Banner grid item",
+                        "heading_size": "h6"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_dT4nC8"
+                  ]
+                },
+                "button_group_RKnafK": {
+                  "type": "button-group",
+                  "settings": {
+                    "horizontal_alignment": "inherit"
+                  },
+                  "blocks": {
+                    "button_XVzKac": {
+                      "type": "_button",
+                      "settings": {
+                        "button_style": "primary",
+                        "button_label": "Button label",
+                        "button_link": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "button_XVzKac"
+                  ]
+                }
+              },
+              "block_order": [
+                "heading_group_KJbfJh",
+                "button_group_RKnafK"
+              ]
+            }
+          },
+          "block_order": [
+            "grid_image_banner_gjBaiX"
+          ]
+        },
+        "banner_grid_item_APtPpC": {
+          "type": "_banner-grid-item",
+          "settings": {
+            "column_desktop": 2,
+            "row_desktop": 1,
+            "column_mobile": "2",
+            "row_mobile": "1"
+          },
+          "blocks": {
+            "grid_image_banner_GcTVQb": {
+              "type": "_grid-image-banner",
+              "settings": {
+                "image": "shopify://shop_images/Puhdas_D3_vitamin_8251ba8c-3cc0-41ce-a7da-ade9d46bbcdb.png",
+                "spacing": "0px",
+                "media_content_padding": "default",
+                "horizontal_alignment": "left",
+                "vertical_alignment": "bottom",
+                "enable_overlay": false,
+                "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)",
+                "color_scheme": "scheme-4",
+                "enable_color_scheme_transition": false,
+                "color_scheme_transition": ""
+              },
+              "blocks": {
+                "heading_group_LzCPMK": {
+                  "type": "heading-group",
+                  "settings": {
+                    "page_title": false
+                  },
+                  "blocks": {
+                    "heading_HfDbgc": {
+                      "type": "_heading",
+                      "settings": {
+                        "heading": "Banner grid item",
+                        "heading_size": "h6"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_HfDbgc"
+                  ]
+                },
+                "button_group_pYAXHQ": {
+                  "type": "button-group",
+                  "settings": {
+                    "horizontal_alignment": "inherit"
+                  },
+                  "blocks": {
+                    "button_p8R8P3": {
+                      "type": "_button",
+                      "settings": {
+                        "button_style": "primary",
+                        "button_label": "Button label",
+                        "button_link": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "button_p8R8P3"
+                  ]
+                }
+              },
+              "block_order": [
+                "heading_group_LzCPMK",
+                "button_group_pYAXHQ"
+              ]
+            }
+          },
+          "block_order": [
+            "grid_image_banner_GcTVQb"
+          ]
+        },
+        "section-header": {
+          "type": "_section-header",
+          "disabled": true,
+          "static": true,
+          "settings": {
+            "layout_header": "left",
+            "subheading": "Subheading",
+            "heading": "Heading",
+            "page_title": false,
+            "heading_size": "h2",
+            "text": "<p>This is an optional description. Use this text to provide context and guidance for the content below. For example, you could briefly describe features, inspiration or relevant promotions. Leave the text blank if you prefer to remove it.</p>",
+            "button_label": "Button label",
+            "button_link": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "banner_grid_item_MzWKEK",
+        "banner_grid_item_AhLnDh",
+        "banner_grid_item_APtPpC"
+      ],
+      "settings": {
+        "container_type": "max",
+        "height": "small",
+        "grid_gap_vertical": "var(--space-3xs)",
+        "grid_gap_horizontal": "var(--space-3xs)",
+        "color_scheme": "",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "0px",
+        "padding_bottom": "default",
+        "show_top_border": false,
+        "show_bottom_border": false
+      }
+    },
+    "shoppable_banner_hUfPLz": {
+      "type": "shoppable-banner",
+      "blocks": {
+        "mini_product_card_gpBKh7": {
+          "type": "mini-product",
+          "settings": {
+            "product": "kombucha-ihana-inkivaari",
+            "style": "card",
+            "color_scheme": ""
+          },
+          "blocks": {}
+        },
+        "mini_product_card_DkdHYL": {
+          "type": "mini-product",
+          "settings": {
+            "product": "kombucha-raikas-omena-lime",
+            "style": "card",
+            "color_scheme": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "mini_product_card_gpBKh7",
+        "mini_product_card_DkdHYL"
+      ],
+      "settings": {
+        "video": "shopify://files/videos/68df8bc4663542c58c1d7c71e5f6db0e.HD-1080p-3.3Mbps-51363566.mp4",
+        "enable_autoplay": true,
+        "play_button_display": "hover_focus",
+        "button_style": "text",
+        "button_alignment": "top-left",
+        "height": "small",
+        "mobile_height": "medium",
+        "stack": "none",
+        "spacing": "0px",
+        "media_content_padding": "default",
+        "container_type": "full",
+        "horizontal_alignment": "left",
+        "vertical_alignment": "bottom",
+        "enable_overlay": false,
+        "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)",
+        "color_scheme": "scheme-1",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "0px",
+        "padding_bottom": "var(--space-l)",
+        "show_top_border": false,
+        "show_bottom_border": false
+      }
+    },
+    "newsletter_HatamJ": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_group_pRBDpT": {
+          "type": "heading-group",
+          "settings": {
+            "page_title": false
+          },
+          "blocks": {
+            "subheading_naQRTN": {
+              "type": "_subheading",
+              "settings": {
+                "subheading": ""
+              },
+              "blocks": {}
+            },
+            "heading_cr8GKw": {
+              "type": "_heading",
+              "settings": {
+                "heading": "Tilaa uutiskirjeemme",
+                "heading_size": "h2"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "subheading_naQRTN",
+            "heading_cr8GKw"
+          ]
+        },
+        "text_iVxFYD": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Use this text to share information about your brand, collections or products with your customers.</p>",
+            "font_style": "body"
+          },
+          "blocks": {}
+        },
+        "newsletter_txcDYJ": {
+          "type": "_newsletter",
+          "settings": {
+            "button_style": "primary",
+            "button_width": "default"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_group_pRBDpT",
+        "text_iVxFYD",
+        "newsletter_txcDYJ"
+      ],
+      "settings": {
+        "height": "adapt",
+        "mobile_height": "adapt",
+        "stack": "none",
+        "spacing": "0px",
+        "media_content_padding": "default",
+        "container_type": "full",
+        "container_width": "md",
+        "horizontal_alignment": "center",
+        "vertical_alignment": "middle",
+        "enable_overlay": false,
+        "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)",
+        "color_scheme": "scheme-2",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "default",
+        "padding_bottom": "default",
+        "show_top_border": false,
+        "show_bottom_border": false
       }
     }
   },
   "order": [
-    "image_banner",
-    "featured_products_YWh6RY",
-    "featured_collection"
+    "slideshow_CBjRQG",
+    "split_card_xXGdTW",
+    "featured_collection",
+    "banner_grid_L3xzGe",
+    "shoppable_banner_hUfPLz",
+    "newsletter_HatamJ"
   ]
 }
